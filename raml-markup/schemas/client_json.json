@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "client": {
+      "id": "client",
+      "type": "object",
+      "properties": {
+        "clientId": {
+          "id": "clientId",
+          "type": "string"
+        },
+        "firstName": {
+          "id": "firstName",
+          "type": "string"
+        },
+        "middleName": {
+          "id": "middleName",
+          "type": "string"
+        },
+        "lastName": {
+          "id": "lastName",
+          "type": "string"
+        },
+        "nameSuffix": {
+          "id": "nameSuffix",
+          "type": "string"
+        },
+        "nameDataQuality": {
+          "id": "nameDataQuality",
+          "type": "string"
+        },
+        "ssn": {
+          "id": "ssn",
+          "type": "string"
+        },
+        "ssnDataQuality": {
+          "id": "ssnDataQuality",
+          "type": "string"
+        },
+        "dob": {
+          "id": "dob",
+          "type": "integer"
+        },
+        "dobDataQuality": {
+          "id": "dobDataQuality",
+          "type": "string"
+        },
+        "race": {
+          "id": "race",
+          "type": "string"
+        },
+        "ethnicity": {
+          "id": "ethnicity",
+          "type": "string"
+        },
+        "gender": {
+          "id": "gender",
+          "type": "string"
+        },
+        "otherGender": {
+          "id": "otherGender",
+          "type": "string"
+        }
+      },
+      "required": [
+        "clientId",
+        "firstName",
+        "middleName",
+        "lastName",
+        "nameSuffix",
+        "nameDataQuality",
+        "ssn",
+        "ssnDataQuality",
+        "dob",
+        "dobDataQuality",
+        "race",
+        "ethnicity",
+        "gender",
+        "otherGender"
+      ]
+    }
+  },
+  "required": [
+    "client"
+  ]
+}

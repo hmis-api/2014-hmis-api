@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "inventories": {
+      "id": "inventories",
+      "type": "object",
+      "properties": {
+        "pagination": {
+          "id": "pagination",
+          "type": "object",
+          "properties": {
+            "from": {
+              "id": "from",
+              "type": "integer"
+            },
+            "returned": {
+              "id": "returned",
+              "type": "integer"
+            },
+            "total": {
+              "id": "total",
+              "type": "integer"
+            },
+            "maximum": {
+              "id": "maximum",
+              "type": "integer"
+            },
+            "sort": {
+              "id": "sort",
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "required": [
+            "from",
+            "returned",
+            "total",
+            "maximum",
+            "sort"
+          ]
+        },
+        "inventories": {
+          "id": "inventories",
+          "type": "array",
+          "items": {
+            "id": "0",
+            "type": "object",
+            "properties": {
+              "inventoryId": {
+                "id": "inventoryId",
+                "type": "string"
+              },
+              "availabilty": {
+                "id": "availabilty",
+                "type": "string"
+              },
+              "bedtype": {
+                "id": "bedtype",
+                "type": "integer"
+              },
+              "hmisparticipatingbeds": {
+                "id": "hmisparticipatingbeds",
+                "type": "integer"
+              },
+              "householdtype": {
+                "id": "householdtype",
+                "type": "integer"
+              },
+              "unitinventory": {
+                "id": "unitinventory",
+                "type": "integer"
+              },
+              "dateCreated": {
+                "id": "dateCreated",
+                "type": "string"
+              },
+              "dateUpdated": {
+                "id": "dateUpdated",
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "pagination",
+        "inventories",
+        "0"
+      ]
+    }
+  },
+  "required": [
+    "inventories"
+  ]
+}

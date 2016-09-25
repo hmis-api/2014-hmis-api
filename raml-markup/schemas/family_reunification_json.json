@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "familyReunification": {
+      "id": "familyReunification",
+      "type": "object",
+      "properties": {
+        "familyReunificationId": {
+          "id": "familyReunificationId",
+          "type": "string"
+        },
+        "familyreunificationachieved": {
+          "id": "familyreunificationachieved",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "familyReunificationId",
+        "familyreunificationachieved"
+      ]
+    }
+  },
+  "required": [
+    "familyReunification"
+  ]
+}

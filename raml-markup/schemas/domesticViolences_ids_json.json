@@ -1,0 +1,81 @@
+ {
+                      "$schema": "http://json-schema.org/draft-04/schema#",
+                      "id": "/",
+                      "type": "object",
+                      "properties": {
+                        "DomesticViolences": {
+                          "id": "DomesticViolences",
+                          "type": "object",
+                          "properties": {
+                            "pagination": {
+                              "id": "pagination",
+                              "type": "object",
+                              "properties": {
+                                "from": {
+                                  "id": "from",
+                                  "type": "integer"
+                                },
+                                "returned": {
+                                  "id": "returned",
+                                  "type": "integer"
+                                },
+                                "total": {
+                                  "id": "total",
+                                  "type": "integer"
+                                },
+                                "maximum": {
+                                  "id": "maximum",
+                                  "type": "integer"
+                                },
+                                "sort": {
+                                  "id": "sort",
+                                  "type": "object",
+                                  "properties": {}
+                                }
+                              },
+                              "required": [
+                                "from",
+                                "returned",
+                                "total",
+                                "maximum",
+                                "sort"
+                              ]
+                            },
+                            "domesticViolences": {
+                              "id": "domesticViolences",
+                              "type": "array",
+                              "items": {
+                                "id": "0",
+                                "type": "object",
+                                "properties": {
+                                  "domesticViolenceId": {
+                                    "id": "domesticViolenceId",
+                                    "type": "string"
+                                  },
+                                  "domesticviolencevictim": {
+                                    "id": "domesticviolencevictim",
+                                    "type": "string"
+                                  },
+                                  "whenoccurred": {
+                                    "id": "whenoccurred",
+                                    "type": "string"
+                                  },
+                                  "dateCreated": {
+                                    "id": "dateCreated",
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "additionalItems": false
+                            }
+                          },
+                          "required": [
+                            "pagination",
+                            "domesticViolences"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "DomesticViolences"
+                      ]
+                    }      

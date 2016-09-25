@@ -1,0 +1,80 @@
+{
+			  "$schema": "http://json-schema.org/draft-04/schema#",
+			  "id": "http://jsonschema.net",
+			  "type": "object",
+			  "properties": {
+				"percentamis": {
+				  "id": "http://jsonschema.net/percentamis",
+				  "type": "object",
+				  "properties": {
+					"pagination": {
+					  "id": "http://jsonschema.net/percentamis/pagination",
+					  "type": "object",
+					  "properties": {
+						"from": {
+						  "id": "http://jsonschema.net/percentamis/pagination/from",
+						  "type": "integer"
+						},
+						"returned": {
+						  "id": "http://jsonschema.net/percentamis/pagination/returned",
+						  "type": "integer"
+						},
+						"total": {
+						  "id": "http://jsonschema.net/percentamis/pagination/total",
+						  "type": "integer"
+						},
+						"maximum": {
+						  "id": "http://jsonschema.net/percentamis/pagination/maximum",
+						  "type": "integer"
+						},
+						"sort": {
+						  "id": "http://jsonschema.net/percentamis/pagination/sort",
+						  "type": "object",
+						  "properties": {}
+						}
+					  },
+					  "required": [
+						"from",
+						"returned",
+						"total",
+						"maximum",
+						"sort"
+					  ]
+					},
+					"percentamis": {
+					  "id": "http://jsonschema.net/percentamis/percentamis",
+					  "type": "array",
+					  "items": {
+						"id": "http://jsonschema.net/percentamis/percentamis/0",
+						"type": "object",
+						"properties": {
+						  "percentamiId": {
+							"id": "http://jsonschema.net/percentamis/percentamis/0/percentamiId",
+							"type": "string"
+						  },
+						  "percentage": {
+							"id": "http://jsonschema.net/percentamis/percentamis/0/percentage",
+							"type": "integer"
+						  },
+						  "dateCreated": {
+							"id": "http://jsonschema.net/percentamis/percentamis/0/dateCreated",
+							"type": "string"
+						  },
+						  "dateUpdated": {
+							"id": "http://jsonschema.net/percentamis/percentamis/0/dateUpdated",
+							"type": "string"
+						  }
+						}
+					  }
+					}
+				  },
+				  "required": [
+					"pagination",
+					"percentamis"
+				  ]
+				}
+			  },
+			  "required": [
+				"percentamis"
+			  ]
+			}

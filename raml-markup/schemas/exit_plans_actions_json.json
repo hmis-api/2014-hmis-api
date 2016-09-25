@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "exitPlansActions": {
+      "id": "exitPlansActions",
+      "type": "object",
+      "properties": {
+        "exitPlansActionsId": {
+          "id": "exitPlansActionsId",
+          "type": "string"
+        },
+        "assistancemainstreambenefits": {
+          "id": "assistancemainstreambenefits",
+          "type": "integer"
+        },
+        "exitcounseling": {
+          "id": "exitcounseling",
+          "type": "integer"
+        },
+        "furtherfollowupservices": {
+          "id": "furtherfollowupservices",
+          "type": "integer"
+        },
+        "otheraftercareplanoraction": {
+          "id": "otheraftercareplanoraction",
+          "type": "integer"
+        },
+        "permanenthousingplacement": {
+          "id": "permanenthousingplacement",
+          "type": "integer"
+        },
+        "resourcepackage": {
+          "id": "resourcepackage",
+          "type": "integer"
+        },
+        "scheduledfollowupcontacts": {
+          "id": "scheduledfollowupcontacts",
+          "type": "integer"
+        },
+        "temporaryshelterplacement": {
+          "id": "temporaryshelterplacement",
+          "type": "integer"
+        },
+        "writtenaftercareplan": {
+          "id": "writtenaftercareplan",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "exitPlansActionsId",
+        "assistancemainstreambenefits",
+        "exitcounseling",
+        "furtherfollowupservices",
+        "otheraftercareplanoraction",
+        "permanenthousingplacement",
+        "resourcepackage",
+        "scheduledfollowupcontacts",
+        "temporaryshelterplacement",
+        "writtenaftercareplan"
+      ]
+    }
+  },
+  "required": [
+    "exitPlansActions"
+  ]
+}

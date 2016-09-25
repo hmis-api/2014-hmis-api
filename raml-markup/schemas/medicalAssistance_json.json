@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "medicalassistance": {
+      "id": "medicalassistance",
+      "type": "object",
+      "properties": {
+        "medicalassistanceId": {
+          "id": "medicalassistanceId",
+          "type": "string"
+        },
+        "adap": {
+          "id": "adap",
+          "type": "integer"
+        },
+        "dateCreated": {
+          "id": "dateCreated",
+          "type": "string"
+        },
+        "dateUpdated": {
+          "id": "dateUpdated",
+          "type": "string"
+        }
+      },
+      "required": [
+        "medicalassistanceId",
+        "adap",
+        "dateCreated",
+        "dateUpdated"
+      ]
+    }
+  },
+  "required": [
+    "medicalassistance"
+  ]
+}

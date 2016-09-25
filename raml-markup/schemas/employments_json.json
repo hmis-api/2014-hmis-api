@@ -1,0 +1,84 @@
+{
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "id": "/",
+                "type": "object",
+                "properties": {
+                  "employments": {
+                    "id": "employments",
+                    "type": "object",
+                    "properties": {
+                      "pagination": {
+                        "id": "pagination",
+                        "type": "object",
+                        "properties": {
+                          "from": {
+                            "id": "from",
+                            "type": "integer"
+                          },
+                          "returned": {
+                            "id": "returned",
+                            "type": "integer"
+                          },
+                          "total": {
+                            "id": "total",
+                            "type": "integer"
+                          },
+                          "maximum": {
+                            "id": "maximum",
+                            "type": "integer"
+                          },
+                          "sort": {
+                            "id": "sort",
+                            "type": "object",
+                            "properties": {}
+                          }
+                        }
+                        
+                      },
+                      "employments": {
+                        "id": "employments",
+                        "type": "array",
+                        "items": {
+                          "id": "0",
+                          "type": "object",
+                          "properties": {
+                            "employmentId": {
+                              "id": "employmentId",
+                              "type": "string"
+                            },
+                            "employed": {
+                              "id": "employed",
+                              "type": "string"
+                            },
+                            "employmentType": {
+                              "id": "employmentType",
+                              "type": "string"
+                            },
+                            "notEmployedReason": {
+                              "id": "notEmployedReason",
+                              "type": "string"
+                            },
+                            "informationDate": {
+                              "id": "informationDate",
+                              "type": "integer"
+                            },
+                            "dateCreated": {
+                              "id": "dateCreated",
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "additionalItems": false
+                      }
+                    },
+                    "required": [
+                      "pagination",
+                      "employments",
+                      "0"
+                    ]
+                  }
+                },
+                "required": [
+                  "employments"
+                ]
+              }

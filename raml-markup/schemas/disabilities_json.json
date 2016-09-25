@@ -1,0 +1,62 @@
+"$schema": "http://json-schema.org/draft-04/schema",
+    "title": "disabilities",
+    "type": "object",
+    "required": ["DisabilitiesID","ProjectEntryID", "InformationDate", "DataCollectionStage", "DateCreated", "DateUpdated", "UserID"],
+      "properties": {
+        "DisabilitiesID": {
+        "type": "String",
+        "maxLength": "32",
+        "minLength": "32" 
+        },
+        "ProjectEntryID": {
+        "type": "String",
+        "maxLength": "32",
+        "minLength": "32"
+        },
+        "InformationDate": {
+        "type": "String",
+        "format": "date-time"
+        },
+        "DisabilityType": {
+        "type": "Integer",
+        },
+        "DisabilityResponse": {
+        "type": "Integer",
+        },
+        "IndefiniteAndImpairs": {
+        "type": "Integer",
+        },
+        "DocumentationOnFile": {
+        "type": "Integer",
+        },
+        "ReceivingServices": {
+        "type": "Integer",
+        },
+        "PATHHowConfirmed": {
+        "type": "Integer",
+        },
+        "PATHSMIInformation": {
+        "type": "Integer",
+        },
+        "DataCollectionStage": {
+        "type": "Integer",
+        },
+        "DateCreated": {
+        "type": "String",
+        "format": "date-time"
+        },
+        "DateUpdated": {  
+        "type": "String",
+        "format": "date-time"
+        },,
+        "DateDeleted": {  
+        "type": "String",
+        "format": "date-time"
+        }
+        "UserID": {
+        "type": "String",
+        "maxLength": "32",
+        "minLength": "32"
+        }
+       }
+      }

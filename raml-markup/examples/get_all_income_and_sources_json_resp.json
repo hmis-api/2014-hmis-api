@@ -1,0 +1,51 @@
+{
+							"IncomeAndSources": {
+							"pagination": {
+							"from": 0
+							"returned": 1
+							"total": 1
+							"maximum": 30
+							"sort": {}
+							}-
+							"incomeAndSources": [1]
+							0:  {
+							"incomeAndSourceId": "5c025aea-ecdc-4902-b451-4436b64a83ea"
+							"alimony": 99
+							"alimonyamount": 15
+							"childsupport": 1
+							"childsupportamount": 3
+							"earned": 99
+							"earnedamount": 15
+							"ga": 0
+							"gaamount": 3
+							"incomefromanysource": 8
+							"othersource": 0
+							"othersourceamount": 15
+							"othersourceidentify": "test"
+							"pension": 99
+							"pensionamount": 3
+							"privatedisability": 1
+							"privatedisabilityamount": 15
+							"socsecretirement": 99
+							"socsecretirementamount": 15
+							"ssdi": 0
+							"ssdiamount": 3
+							"ssi": 99
+							"ssiamount": 3
+							"tanf": 0
+							"tanfamount": 3
+							"totalmonthlyincome": 3
+							"unemployment": 99
+							"unemploymentamount": 15
+							"vadisabilitynonservice": 0
+							"vadisabilitynonserviceamount": 3
+							"vadisabilityservice": 1
+							"vadisabilityserviceamount": 15
+							"workerscomp": 0
+							"workerscompamount": 15
+							"dateCreated": "03-17-2016"
+							"dateUpdated": "03-17-2016"
+							}-
+							-
+							}-
+							}

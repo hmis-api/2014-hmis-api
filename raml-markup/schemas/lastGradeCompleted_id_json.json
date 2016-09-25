@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "lastgradecompleted": {
+      "id": "lastgradecompleted",
+      "type": "object",
+      "properties": {
+        "lastgradecompletedId": {
+          "id": "lastgradecompletedId",
+          "type": "string"
+        }
+      },
+      "required": [
+        "lastgradecompletedId"
+      ]
+    }
+  },
+  "required": [
+    "lastgradecompleted"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "housingAssessmentDisposition": {
+      "id": "housingAssessmentDisposition",
+      "type": "object",
+      "properties": {
+        "housingAssessmentDispositionId": {
+          "id": "housingAssessmentDispositionId",
+          "type": "string"
+        }
+      },
+      "required": [
+        "housingAssessmentDispositionId"
+      ]
+    }
+  },
+  "required": [
+    "housingAssessmentDisposition"
+  ]
+}

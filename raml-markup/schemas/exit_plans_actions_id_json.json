@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "exitPlansActions": {
+      "id": "exitPlansActions",
+      "type": "object",
+      "properties": {
+        "exitPlansActionsId": {
+          "id": "exitPlansActionsId",
+          "type": "string"
+        }
+      },
+      "required": [
+        "exitPlansActionsId"
+      ]
+    }
+  },
+  "required": [
+    "exitPlansActions"
+  ]
+}

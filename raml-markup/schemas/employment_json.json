@@ -1,0 +1,38 @@
+{
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "id": "/",
+                "type": "object",
+                "properties": {
+                  "employment": {
+                    "id": "employment",
+                    "type": "object",
+                    "properties": {
+                      "employed": {
+                        "id": "employed",
+                        "type": "string"
+                      },
+                      "employmentType": {
+                        "id": "employmentType",
+                        "type": "string"
+                      },
+                      "notEmployedReason": {
+                        "id": "notEmployedReason",
+                        "type": "string"
+                      },
+                      "informationDate": {
+                        "id": "informationDate",
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "employed",
+                      "employmentType",
+                      "notEmployedReason",
+                      "informationDate"
+                    ]
+                  }
+                },
+                "required": [
+                  "employment"
+                ]
+              }

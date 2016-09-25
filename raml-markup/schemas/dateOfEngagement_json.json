@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "dateofengagement": {
+      "id": "dateofengagement",
+      "type": "object",
+      "properties": {
+        "dateofengagementId": {
+          "id": "dateofengagementId",
+          "type": "string"
+        },
+        "dateofengagement": {
+          "id": "dateofengagement",
+          "type": "integer"
+        },
+        "dateCreated": {
+          "id": "dateCreated",
+          "type": "string"
+        }
+      },
+      "required": [
+        "dateofengagementId",
+        "dateofengagement",
+        "dateCreated"
+      ]
+    }
+  },
+  "required": [
+    "dateofengagement"
+  ]
+}

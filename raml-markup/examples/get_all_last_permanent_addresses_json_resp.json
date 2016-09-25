@@ -1,0 +1,23 @@
+{
+   "LastPermanentAddresses":{
+      "pagination":{
+         "from":0,
+         "returned":0,
+         "total":0,
+         "maximum":30,
+         "sort":{
+
+         }
+      },
+      "lastPermanentAddresses":[
+         {
+            "lastPermanentAddressId":"5c025aea-ecdc-4902-b451-4436b64a83ea",
+            "addressdataquality":1,
+            "lastpermanentcity":"test",
+            "lastpermanentstate":2,
+            "lastpermanentstreet":"street",
+            "lastpermanentzip":"53324"
+         }
+      ]
+   }
+}

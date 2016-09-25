@@ -1,0 +1,92 @@
+{
+			  "$schema": "http://json-schema.org/draft-04/schema#",
+			  "id": "http://jsonschema.net",
+			  "type": "object",
+			  "properties": {
+				"healthStatuses": {
+				  "id": "http://jsonschema.net/healthStatuses",
+				  "type": "object",
+				  "properties": {
+					"pagination": {
+					  "id": "http://jsonschema.net/healthStatuses/pagination",
+					  "type": "object",
+					  "properties": {
+						"from": {
+						  "id": "http://jsonschema.net/healthStatuses/pagination/from",
+						  "type": "integer"
+						},
+						"returned": {
+						  "id": "http://jsonschema.net/healthStatuses/pagination/returned",
+						  "type": "integer"
+						},
+						"total": {
+						  "id": "http://jsonschema.net/healthStatuses/pagination/total",
+						  "type": "integer"
+						},
+						"maximum": {
+						  "id": "http://jsonschema.net/healthStatuses/pagination/maximum",
+						  "type": "integer"
+						},
+						"sort": {
+						  "id": "http://jsonschema.net/healthStatuses/pagination/sort",
+						  "type": "object",
+						  "properties": {}
+						}
+					  },
+					  "required": [
+						"from",
+						"returned",
+						"total",
+						"maximum",
+						"sort"
+					  ]
+					},
+					"healthStatuses": {
+					  "id": "http://jsonschema.net/healthStatuses/healthStatuses",
+					  "type": "array",
+					  "items": {
+						"id": "http://jsonschema.net/healthStatuses/healthStatuses/0",
+						"type": "object",
+						"properties": {
+						  "healthStatusId": {
+							"id": "http://jsonschema.net/healthStatuses/healthStatuses/0/healthStatusId",
+							"type": "string"
+						  },
+						  "informationDate": {
+							"id": "http://jsonschema.net/healthStatuses/healthStatuses/0/informationDate",
+							"type": "integer"
+						  },
+						  "healthCategory": {
+							"id": "http://jsonschema.net/healthStatuses/healthStatuses/0/healthCategory",
+							"type": "integer"
+						  },
+						  "healthStatus": {
+							"id": "http://jsonschema.net/healthStatuses/healthStatuses/0/healthStatus",
+							"type": "integer"
+						  },
+						  "dueDate": {
+							"id": "http://jsonschema.net/healthStatuses/healthStatuses/0/dueDate",
+							"type": "integer"
+						  },
+						  "dateCreated": {
+							"id": "http://jsonschema.net/healthStatuses/healthStatuses/0/dateCreated",
+							"type": "string"
+						  },
+						  "dateUpdated": {
+							"id": "http://jsonschema.net/healthStatuses/healthStatuses/0/dateUpdated",
+							"type": "string"
+						  }
+						}
+					  }
+					}
+				  },
+				  "required": [
+					"pagination",
+					"healthStatuses"
+				  ]
+				}
+			  },
+			  "required": [
+				"healthStatuses"
+			  ]
+			}

@@ -1,0 +1,21 @@
+{
+                          "employments": {
+                              "pagination": {
+                                  "from": 0,
+                                  "returned": 1,
+                                  "total": 1,
+                                  "maximum": 30,
+                                  "sort": {}
+                              },
+                              "employments": [
+                                  {
+                                      "employmentId": "3d01bf85-75f0-4ee3-89aa-c603380afea2",
+                                      "employed": 9,
+                                      "employmentType": 2,
+                                      "notEmployedReason": 2,
+                                      "informationDate": 1458124933736,
+                                      "dateCreated": "03-16-2016"
+                                  }
+                              ]
+                          }
+                      }

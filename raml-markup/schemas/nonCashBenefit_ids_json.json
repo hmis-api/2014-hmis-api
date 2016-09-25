@@ -1,0 +1,116 @@
+{
+			  "$schema": "http://json-schema.org/draft-04/schema#",
+			  "id": "http://jsonschema.net",
+			  "type": "object",
+			  "properties": {
+				"nonCashBenefits": {
+				  "id": "http://jsonschema.net/nonCashBenefits",
+				  "type": "object",
+				  "properties": {
+					"pagination": {
+					  "id": "http://jsonschema.net/nonCashBenefits/pagination",
+					  "type": "object",
+					  "properties": {
+						"from": {
+						  "id": "http://jsonschema.net/nonCashBenefits/pagination/from",
+						  "type": "integer"
+						},
+						"returned": {
+						  "id": "http://jsonschema.net/nonCashBenefits/pagination/returned",
+						  "type": "integer"
+						},
+						"total": {
+						  "id": "http://jsonschema.net/nonCashBenefits/pagination/total",
+						  "type": "integer"
+						},
+						"maximum": {
+						  "id": "http://jsonschema.net/nonCashBenefits/pagination/maximum",
+						  "type": "integer"
+						},
+						"sort": {
+						  "id": "http://jsonschema.net/nonCashBenefits/pagination/sort",
+						  "type": "object",
+						  "properties": {}
+						}
+					  },
+					  "required": [
+						"from",
+						"returned",
+						"total",
+						"maximum",
+						"sort"
+					  ]
+					},
+					"nonCashBenefits": {
+					  "id": "http://jsonschema.net/nonCashBenefits/nonCashBenefits",
+					  "type": "array",
+					  "items": {
+						"id": "http://jsonschema.net/nonCashBenefits/nonCashBenefits/0",
+						"type": "object",
+						"properties": {
+						  "nonCashBenefitId": {
+							"id": "http://jsonschema.net/nonCashBenefits/nonCashBenefits/0/nonCashBenefitId",
+							"type": "string"
+						  },
+						  "othersource": {
+							"id": "http://jsonschema.net/nonCashBenefits/nonCashBenefits/0/othersource",
+							"type": "integer"
+						  },
+						  "othersourceidentify": {
+							"id": "http://jsonschema.net/nonCashBenefits/nonCashBenefits/0/othersourceidentify",
+							"type": "string"
+						  },
+						  "othertanf": {
+							"id": "http://jsonschema.net/nonCashBenefits/nonCashBenefits/0/othertanf",
+							"type": "integer"
+						  },
+						  "rentalassistanceongoing": {
+							"id": "http://jsonschema.net/nonCashBenefits/nonCashBenefits/0/rentalassistanceongoing",
+							"type": "integer"
+						  },
+						  "rentalassistancetemp": {
+							"id": "http://jsonschema.net/nonCashBenefits/nonCashBenefits/0/rentalassistancetemp",
+							"type": "integer"
+						  },
+						  "snap": {
+							"id": "http://jsonschema.net/nonCashBenefits/nonCashBenefits/0/snap",
+							"type": "integer"
+						  },
+						  "tanfchildcare": {
+							"id": "http://jsonschema.net/nonCashBenefits/nonCashBenefits/0/tanfchildcare",
+							"type": "integer"
+						  },
+						  "tanftransportation": {
+							"id": "http://jsonschema.net/nonCashBenefits/nonCashBenefits/0/tanftransportation",
+							"type": "integer"
+						  },
+						  "wic": {
+							"id": "http://jsonschema.net/nonCashBenefits/nonCashBenefits/0/wic",
+							"type": "integer"
+						  },
+						  "benefitsfromanysource": {
+							"id": "http://jsonschema.net/nonCashBenefits/nonCashBenefits/0/benefitsfromanysource",
+							"type": "integer"
+						  },
+						  "dateCreated": {
+							"id": "http://jsonschema.net/nonCashBenefits/nonCashBenefits/0/dateCreated",
+							"type": "string"
+						  },
+						  "dateUpdated": {
+							"id": "http://jsonschema.net/nonCashBenefits/nonCashBenefits/0/dateUpdated",
+							"type": "string"
+						  }
+						}
+					  }
+					}
+				  },
+				  "required": [
+					"pagination",
+					"nonCashBenefits"
+				  ]
+				}
+			  },
+			  "required": [
+				"nonCashBenefits"
+			  ]
+			}

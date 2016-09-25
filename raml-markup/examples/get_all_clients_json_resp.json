@@ -1,0 +1,30 @@
+{
+                        "Clients": {
+                            "pagination": {
+                                "from": 0,
+                                "returned": 3,
+                                "total": 3,
+                                "maximum": 30,
+                                "sort": {}
+                            },
+                            "clients": [
+                                {
+                                    "clientId": "717661f4-eaa3-4298-8739-789ab8a1f3d1",
+                                    "firstName": "FirstName ",
+                                    "middleName": "Middle Name",
+                                    "lastName": "LAST NAME",
+                                    "nameSuffix": "NS",
+                                    "nameDataQuality": "1",
+                                    "ssn": "ssn      ",
+                                    "ssnDataQuality": "1",
+                                    "dob": 1458035236115,
+                                    "dobDataQuality": "1",
+                                    "race": "1",
+                                    "ethnicity": "1",
+                                    "gender": "1",
+                                    "otherGender": "Test      ",
+                                    "dateCreated": "03-15-2016"
+                                }
+                            ]
+                        }
+                    }

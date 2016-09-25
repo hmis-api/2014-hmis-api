@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "rhybcpstatus": {
+      "id": "rhybcpstatus",
+      "type": "object",
+      "properties": {
+        "rhybcpstatusId": {
+          "id": "rhybcpstatusId",
+          "type": "string"
+        }
+      },
+      "required": [
+        "rhybcpstatusId"
+      ]
+    }
+  },
+  "required": [
+    "rhybcpstatus"
+  ]
+}

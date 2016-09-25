@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "projectCompletionStatus": {
+      "id": "projectCompletionStatus",
+      "type": "object",
+      "properties": {
+        "projectCompletionStatusId": {
+          "id": "projectCompletionStatusId",
+          "type": "string"
+        }
+      },
+      "required": [
+        "projectCompletionStatusId"
+      ]
+    }
+  },
+  "required": [
+    "projectCompletionStatus"
+  ]
+}

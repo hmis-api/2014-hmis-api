@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "formerwardchildwelfare": {
+      "id": "formerwardchildwelfare",
+      "type": "object",
+      "properties": {
+        "childwelfaremonths": {
+          "id": "childwelfaremonths",
+          "type": "integer"
+        },
+        "childwelfareyears": {
+          "id": "childwelfareyears",
+          "type": "integer"
+        },
+        "formerwardchildwelfare": {
+          "id": "formerwardchildwelfare",
+          "type": "integer"
+        },
+        "formerwardchildwelfareid": {
+          "id": "formerwardchildwelfareid",
+          "type": "string"
+        }
+      },
+      "required": [
+        "childwelfaremonths",
+        "childwelfareyears",
+        "formerwardchildwelfare",
+        "formerwardchildwelfareid"
+      ]
+    }
+  },
+  "required": [
+    "formerwardchildwelfare"
+  ]
+}

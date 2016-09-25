@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "formerwardchildwelfare": {
+      "id": "formerwardchildwelfare",
+      "type": "object",
+      "properties": {
+        "formerwardchildwelfareid": {
+          "id": "formerwardchildwelfareid",
+          "type": "string"
+        }
+      },
+      "required": [
+        "formerwardchildwelfareid"
+      ]
+    }
+  },
+  "required": [
+    "formerwardchildwelfare"
+  ]
+}

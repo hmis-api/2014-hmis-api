@@ -1,0 +1,12 @@
+{ "project":
+  {
+
+            "projectName":"Homeless People Project",
+            "projectCommonName":"Homeless People Project",
+            "continuumProject":0,
+            "projectType":1,
+            "residentialAffiliation":0,
+            "targetPopulation":1,
+            "trackingMethod":0
+         }
+}

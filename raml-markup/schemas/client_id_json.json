@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "client": {
+      "id": "client",
+      "type": "object",
+      "properties": {
+        "clientId": {
+          "id": "clientId",
+          "type": "string"
+        }
+      },
+      "required": [
+        "clientId"
+      ]
+    }
+  },
+  "required": [
+    "client"
+  ]
+}

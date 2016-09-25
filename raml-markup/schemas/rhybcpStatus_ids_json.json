@@ -1,0 +1,80 @@
+{
+			  "$schema": "http://json-schema.org/draft-04/schema#",
+			  "id": "http://jsonschema.net",
+			  "type": "object",
+			  "properties": {
+				"rhybcpstatuses": {
+				  "id": "http://jsonschema.net/rhybcpstatuses",
+				  "type": "object",
+				  "properties": {
+					"pagination": {
+					  "id": "http://jsonschema.net/rhybcpstatuses/pagination",
+					  "type": "object",
+					  "properties": {
+						"from": {
+						  "id": "http://jsonschema.net/rhybcpstatuses/pagination/from",
+						  "type": "integer"
+						},
+						"returned": {
+						  "id": "http://jsonschema.net/rhybcpstatuses/pagination/returned",
+						  "type": "integer"
+						},
+						"total": {
+						  "id": "http://jsonschema.net/rhybcpstatuses/pagination/total",
+						  "type": "integer"
+						},
+						"maximum": {
+						  "id": "http://jsonschema.net/rhybcpstatuses/pagination/maximum",
+						  "type": "integer"
+						},
+						"sort": {
+						  "id": "http://jsonschema.net/rhybcpstatuses/pagination/sort",
+						  "type": "object",
+						  "properties": {}
+						}
+					  },
+					  "required": [
+						"from",
+						"returned",
+						"total",
+						"maximum",
+						"sort"
+					  ]
+					},
+					"rhybcpstatuses": {
+					  "id": "http://jsonschema.net/rhybcpstatuses/rhybcpstatuses",
+					  "type": "array",
+					  "items": {
+						"id": "http://jsonschema.net/rhybcpstatuses/rhybcpstatuses/0",
+						"type": "object",
+						"properties": {
+						  "rhybcpstatusId": {
+							"id": "http://jsonschema.net/rhybcpstatuses/rhybcpstatuses/0/rhybcpstatusId",
+							"type": "string"
+						  },
+						  "dateCreated": {
+							"id": "http://jsonschema.net/rhybcpstatuses/rhybcpstatuses/0/dateCreated",
+							"type": "string"
+						  },
+						  "dateUpdated": {
+							"id": "http://jsonschema.net/rhybcpstatuses/rhybcpstatuses/0/dateUpdated",
+							"type": "string"
+						  },
+						  "statusDate": {
+							"id": "http://jsonschema.net/rhybcpstatuses/rhybcpstatuses/0/statusDate",
+							"type": "string"
+						  }
+						}
+					  }
+					}
+				  },
+				  "required": [
+					"pagination",
+					"rhybcpstatuses"
+				  ]
+				}
+			  },
+			  "required": [
+				"rhybcpstatuses"
+			  ]
+			}

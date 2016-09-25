@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "percentami": {
+      "id": "percentami",
+      "type": "object",
+      "properties": {
+        "percentamiId": {
+          "id": "percentamiId",
+          "type": "string"
+        }
+      },
+      "required": [
+        "percentamiId"
+      ]
+    }
+  },
+  "required": [
+    "percentami"
+  ]
+}

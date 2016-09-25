@@ -1,0 +1,102 @@
+ {
+              "$schema": "http://json-schema.org/draft-04/schema#",
+              "id": "/",
+              "type": "object",
+              "properties": {
+                "disabilitiesList": {
+                  "id": "disabilitiesList",
+                  "type": "object",
+                  "properties": {
+                    "pagination": {
+                      "id": "pagination",
+                      "type": "object",
+                      "properties": {
+                        "from": {
+                          "id": "from",
+                          "type": "integer"
+                        },
+                        "returned": {
+                          "id": "returned",
+                          "type": "integer"
+                        },
+                        "total": {
+                          "id": "total",
+                          "type": "integer"
+                        },
+                        "maximum": {
+                          "id": "maximum",
+                          "type": "integer"
+                        },
+                        "sort": {
+                          "id": "sort",
+                          "type": "object",
+                          "properties": {}
+                        }
+                      },
+                      "required": [
+                        "from",
+                        "returned",
+                        "total",
+                        "maximum",
+                        "sort"
+                      ]
+                    },
+                    "disabilitiesList": {
+                      "id": "disabilitiesList",
+                      "type": "array",
+                      "items": {
+                        "id": "0",
+                        "type": "object",
+                        "properties": {
+                          "disabilitiesId": {
+                            "id": "disabilitiesId",
+                            "type": "string"
+                          },
+                          "disabilityresponse": {
+                            "id": "disabilityresponse",
+                            "type": "integer"
+                          },
+                          "disabilitytype": {
+                            "id": "disabilitytype",
+                            "type": "string"
+                          },
+                          "documentationonfile": {
+                            "id": "documentationonfile",
+                            "type": "string"
+                          },
+                          "indefiniteandimpairs": {
+                            "id": "indefiniteandimpairs",
+                            "type": "string"
+                          },
+                          "pathhowconfirmed": {
+                            "id": "pathhowconfirmed",
+                            "type": "string"
+                          },
+                          "receivingservices": {
+                            "id": "receivingservices",
+                            "type": "string"
+                          },
+                          "pathsmiinformation": {
+                            "id": "pathsmiinformation",
+                            "type": "string"
+                          },
+                          "dateCreated": {
+                            "id": "dateCreated",
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "additionalItems": false
+                    }
+                  },
+                  "required": [
+                    "pagination",
+                    "disabilitiesList",
+                    "0"
+                  ]
+                }
+              },
+              "required": [
+                "disabilitiesList"
+              ]
+            }

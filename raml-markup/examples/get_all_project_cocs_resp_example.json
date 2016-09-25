@@ -1,0 +1,26 @@
+{
+   "projectcocs":{
+      "pagination":{
+         "from":0,
+         "returned":2,
+         "total":2,
+         "maximum":30,
+         "sort":{
+
+         }
+      },
+      "projectcocs":[
+         {
+            "projectcocId":"0dda7333-0592-4fa7-ba79-1fe2dfaaff4e",
+            "coccode":"coc code",
+            "dateCreated":"03-15-2016",
+            "dateUpdated":"03-15-2016"
+         },
+         {
+            "projectcocId":"62caffe5-dd48-4acd-9b48-cadf9a68205c",
+            "coccode":"coc new code",
+            "dateCreated":"03-21-2016"
+         }
+      ]
+   }
+}

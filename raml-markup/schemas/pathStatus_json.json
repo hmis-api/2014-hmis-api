@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "pathstatus": {
+      "id": "pathstatus",
+      "type": "object",
+      "properties": {
+        "pathstatusId": {
+          "id": "pathstatusId",
+          "type": "string"
+        },
+        "clientenrolledinpath": {
+          "id": "clientenrolledinpath",
+          "type": "integer"
+        },
+        "dateCreated": {
+          "id": "dateCreated",
+          "type": "string"
+        },
+        "dateUpdated": {
+          "id": "dateUpdated",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pathstatusId",
+        "clientenrolledinpath",
+        "dateCreated",
+        "dateUpdated"
+      ]
+    }
+  },
+  "required": [
+    "pathstatus"
+  ]
+}

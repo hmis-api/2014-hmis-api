@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "projectCompletionStatus": {
+      "id": "projectCompletionStatus",
+      "type": "object",
+      "properties": {
+        "projectCompletionStatusId": {
+          "id": "projectCompletionStatusId",
+          "type": "string"
+        },
+        "earlyExitReason": {
+          "id": "earlyExitReason",
+          "type": "integer"
+        },
+        "projectCompletionStatus": {
+          "id": "projectCompletionStatus",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "projectCompletionStatusId",
+        "earlyExitReason",
+        "projectCompletionStatus"
+      ]
+    }
+  },
+  "required": [
+    "projectCompletionStatus"
+  ]
+}

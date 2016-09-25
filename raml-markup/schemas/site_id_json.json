@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "site": {
+      "id": "site",
+      "type": "object",
+      "properties": {
+        "siteId": {
+          "id": "siteId",
+          "type": "string"
+        }
+      },
+      "required": [
+        "siteId"
+      ]
+    }
+  },
+  "required": [
+    "site"
+  ]
+}

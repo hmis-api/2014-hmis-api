@@ -1,0 +1,19 @@
+{
+  "formerwardjuvenilejustices": {
+    "pagination": {
+      "from": 0,
+      "returned": 0,
+      "total": 0,
+      "maximum": 30,
+      "sort": {}
+    },
+    "formerwardjuvenilejustices": [
+      {
+        "formerwardjuvenilejusticeid": "",
+        "formerwardjuvenilejustice": 0,
+        "juvenilejusticemonths": 0,
+        "juvenilejusticeyears": 0
+      }
+    ]
+  }
+}

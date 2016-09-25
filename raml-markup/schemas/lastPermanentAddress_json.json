@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "lastPermanentAddress": {
+      "id": "lastPermanentAddress",
+      "type": "object",
+      "properties": {
+        "lastPermanentAddressId": {
+          "id": "lastPermanentAddressId",
+          "type": "string"
+        },
+        "addressdataquality": {
+          "id": "addressdataquality",
+          "type": "integer"
+        },
+        "lastpermanentcity": {
+          "id": "lastpermanentcity",
+          "type": "string"
+        },
+        "lastpermanentstate": {
+          "id": "lastpermanentstate",
+          "type": "integer"
+        },
+        "lastpermanentstreet": {
+          "id": "lastpermanentstreet",
+          "type": "string"
+        },
+        "lastpermanentzip": {
+          "id": "lastpermanentzip",
+          "type": "string"
+        }
+      },
+      "required": [
+        "lastPermanentAddressId",
+        "addressdataquality",
+        "lastpermanentcity",
+        "lastpermanentstate",
+        "lastpermanentstreet",
+        "lastpermanentzip"
+      ]
+    }
+  },
+  "required": [
+    "lastPermanentAddress"
+  ]
+}

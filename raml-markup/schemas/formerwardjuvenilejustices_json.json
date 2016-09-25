@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "formerwardjuvenilejustice": {
+      "id": "formerwardjuvenilejustice",
+      "type": "object",
+      "properties": {
+        "formerwardjuvenilejusticeid": {
+          "id": "formerwardjuvenilejusticeid",
+          "type": "string"
+        },
+        "formerwardjuvenilejustice": {
+          "id": "formerwardjuvenilejustice",
+          "type": "integer"
+        },
+        "juvenilejusticemonths": {
+          "id": "juvenilejusticemonths",
+          "type": "integer"
+        },
+        "juvenilejusticeyears": {
+          "id": "juvenilejusticeyears",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "formerwardjuvenilejusticeid",
+        "formerwardjuvenilejustice",
+        "juvenilejusticemonths",
+        "juvenilejusticeyears"
+      ]
+    }
+  },
+  "required": [
+    "formerwardjuvenilejustice"
+  ]
+}

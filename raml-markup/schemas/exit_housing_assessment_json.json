@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "housingassessment": {
+      "id": "housingassessment",
+      "type": "object",
+      "properties": {
+        "housingassessmentId": {
+          "id": "housingassessmentId",
+          "type": "string"
+        },
+        "housingassessment": {
+          "id": "housingassessment",
+          "type": "integer"
+        },
+        "subsidyinformation": {
+          "id": "subsidyinformation",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "housingassessmentId",
+        "housingassessment",
+        "subsidyinformation"
+      ]
+    }
+  },
+  "required": [
+    "housingassessment"
+  ]
+}

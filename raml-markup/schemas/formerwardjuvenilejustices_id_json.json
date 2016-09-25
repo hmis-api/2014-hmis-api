@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "formerwardjuvenilejustice": {
+      "id": "formerwardjuvenilejustice",
+      "type": "object",
+      "properties": {
+        "formerwardjuvenilejusticeid": {
+          "id": "formerwardjuvenilejusticeid",
+          "type": "string"
+        }
+      },
+      "required": [
+        "formerwardjuvenilejusticeid"
+      ]
+    }
+  },
+  "required": [
+    "formerwardjuvenilejustice"
+  ]
+}

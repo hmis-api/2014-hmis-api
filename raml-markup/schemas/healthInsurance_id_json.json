@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "healthInsurance": {
+      "id": "healthInsurance",
+      "type": "object",
+      "properties": {
+        "healthInsuranceId": {
+          "id": "healthInsuranceId",
+          "type": "string"
+        }
+      },
+      "required": [
+        "healthInsuranceId"
+      ]
+    }
+  },
+  "required": [
+    "healthInsurance"
+  ]
+}

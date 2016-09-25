@@ -1,0 +1,80 @@
+{
+			  "$schema": "http://json-schema.org/draft-04/schema#",
+			  "id": "http://jsonschema.net",
+			  "type": "object",
+			  "properties": {
+				"worstHousingSituations": {
+				  "id": "http://jsonschema.net/worstHousingSituations",
+				  "type": "object",
+				  "properties": {
+					"pagination": {
+					  "id": "http://jsonschema.net/worstHousingSituations/pagination",
+					  "type": "object",
+					  "properties": {
+						"from": {
+						  "id": "http://jsonschema.net/worstHousingSituations/pagination/from",
+						  "type": "integer"
+						},
+						"returned": {
+						  "id": "http://jsonschema.net/worstHousingSituations/pagination/returned",
+						  "type": "integer"
+						},
+						"total": {
+						  "id": "http://jsonschema.net/worstHousingSituations/pagination/total",
+						  "type": "integer"
+						},
+						"maximum": {
+						  "id": "http://jsonschema.net/worstHousingSituations/pagination/maximum",
+						  "type": "integer"
+						},
+						"sort": {
+						  "id": "http://jsonschema.net/worstHousingSituations/pagination/sort",
+						  "type": "object",
+						  "properties": {}
+						}
+					  },
+					  "required": [
+						"from",
+						"returned",
+						"total",
+						"maximum",
+						"sort"
+					  ]
+					},
+					"worstHousingSituation": {
+					  "id": "http://jsonschema.net/worstHousingSituations/worstHousingSituation",
+					  "type": "array",
+					  "items": {
+						"id": "http://jsonschema.net/worstHousingSituations/worstHousingSituation/0",
+						"type": "object",
+						"properties": {
+						  "worstHousingSituationId": {
+							"id": "http://jsonschema.net/worstHousingSituations/worstHousingSituation/0/worstHousingSituationId",
+							"type": "string"
+						  },
+						  "worsthousingsituation": {
+							"id": "http://jsonschema.net/worstHousingSituations/worstHousingSituation/0/worsthousingsituation",
+							"type": "integer"
+						  },
+						  "dateCreated": {
+							"id": "http://jsonschema.net/worstHousingSituations/worstHousingSituation/0/dateCreated",
+							"type": "string"
+						  },
+						  "dateUpdated": {
+							"id": "http://jsonschema.net/worstHousingSituations/worstHousingSituation/0/dateUpdated",
+							"type": "string"
+						  }
+						}
+					  }
+					}
+				  },
+				  "required": [
+					"pagination",
+					"worstHousingSituation"
+				  ]
+				}
+			  },
+			  "required": [
+				"worstHousingSituations"
+			  ]
+			}

@@ -1,0 +1,59 @@
+{
+			  "$schema": "http://json-schema.org/draft-04/schema#",
+			  "id": "http://jsonschema.net",
+			  "type": "object",
+			  "properties": {
+				"LastPermanentAddresses": {
+				  "id": "http://jsonschema.net/LastPermanentAddresses",
+				  "type": "object",
+				  "properties": {
+					"pagination": {
+					  "id": "http://jsonschema.net/LastPermanentAddresses/pagination",
+					  "type": "object",
+					  "properties": {
+						"from": {
+						  "id": "http://jsonschema.net/LastPermanentAddresses/pagination/from",
+						  "type": "integer"
+						},
+						"returned": {
+						  "id": "http://jsonschema.net/LastPermanentAddresses/pagination/returned",
+						  "type": "integer"
+						},
+						"total": {
+						  "id": "http://jsonschema.net/LastPermanentAddresses/pagination/total",
+						  "type": "integer"
+						},
+						"maximum": {
+						  "id": "http://jsonschema.net/LastPermanentAddresses/pagination/maximum",
+						  "type": "integer"
+						},
+						"sort": {
+						  "id": "http://jsonschema.net/LastPermanentAddresses/pagination/sort",
+						  "type": "object",
+						  "properties": {}
+						}
+					  },
+					  "required": [
+						"from",
+						"returned",
+						"total",
+						"maximum",
+						"sort"
+					  ]
+					},
+					"lastPermanentAddresses": {
+					  "id": "http://jsonschema.net/LastPermanentAddresses/lastPermanentAddresses",
+					  "type": "array",
+					  "items": []
+					}
+				  },
+				  "required": [
+					"pagination",
+					"lastPermanentAddresses"
+				  ]
+				}
+			  },
+			  "required": [
+				"LastPermanentAddresses"
+			  ]
+			}

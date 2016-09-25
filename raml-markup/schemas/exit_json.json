@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "exit": {
+      "id": "exit",
+      "type": "object",
+      "properties": {
+        "exitId": {
+          "id": "exitId",
+          "type": "string"
+        },
+        "exitDate": {
+          "id": "exitDate",
+          "type": "integer"
+        },
+        "dateCreated": {
+          "id": "dateCreated",
+          "type": "string"
+        }
+      },
+      "required": [
+        "exitId",
+        "exitDate",
+        "dateCreated"
+      ]
+    }
+  },
+  "required": [
+    "exit"
+  ]
+}

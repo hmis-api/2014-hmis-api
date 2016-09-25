@@ -1,0 +1,47 @@
+"$schema": "http://json-schema.org/draft-04/schema",    
+    "title": "domesticViolence",
+    "type": "object",
+    "required": ["DomesticViolenceID","ProjectEntryID", "InformationDate", "DataCollectionStage", "DateCreated", "DateUpdated", "UserID"],
+    "properties": {
+      "DomesticViolenceID": {
+        "type": "String",
+        "maxLength": "32",
+        "minLength": "32" 
+      },
+      "ProjectEntryID": {
+      "type": "String",
+      "maxLength": "32",
+      "minLength": "32"
+      },
+      "InformationDate": {
+      "type": "String",
+      "format": "date-time"
+      },
+      "DomesticViolenceVictim": {
+      "type": "Integer",
+      },
+      "WhenOccurred": {
+      "type": "Integer",
+      },
+      "DataCollectionStage": {
+      "type": "Integer",
+      },
+      "DateCreated": {
+      "type": "String",
+      "format": "date-time"
+      },
+      "DateUpdated": {
+      "type": "String",
+      "format": "date-time"
+      },
+      "DateDeleted": {
+      "type": "String",
+      "format": "date-time"
+      },
+      "UserID": {
+      "type": "String",
+      "maxLength": "32",
+      "minLength": "32"
+      }
+     }
+    }

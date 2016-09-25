@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "HealthStatus": {
+      "id": "HealthStatus",
+      "type": "object",
+      "properties": {
+        "healthStatusId": {
+          "id": "healthStatusId",
+          "type": "string"
+        },
+        "informationDate": {
+          "id": "informationDate",
+          "type": "integer"
+        },
+        "healthCategory": {
+          "id": "healthCategory",
+          "type": "integer"
+        },
+        "healthStatus": {
+          "id": "healthStatus",
+          "type": "integer"
+        },
+        "dueDate": {
+          "id": "dueDate",
+          "type": "integer"
+        },
+        "dateCreated": {
+          "id": "dateCreated",
+          "type": "string"
+        },
+        "dateUpdated": {
+          "id": "dateUpdated",
+          "type": "string"
+        }
+      },
+      "required": [
+        "healthStatusId",
+        "informationDate",
+        "healthCategory",
+        "healthStatus",
+        "dueDate",
+        "dateCreated",
+        "dateUpdated"
+      ]
+    }
+  },
+  "required": [
+    "HealthStatus"
+  ]
+}

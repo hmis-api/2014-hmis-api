@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "Connectionwithsoars": {
+      "id": "Connectionwithsoars",
+      "type": "object",
+      "properties": {
+        "pagination": {
+          "id": "pagination",
+          "type": "object",
+          "properties": {
+            "from": {
+              "id": "from",
+              "type": "integer"
+            },
+            "returned": {
+              "id": "returned",
+              "type": "integer"
+            },
+            "total": {
+              "id": "total",
+              "type": "integer"
+            },
+            "maximum": {
+              "id": "maximum",
+              "type": "integer"
+            },
+            "sort": {
+              "id": "sort",
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "required": [
+            "from",
+            "returned",
+            "total",
+            "maximum",
+            "sort"
+          ]
+        },
+        "connectionwithsoars": {
+          "id": "connectionwithsoars",
+          "type": "array",
+          "items": {
+            "id": "0",
+            "type": "object",
+            "properties": {
+              "connectionwithsoarId": {
+                "id": "connectionwithsoarId",
+                "type": "string"
+              },
+              "connectionwithsoar": {
+                "id": "connectionwithsoar",
+                "type": "integer"
+              },
+              "dateCreated": {
+                "id": "dateCreated",
+                "type": "string"
+              },
+              "dateUpdated": {
+                "id": "dateUpdated",
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "pagination",
+        "connectionwithsoars"
+      ]
+    }
+  },
+  "required": [
+    "Connectionwithsoars"
+  ]
+}

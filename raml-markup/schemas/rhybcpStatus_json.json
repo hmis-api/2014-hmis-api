@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "rhybcpstatus": {
+      "id": "rhybcpstatus",
+      "type": "object",
+      "properties": {
+        "rhybcpstatusId": {
+          "id": "rhybcpstatusId",
+          "type": "string"
+        },
+        "dateCreated": {
+          "id": "dateCreated",
+          "type": "string"
+        },
+        "dateUpdated": {
+          "id": "dateUpdated",
+          "type": "string"
+        },
+        "statusDate": {
+          "id": "statusDate",
+          "type": "string"
+        }
+      },
+      "required": [
+        "rhybcpstatusId",
+        "dateCreated",
+        "dateUpdated",
+        "statusDate"
+      ]
+    }
+  },
+  "required": [
+    "rhybcpstatus"
+  ]
+}

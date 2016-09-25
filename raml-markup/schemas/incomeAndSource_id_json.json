@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "incomeAndSource": {
+      "id": "incomeAndSource",
+      "type": "object",
+      "properties": {
+        "incomeAndSourceId": {
+          "id": "incomeAndSourceId",
+          "type": "string"
+        }
+      },
+      "required": [
+        "incomeAndSourceId"
+      ]
+    }
+  },
+  "required": [
+    "incomeAndSource"
+  ]
+}

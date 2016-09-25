@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "enrollment": {
+      "id": "enrollment",
+      "type": "object",
+      "properties": {
+        "enrollmentId": {
+          "id": "enrollmentId",
+          "type": "string"
+        },
+        "continuouslyhomelessoneyear": {
+          "id": "continuouslyhomelessoneyear",
+          "type": "integer"
+        },
+        "disablingcondition": {
+          "id": "disablingcondition",
+          "type": "integer"
+        },
+        "entrydate": {
+          "id": "entrydate",
+          "type": "integer"
+        },
+        "householdid": {
+          "id": "householdid",
+          "type": "string"
+        },
+        "housingstatus": {
+          "id": "housingstatus",
+          "type": "integer"
+        },
+        "monthshomelesspastthreeyears": {
+          "id": "monthshomelesspastthreeyears",
+          "type": "integer"
+        },
+        "monthshomelessthistime": {
+          "id": "monthshomelessthistime",
+          "type": "integer"
+        },
+        "otherresidenceprior": {
+          "id": "otherresidenceprior",
+          "type": "string"
+        },
+        "personalid": {
+          "id": "personalid",
+          "type": "string"
+        },
+        "projectentryid": {
+          "id": "projectentryid",
+          "type": "string"
+        },
+        "relationshiptohoh": {
+          "id": "relationshiptohoh",
+          "type": "integer"
+        },
+        "residenceprior": {
+          "id": "residenceprior",
+          "type": "integer"
+        },
+        "residencepriorlengthofstay": {
+          "id": "residencepriorlengthofstay",
+          "type": "integer"
+        },
+        "statusdocumented": {
+          "id": "statusdocumented",
+          "type": "integer"
+        },
+        "yearshomeless": {
+          "id": "yearshomeless",
+          "type": "integer"
+        },
+        "dateCreated": {
+          "id": "dateCreated",
+          "type": "string"
+        }
+      },
+      "required": [
+        "enrollmentId",
+        "continuouslyhomelessoneyear",
+        "disablingcondition",
+        "entrydate",
+        "householdid",
+        "housingstatus",
+        "monthshomelesspastthreeyears",
+        "monthshomelessthistime",
+        "otherresidenceprior",
+        "personalid",
+        "projectentryid",
+        "relationshiptohoh",
+        "residenceprior",
+        "residencepriorlengthofstay",
+        "statusdocumented",
+        "yearshomeless",
+        "dateCreated"
+      ]
+    }
+  },
+  "required": [
+    "enrollment"
+  ]
+}

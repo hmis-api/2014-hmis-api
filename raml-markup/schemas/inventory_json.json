@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "inventory": {
+      "id": "inventory",
+      "type": "object",
+      "properties": {
+        "availabilty": {
+          "id": "availabilty",
+          "type": "string"
+        },
+        "bedtype": {
+          "id": "bedtype",
+          "type": "integer"
+        },
+        "hmisparticipatingbeds": {
+          "id": "hmisparticipatingbeds",
+          "type": "integer"
+        },
+        "householdtype": {
+          "id": "householdtype",
+          "type": "integer"
+        },
+        "unitinventory": {
+          "id": "unitinventory",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "availabilty",
+        "bedtype",
+        "hmisparticipatingbeds",
+        "householdtype",
+        "unitinventory"
+      ]
+    }
+  },
+  "required": [
+    "inventory"
+  ]
+}

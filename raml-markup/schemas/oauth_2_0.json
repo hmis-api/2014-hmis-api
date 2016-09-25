@@ -1,0 +1,25 @@
+settings:
+  accessTokenUri: http://examplehmis.com/1/oauth2/token
+  authorizationUri: http://examplehmis.com/1/oauth2/authorize
+  scopes: [user, administrator]
+  authorizationGrants: [ owner ] #resource owner password credential grant used, since the client doesn't own the data (https://tools.ietf.org/html/rfc6749)
+description: |
+  The HMIS API supports OAuth 2.0 for authenticating all API requests.
+type: OAuth 2.0
+describedBy:
+  headers:
+    Authorization:
+        description: |
+           Used to send a valid OAuth 2 access token. Do not use
+           an "access_token" query string parameter.
+        type: string
+  responses:
+    401:
+        description: |
+            Bad or expired token. This can happen if the user or the HMIS
+            revoked or expired an access token. To fix, you should re-
+            authenticate the user.
+    403:
+        description: |
+            Bad OAuth request (wrong consumer key, bad nonce, expired
+            timestamp...). Unfortunately, re-authenticating the user won't help here.

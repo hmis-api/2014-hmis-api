@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "affiliation": {
+      "id": "http://jsonschema.net/affiliation",
+      "type": "object",
+      "properties": {
+        "affiliationId": {
+          "id": "http://jsonschema.net/affiliation/affiliationId",
+          "type": "string"
+        }
+      },
+      "required": [
+        "affiliationId"
+      ]
+    }
+  },
+  "required": [
+    "affiliation"
+  ]
+}

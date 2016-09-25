@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "worstHousingSituation": {
+      "id": "worstHousingSituation",
+      "type": "object",
+      "properties": {
+        "worstHousingSituationId": {
+          "id": "worstHousingSituationId",
+          "type": "string"
+        },
+        "worsthousingsituation": {
+          "id": "worsthousingsituation",
+          "type": "integer"
+        },
+        "dateCreated": {
+          "id": "dateCreated",
+          "type": "string"
+        },
+        "dateUpdated": {
+          "id": "dateUpdated",
+          "type": "string"
+        }
+      },
+      "required": [
+        "worstHousingSituationId",
+        "worsthousingsituation",
+        "dateCreated",
+        "dateUpdated"
+      ]
+    }
+  },
+  "required": [
+    "worstHousingSituation"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+   "ExitPlansActionsList":{
+      "pagination":{
+         "from":0,
+         "returned":0,
+         "total":0,
+         "maximum":30,
+         "sort":{
+
+         }
+      },
+      "exitPlansActionsList":[
+         {
+            "exitPlansActionsId":"5c025aea-ecdc-4902-b451-4436b64a83ea",
+            "assistancemainstreambenefits":0,
+            "exitcounseling":0,
+            "furtherfollowupservices":0,
+            "otheraftercareplanoraction":0,
+            "permanenthousingplacement":0,
+            "resourcepackage":0,
+            "scheduledfollowupcontacts":0,
+            "temporaryshelterplacement":0,
+            "writtenaftercareplan":0
+         }
+      ]
+   }
+}

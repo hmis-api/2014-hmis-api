@@ -1,0 +1,25 @@
+{
+   "inventories":{
+      "pagination":{
+         "from":0,
+         "returned":1,
+         "total":1,
+         "maximum":30,
+         "sort":{
+
+         }
+      },
+      "inventories":[
+         {
+            "inventoryId":"9c64f6e4-924b-4b65-af62-11a33cc6090a",
+            "availabilty":"ONE",
+            "bedtype":1,
+            "hmisparticipatingbeds":1,
+            "householdtype":1,
+            "unitinventory":123,
+            "dateCreated":"03-15-2016",
+            "dateUpdated":"03-15-2016"
+         }
+      ]
+   }
+}

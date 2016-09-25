@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "services": {
+      "id": "services",
+      "type": "object",
+      "properties": {
+        "servicesId": {
+          "id": "servicesId",
+          "type": "string"
+        },
+        "dateprovided": {
+          "id": "dateprovided",
+          "type": "integer"
+        },
+        "faamount": {
+          "id": "faamount",
+          "type": "integer"
+        },
+        "recordtype": {
+          "id": "recordtype",
+          "type": "integer"
+        },
+        "referraloutcome": {
+          "id": "referraloutcome",
+          "type": "integer"
+        },
+        "subtypeprovided": {
+          "id": "subtypeprovided",
+          "type": "integer"
+        },
+        "typeprovided": {
+          "id": "typeprovided",
+          "type": "integer"
+        },
+        "dateCreated": {
+          "id": "dateCreated",
+          "type": "string"
+        },
+        "dateUpdated": {
+          "id": "dateUpdated",
+          "type": "string"
+        }
+      },
+      "required": [
+        "servicesId",
+        "dateprovided",
+        "faamount",
+        "recordtype",
+        "referraloutcome",
+        "subtypeprovided",
+        "typeprovided",
+        "dateCreated",
+        "dateUpdated"
+      ]
+    }
+  },
+  "required": [
+    "services"
+  ]
+}

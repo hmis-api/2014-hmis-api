@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "sexualorientation": {
+      "id": "sexualorientation",
+      "type": "object",
+      "properties": {
+        "sexualorientationId": {
+          "id": "sexualorientationId",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sexualorientationId"
+      ]
+    }
+  },
+  "required": [
+    "sexualorientation"
+  ]
+}
