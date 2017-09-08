@@ -92,7 +92,15 @@
           "DateDeleted": {
           "type": "string",
           "format": "date-time"
-          }
+          },
+              "phoneNumber":{
+                "id":"phoneNumber",
+                "type":"string"
+              },
+              "emailAddress":{
+                "id":"emailAddress",
+                "type":"string"
+              }
         }
       }
     }

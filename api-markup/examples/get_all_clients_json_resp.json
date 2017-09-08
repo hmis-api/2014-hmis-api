@@ -23,7 +23,9 @@
                                     "ethnicity": "1",
                                     "gender": "1",
                                     "otherGender": "Test      ",
-                                    "dateCreated": "03-15-2016"
+                                    "dateCreated": "03-15-2016",
+                                    "phoneNumber":"1-541-754-3010",
+                                    "emailAddress":"Jeanette@gmail.com"
                                 }
                             ]
                         }

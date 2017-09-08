@@ -410,8 +410,11 @@ resourceTypes:
                         "race": "1",
                         "ethnicity": "1",
                         "gender": "1",
-                        "otherGender": "Test      "
-                    } 
+                        "otherGender": "Test      ",
+                        "sourceSystemId":"ssid",
+                         "phoneNumber":"1-541-754-3010",
+                            "emailAddress":"Jeanette@gmail.com"
+                  } 
             }
         schema: client_json
     responses:
@@ -1913,12 +1916,15 @@ resourceTypes:
 /search/{searchentity}:
   get:
     description: |
-          The Search API is optimized to find the specific entity you're looking for (e.g., a client, enrollments, etc.).It's designed to  find the one result you're looking for (or maybe the few results you're looking for). Currently hmislynk supporting search on 'clients' entity only. Just like searching on Google, you sometimes want to see a few pages of search results so that you can find the item that best meets your needs.  HMISLynk Search API provides up to 50 results for each searh. However, the search results can be limited by the client.
-            Note: Current suppoerting URI  is /search/clients
+          The Search API is optimized to find the specific entity you're looking for (e.g., a client, enrollments, etc.).It's designed to  find the one result you're looking for (or maybe the few results you're looking for). Currently hmislynk supporting search on 'clients'  and 'projects' entities only. Just like searching on Google, you sometimes want to see a few pages of search results so that you can find the item that best meets your needs.  HMISLynk Search API provides up to 50 results for each searh. However, the search results can be limited by the client.
+            Note: 1) API currently supports search on client and project entities
+                  2) URIs are /search/clients and /search/projects
     queryParameters:
       q:
         description: |
-             The search keywords, as well as any qualifiers.Currently supported search fields are first name,middle name,last name,dob,source system id and ssn. For search on "date of birth" field the format MM-dd-YYYY should be used for the search keyword.
+             The search keywords for clients, as well as any qualifiers.Currently supported search fields are first name,middle name,last name,dob,source system id, client's dedup Id and ssn. For search on "date of birth" field the format MM/dd/YYYY should be used for the search keyword. When searched on dedup Id, the API returns the list of all clients (from all the schema years) that has the same dedup Id.
+             
+             The seach keywords for projects, as well as any qualifiers. Currenly supported search fields are projectName, projectCommonName, projectId.
       sort:
         description: The sort field. Default- results are sorted by "created date".
         type: string
@@ -1940,11 +1946,12 @@ resourceTypes:
         default: 50
       exclude:
          description: | 
-            Excludes flieds from the search.Currently it suppoted value is "ssi" (to exclude         source system id) only.
+            Excludes flieds from the search.Currently it suppoted value is "ssi" (to exclude source system id) only.
     responses:
       200:
         body:
-          example: |
+          example: |   
+            sample search response for client search
             {
             "searchResults": {
               "pagination": {
@@ -1970,6 +1977,8 @@ resourceTypes:
                   "gender": "1",
                   "otherGender": "Test",
                   "veteranStatus": "8",
+                  "phoneNumber":"1-541-754-3010",
+                   "emailAddress":"Jeanette@gmail.com"
                   "link":"/hmis-clientapi/rest/v2015/clients/65e3df62-dd22-4d07-83ef-6858a6322839"
                 },
                 {
@@ -1993,4 +2002,34 @@ resourceTypes:
               ]
             }
             }
-                                      
+            
+            sample search response for project search
+              {
+               "searchResults":{
+                  "pagination":{
+                     "from":0,
+                     "returned":1,
+                     "total":1,
+                     "maximum":50,
+                     "sort":{
+                        "field":"id",
+                        "order":"asc"
+                     }
+                  },
+                  "items":[
+                     {
+                        "projectId":"066c95d3-c97c-40b9-b8c1-bf12cafdfca4",
+                        "projectName":"ProjectName_1459515376900",
+                        "projectCommonName":"ProjectCommonName_1459515376900",
+                        "continuumProject":0,
+                        "projectType":2,
+                        "targetPopulation":3,
+                        "trackingMethod":0,
+                        "schemaYear":2015,
+                        "link":"/hmis-clientapi/rest/v2015/projects/066c95d3-c97c-40b9-b8c1-bf12cafdfca4",
+                        "projectGroup":"HO0002"
+                     }
+                  ]
+               }
+            }
+            

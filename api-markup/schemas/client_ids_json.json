@@ -107,6 +107,14 @@
               "dateCreated": {
                 "id": "dateCreated",
                 "type": "string"
+              },
+              "phoneNumber":{
+                "id":"phoneNumber",
+                "type":"string"
+              },
+              "emailAddress":{
+                "id":"emailAddress",
+                "type":"string"
               }
             }
           }

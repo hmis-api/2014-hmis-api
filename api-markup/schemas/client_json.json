@@ -62,7 +62,19 @@
         "otherGender": {
           "id": "otherGender",
           "type": "string"
-        }
+        },
+        "sourceSystemId":{
+          "id":"sourceSystemId",
+          "type":"string"
+        },
+              "phoneNumber":{
+                "id":"phoneNumber",
+                "type":"string"
+              },
+              "emailAddress":{
+                "id":"emailAddress",
+                "type":"string"
+              }
       },
       "required": [
         "clientId",
@@ -78,7 +90,9 @@
         "race",
         "ethnicity",
         "gender",
-        "otherGender"
+        "otherGender",
+        "emailAddress",
+        "phoneNumber"
       ]
     }
   },
