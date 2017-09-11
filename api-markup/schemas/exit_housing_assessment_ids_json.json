@@ -3,8 +3,8 @@
   "id": "/",
   "type": "object",
   "properties": {
-    "housingassessments": {
-      "id": "housingassessments",
+    "exithousingassessments": {
+      "id": "exithousingassessments",
       "type": "object",
       "properties": {
         "pagination": {
@@ -41,19 +41,19 @@
             "sort"
           ]
         },
-        "housingassessments": {
-          "id": "housingassessments",
+        "exithousingassessments": {
+          "id": "exithousingassessments",
           "type": "array",
           "items": {
             "id": "0",
             "type": "object",
             "properties": {
-              "housingassessmentId": {
-                "id": "housingassessmentId",
+              "exithousingassessmentId": {
+                "id": "exithousingassessmentId",
                 "type": "string"
               },
-              "housingassessment": {
-                "id": "housingassessment",
+              "exithousingassessment": {
+                "id": "exithousingassessment",
                 "type": "integer"
               },
               "subsidyinformation": {
@@ -66,12 +66,11 @@
       },
       "required": [
         "pagination",
-        "housingassessments",
-        "0"
+        "exithousingassessments"
       ]
     }
   },
   "required": [
-    "housingassessments"
+    "exithousingassessments"
   ]
 }

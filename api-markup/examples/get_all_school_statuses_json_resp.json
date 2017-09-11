@@ -1,19 +1,19 @@
 {
-							"schoolstatuses": {
+						"schoolstatuses": {
 							"pagination": {
-							"from": 0
-							"returned": 1
-							"total": 1
-							"maximum": 30
-							"sort": {}
-							}-
-							"schoolstatuses": [1]
-							0:  {
-							"schoolstatusId": "5c025aea-ecdc-4902-b451-4436b64a83ea"
-							"dateCreated": "03-17-2016"
-							"dateUpdated": "03-17-2016"
-							"informationDate": "2016-03-17T09:21:08.375"
-							}-
-							-
-							}-
-							}
+						    "from": 0,
+							  "returned": 1,
+							  "total": 1,
+							  "maximum": 30,
+							  "sort": {}
+							},
+							"schoolstatuses": [
+                {
+							  "schoolstatusId": "5c025aea-ecdc-4902-b451-4436b64a83ea",
+							  "dateCreated": "03-17-2016",
+							  "dateUpdated": "03-17-2016",
+							  "informationDate": "2016-03-17T09:21:08.375"
+							  }
+              ]
+						}
+}

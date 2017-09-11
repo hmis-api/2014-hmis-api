@@ -41,7 +41,7 @@
 						"sort"
 					  ]
 					},
-					"worstHousingSituation": {
+					"worstHousingSituations": {
 					  "id": "http://jsonschema.net/worstHousingSituations/worstHousingSituation",
 					  "type": "array",
 					  "items": {
@@ -70,7 +70,7 @@
 				  },
 				  "required": [
 					"pagination",
-					"worstHousingSituation"
+					"worstHousingSituations"
 				  ]
 				}
 			  },

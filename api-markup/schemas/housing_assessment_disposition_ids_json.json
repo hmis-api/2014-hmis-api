@@ -66,8 +66,7 @@
       },
       "required": [
         "pagination",
-        "HousingAssessmentDispositions",
-        "0"
+        "HousingAssessmentDispositions"
       ]
     }
   },

@@ -2,6 +2,7 @@
                          "domesticViolence":{
                             "domesticViolenceId":"73f7cd05-2ed1-458e-b445-f26741d3f4ad",
                             "domesticviolencevictim":1,
-                            "whenoccurred":3
+                            "whenoccurred":3,
+                            "dateCreated":"03-16-2017"
                          }
                       }

@@ -70,8 +70,7 @@
       },
       "required": [
         "pagination",
-        "formerwardjuvenilejustices",
-        "0"
+        "formerwardjuvenilejustices"
       ]
     }
   },

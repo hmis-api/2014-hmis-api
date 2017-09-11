@@ -1,24 +1,25 @@
 {
-							"ServicesList": {
-							"pagination": {
-							"from": 0
-							"returned": 1
-							"total": 1
-							"maximum": 30
+		"ServicesList": {
+						"pagination": {
+							"from": 0,
+							"returned": 1,
+							"total": 1,
+							"maximum": 30,
 							"sort": {}
-							}-
-							"servicesList": [1]
-							0:  {
-							"servicesId": "5c025aea-ecdc-4902-b451-4436b64a83ea"
-							"dateprovided": 1458186668375
-							"faamount": 15
-							"recordtype": 15
-							"referraloutcome": 3
-							"subtypeprovided": 11
-							"typeprovided": 10
-							"dateCreated": "03-17-2016"
+						},
+						"servicesList": [
+							{
+							"servicesId": "5c025aea-ecdc-4902-b451-4436b64a83ea",
+							"dateprovided": 1458186668375,
+							"faamount": 15,
+							"recordtype": 15,
+							"referraloutcome": 3,
+							"subtypeprovided": 11,
+							"typeprovided": 10,
+							"dateCreated": "03-17-2016",
 							"dateUpdated": "03-17-2016"
-							}-
-							-
-							}-
 							}
+            ]
+							
+		}
+}

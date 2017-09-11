@@ -70,8 +70,7 @@
       },
       "required": [
         "pagination",
-        "affiliations",
-        "0"
+        "affiliations"
       ]
     }
   },

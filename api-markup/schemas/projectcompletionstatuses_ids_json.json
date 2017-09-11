@@ -66,8 +66,7 @@
       },
       "required": [
         "pagination",
-        "ProjectCompletionStatuses",
-        "0"
+        "ProjectCompletionStatuses"
       ]
     }
   },

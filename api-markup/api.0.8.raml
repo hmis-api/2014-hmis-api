@@ -37,7 +37,9 @@ schemas:
   - employment_id_json: !include schemas/employment_id_json.json
   - employment_json : !include schemas/employment_json.json
   - employments_json: !include schemas/employments_json.json
-  - employment_ids_json: !include schemas/employment_ids_json.json 
+  - employment_ids_json: !include schemas/employment_ids_json.json
+  - enrollment_coc_id_json: !include schemas/enrollment_coc_id_json.json 
+  - enrollment_coc_json: !include schemas/enrollment_coc_json.json 
   - enrollment_id_json: !include schemas/enrollment_id_json.json
   - enrollment_ids_json: !include schemas/enrollment_ids_json.json
   - enrollment_json: !include schemas/enrollment_json.json
@@ -124,15 +126,15 @@ schemas:
   - formerWardChildWelfare_id_json: !include schemas/formerwardchildwelfares_id_json.json
   - formerWardChildWelfare_ids_json: !include schemas/formerwardchildwelfares_ids_json.json
   - formerWardChildWelfare_json: !include schemas/formerwardchildwelfares_json.json
-  - formerWardJuvenileJustice_id_json: !include schemas/formerwardjuvenilejustices_id_json.json
-  - formerWardJuvenileJustice_ids_json: !include schemas/formerwardjuvenilejustices_ids_json.json
-  - formerWardJuvenileJustice_json: !include schemas/formerwardjuvenilejustices_json.json
+  - former_ward_juvenile_justices_id_json: !include schemas/formerwardjuvenilejustices_id_json.json
+  - former_ward_juvenile_justices_ids_json: !include schemas/formerwardjuvenilejustices_ids_json.json
+  - former_ward_juvenile_justices_json: !include schemas/formerwardjuvenilejustices_json.json
   - housingAssessmentDisposition_id_json: !include schemas/housingAssessmentDisposition_id_json.json
   - housing_assessment_disposition_ids_json: !include schemas/housing_assessment_disposition_ids_json.json
   - housingAssessmentDisposition_json: !include schemas/housingAssessmentDisposition_json.json
-  - project_completion_status_id_json: !include schemas/projectcompletionstatuses_id_json.json
-  - project_completion_status_ids_json: !include schemas/projectcompletionstatuses_ids_json.json
-  - project_completion_status_json: !include schemas/projectcompletionstatuses_json.json           
+  - project_completion_statuses_id_json: !include schemas/projectcompletionstatuses_id_json.json
+  - project_completion_statuses_ids_json: !include schemas/projectcompletionstatuses_ids_json.json
+  - project_completion_statuses_json: !include schemas/projectcompletionstatuses_json.json           
   - lastGradeCompleted_json: !include schemas/lastGradeCompleted_json.json
   - lastGradeCompleted_ids_json: !include schemas/lastGradeCompleted_ids_json.json
   - lastGradeCompleted_id_json: !include schemas/lastGradeCompleted_id_json.json      
@@ -593,16 +595,15 @@ resourceTypes:
               description: Updates one specific disabilities for a specific enrollment.
               body:
                 application/json:
-                  example: !include examples/put_disabilitie_json_req.json
+                  example: !include examples/put_disabilities_json_req.json
+                  schema: disabilities_json
             delete:
               description: Deletes one specific disabilities for a specific enrollment
         /domesticviolences:
-          type: {
-            collection: {
-                id_schema_json: domesticViolences_id_json,  
-                schema_json:  domesticViolences_json
-            }
-          }
+          type:
+            collection:
+              id_schema_json: domesticViolences_ids_json  
+              schema_json: domesticViolences_json
           description: Work with domesticViolenceses for a particular enrollment.
           get:
             description: Fetches all the domesticViolences ids for a given enrollment, or a subset of them, if a query parameter is used.
@@ -675,17 +676,14 @@ resourceTypes:
             delete:
               description: Deletes one specific employment for a specific enrollment
         /enrollmentcocs:
-          type: {
-            collection: {
-                id_schema_json: enrollment_coc_id_json,  
+          type:
+            collection:
+                id_schema_json: enrollment_coc_id_json  
                 schema_json:  enrollment_coc_json
-              }
-            }
           /{enrollment_coc_id}:
             get:
               body:
                 application/json:
-                  example: |         
         /exits:
           type: {
             collection: {
@@ -839,7 +837,7 @@ resourceTypes:
                   description: Updates one specific exit_plans_actions for a given exit
                   body:
                     application/json:
-                      example: !include examples/put_exit_plans_actionse_json_req.json
+                      example: !include examples/put_exit_plans_actions_json_req.json
                 delete:
                   description: Deletes one specific exit_plans_actions for a specific exit                
             /familyreunifications:
@@ -923,10 +921,10 @@ resourceTypes:
             /projectcompletionstatuses:
               type: {
                 collection: {
-                  id_schema_json: project_completion_status_id_json,  
-                  schema_json:  project_completion_status_json
-                      }
-                    }
+                  id_schema_json: project_completion_statuses_id_json,  
+                  schema_json:  project_completion_statuses_json
+                }
+              }
               description: Work with project_completion_statuses for a particular exit.
               get:
                 description: Fetches all the project_completion_status ids for a given exit, or a subset of them, if a query parameter is used.
@@ -937,13 +935,13 @@ resourceTypes:
                       body:  
                         application/json:
                           example: !include examples/get_all_project_completion_statuses_json_resp.json
-                          schema: project_completion_status_ids_json
+                          schema: project_completion_statuses_ids_json
               post:
                 description: Adds an project_completion_status for a given exit. 
               /{project_completion_status_id}:
                 type: 
                   member: 
-                    schema_json: project_completion_status_json
+                    schema_json: project_completion_statuses_json
                 description: Work with a specific project_completion_status for a particular exit.
                 uriParameters:
                   project_completion_status_id:
@@ -1001,8 +999,8 @@ resourceTypes:
         /formerwardjuvenilejustices:
           type: {
             collection: {
-                id_schema_json: formerWardJuvenileJustice_id_json,  
-                schema_json:  formerWardJuvenileJustice_json
+                id_schema_json: former_ward_juvenile_justices_id_json,  
+                schema_json: former_ward_juvenile_justices_json
               }
             }
           description: Work with formerWardJuvenileJustices for a particular enrollment.
@@ -1015,16 +1013,16 @@ resourceTypes:
                 body:  
                   application/json:
                     example: !include examples/get_all_former_ward_juvenile_justices_json_resp.json
-                    schema: formerWardJuvenileJustice_ids_json
+                    schema: former_ward_juvenile_justices_ids_json
           post:
-            description: Adds an formeWardJuvenileJustice for a given enrollment. 
-          /{former_ward_juvenile_justice_id}:
+            description: Adds a formerWardJuvenileJustice for a given enrollment. 
+          /{former_ward_juvenile_justices_id}:
             type:
               member:
-                schema_json:  formerWardJuvenileJustice_json
+                schema_json: former_ward_juvenile_justices_json
             description: Work with a specific formerWardJuvenileJustice for a particular enrollment.
             uriParameters:
-              former_ward_juvenile_justice_id:
+              former_ward_juvenile_justices_id:
                 displayName: formerWardJuvenileJustice Identifier 
                 type: string
                 example: ADBC1111211111114111111111D1111V
@@ -1034,7 +1032,6 @@ resourceTypes:
               description: Updates one specific formerWardJuvenileJustice for a specific enrollment.
               body:
                 application/json:
-                  example: |
                    
             delete:
               description: Deletes one specific formerWardJuvenileJustice for a specific enrollment            
@@ -1588,7 +1585,7 @@ resourceTypes:
           type: {
             collection: {
                 id_schema_json: sexualOrientation_id_json,  
-                schema_json:  sexualOrientation_json
+                schema_json: sexualOrientation_json
               }
             }
           description: Work with sexualOrientations for a particular enrollment.
@@ -1626,7 +1623,7 @@ resourceTypes:
         /worsthousingsituations:
           type: {
             collection: {
-                id_schema_json: worstHousingSituation_id_json,  
+                id_schema_json: worstHousingSituation_ids_json,  
                 schema_json:  worstHousingSituation_json
               }
             }
@@ -1946,16 +1943,16 @@ resourceTypes:
         default: 50
       exclude:
          description: | 
-            Excludes flieds from the search.Currently it suppoted value is "ssi" (to exclude source system id) only.
+            Excludes fields from the search.Currently it suppoted value is "ssi" (to exclude source system id) only.
     responses:
       200:
         body:
-          example: |   
-            sample search response for client search
+          description: |
+            sample search responses for client and project searches   
             {
             "searchResults": {
               "pagination": {
-                "total":"2"
+                "total":"2",
                 "from": "0",
                 "maximum": "50",
                 "returned":"2"
@@ -1964,9 +1961,9 @@ resourceTypes:
                 {
                   "clientId": "65e3df62-dd22-4d07-83ef-6858a6322839",
                   "firstName": "Eric",
-                  "middleName": "Eric",
-                  "lastName": "Eric",
-                  "nameSuffix": "NS ",
+                  "middleName": "Johnstone",
+                  "lastName": "Smith",
+                  "nameSuffix": "Jr.",
                   "nameDataQuality": "1",
                   "ssn": "ssn ",
                   "ssnDataQuality": "1",
@@ -1978,15 +1975,15 @@ resourceTypes:
                   "otherGender": "Test",
                   "veteranStatus": "8",
                   "phoneNumber":"1-541-754-3010",
-                   "emailAddress":"Jeanette@gmail.com"
+                  "emailAddress":"Jeanette@gmail.com",
                   "link":"/hmis-clientapi/rest/v2015/clients/65e3df62-dd22-4d07-83ef-6858a6322839"
                 },
                 {
                   "clientId": "cf98b9b2-9a77-4133-99a3-b60f05a12ad1",
-                  "firstName": "Eric",
-                  "middleName": "Eric",
-                  "lastName": "Eric",
-                  "nameSuffix": "NS ",
+                  "firstName": "Harold",
+                  "middleName": "William",
+                  "lastName": "Jones",
+                  "nameSuffix": "III ",
                   "nameDataQuality": "1",
                   "ssn": "ssn ",
                   "ssnDataQuality": "1",
@@ -2002,34 +1999,32 @@ resourceTypes:
               ]
             }
             }
-            
-            sample search response for project search
-              {
-               "searchResults":{
-                  "pagination":{
-                     "from":0,
-                     "returned":1,
-                     "total":1,
-                     "maximum":50,
-                     "sort":{
-                        "field":"id",
-                        "order":"asc"
-                     }
-                  },
-                  "items":[
-                     {
-                        "projectId":"066c95d3-c97c-40b9-b8c1-bf12cafdfca4",
-                        "projectName":"ProjectName_1459515376900",
-                        "projectCommonName":"ProjectCommonName_1459515376900",
-                        "continuumProject":0,
-                        "projectType":2,
-                        "targetPopulation":3,
-                        "trackingMethod":0,
-                        "schemaYear":2015,
-                        "link":"/hmis-clientapi/rest/v2015/projects/066c95d3-c97c-40b9-b8c1-bf12cafdfca4",
-                        "projectGroup":"HO0002"
-                     }
-                  ]
-               }
+           
+            {
+              "searchResults":{
+                "pagination":{
+                  "from":0,
+                  "returned":1,
+                  "total":1,
+                  "maximum":50,
+                  "sort":{
+                    "field":"id",
+                    "order":"asc"
+                  }
+                },
+                "items":[
+                  {
+                    "projectId":"066c95d3-c97c-40b9-b8c1-bf12cafdfca4",
+                    "projectName":"ProjectName_1459515376900",
+                    "projectCommonName":"ProjectCommonName_1459515376900,
+                    "continuumProject":0,
+                    "projectType":2,
+                    "targetPopulation":3,
+                    "trackingMethod":0,
+                    "schemaYear":2015,
+                    "link":"/hmis-clientapi/rest/v2015/projects/066c95d3-c97c-40b9-b8c1-bf12cafdfca4",
+                    "projectGroup":"HO0002"
+                  }
+                ]
+              }
             }
-            

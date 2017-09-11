@@ -1,62 +1,63 @@
+{
 "$schema": "http://json-schema.org/draft-04/schema",
     "title": "disabilities",
     "type": "object",
     "required": ["DisabilitiesID","ProjectEntryID", "InformationDate", "DataCollectionStage", "DateCreated", "DateUpdated", "UserID"],
       "properties": {
         "DisabilitiesID": {
-        "type": "String",
-        "maxLength": "32",
-        "minLength": "32" 
+        "type": "string",
+        "maxLength": 32,
+        "minLength": 32 
         },
         "ProjectEntryID": {
-        "type": "String",
-        "maxLength": "32",
-        "minLength": "32"
+        "type": "string",
+        "maxLength": 32,
+        "minLength": 32
         },
         "InformationDate": {
-        "type": "String",
+        "type": "string",
         "format": "date-time"
         },
         "DisabilityType": {
-        "type": "Integer",
+        "type": "integer"
         },
         "DisabilityResponse": {
-        "type": "Integer",
+        "type": "integer"
         },
         "IndefiniteAndImpairs": {
-        "type": "Integer",
+        "type": "integer"
         },
         "DocumentationOnFile": {
-        "type": "Integer",
+        "type": "integer"
         },
         "ReceivingServices": {
-        "type": "Integer",
+        "type": "integer"
         },
         "PATHHowConfirmed": {
-        "type": "Integer",
+        "type": "integer"
         },
         "PATHSMIInformation": {
-        "type": "Integer",
+        "type": "integer"
         },
         "DataCollectionStage": {
-        "type": "Integer",
+        "type": "integer"
         },
         "DateCreated": {
-        "type": "String",
+        "type": "string",
         "format": "date-time"
         },
         "DateUpdated": {  
-        "type": "String",
+        "type": "string",
         "format": "date-time"
-        },,
+        },
         "DateDeleted": {  
-        "type": "String",
+        "type": "string",
         "format": "date-time"
-        }
+        },
         "UserID": {
-        "type": "String",
-        "maxLength": "32",
-        "minLength": "32"
+        "type": "string",
+        "maxLength": 32,
+        "minLength": 32
         }
-       }
       }
+}

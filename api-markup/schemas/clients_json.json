@@ -1,3 +1,4 @@
+{
  "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "clients",
     "type": "array",
@@ -10,31 +11,31 @@
         "properties": {
           "PersonalID": {
             "type": "string",
-            "minLength": "32",
-            "maxLength": "32"
+            "minLength": 32,
+            "maxLength": 32
           },
           "FirstName": {
            "type": "string",
-           "maxLength": "50"
+           "maxLength": 50
           },
           "MiddleName": {
             "type": "string",
-            "maxLength": "50"
+            "maxLength": 50
           },
           "LastName": {
             "type": "string",
-            "maxLength": "50"
+            "maxLength": 50
           },
           "NameSuffix": {
             "type": "string",
-            "maxLength": "50"
+            "maxLength": 50
           },
           "NameDataQuality": {
             "type" : "integer"
           },
           "SSN": {
             "type": "string",
-            "maxLength": "9"
+            "maxLength": 9
           },
           "SSNDataQuality": {
             "type" : "integer"
@@ -72,7 +73,7 @@
           },
           "OtherGender": {
             "type": "string",
-            "maxLength": "50"
+            "maxLength": 50
           },
           "VeteranStatus": {
             "type": "integer"
@@ -87,7 +88,7 @@
           },
           "UserID": {
             "type": "string",
-            "maxLength": "32"
+            "maxLength": 32
           },
           "DateDeleted": {
           "type": "string",
@@ -104,3 +105,4 @@
         }
       }
     }
+}

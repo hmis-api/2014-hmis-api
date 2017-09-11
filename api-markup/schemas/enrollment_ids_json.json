@@ -123,8 +123,7 @@
                 },
                 "required": [
                   "pagination",
-                  "enrollments",
-                  "0"
+                  "enrollments"
                 ]
               }
             },

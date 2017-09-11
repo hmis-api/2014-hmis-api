@@ -1,19 +1,19 @@
 {
-							"worstHousingSituations": {
-							"pagination": {
-							"from": 0
-							"returned": 1
-							"total": 1
-							"maximum": 30
-							"sort": {}
-							}-
-							"worstHousingSituation": [1]
-							0:  {
-							"worstHousingSituationId": "5c025aea-ecdc-4902-b451-4436b64a83ea"
-							"worsthousingsituation": 9
-							"dateCreated": "03-17-2016"
-							"dateUpdated": "03-17-2016"
-							}-
-							-
-							}-
-							}
+  "worstHousingSituations": {
+		"pagination": {
+		  "from": 0,
+		  "returned": 1,
+		  "total": 1,
+		  "maximum": 30,
+		  "sort": {}
+		},
+		"worstHousingSituations": [
+      {
+        "worstHousingSituationId": "5c025aea-ecdc-4902-b451-4436b64a83ea",
+				"worsthousingsituation": 9,
+				"dateCreated": "03-17-2016",
+				"dateUpdated": "03-17-2016"
+		  }
+    ]
+  }	
+}

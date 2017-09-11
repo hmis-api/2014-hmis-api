@@ -75,8 +75,7 @@
                     },
                     "required": [
                       "pagination",
-                      "exits",
-                      "0"
+                      "exits"
                     ]
                   }
                 },

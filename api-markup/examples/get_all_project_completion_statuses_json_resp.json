@@ -5,9 +5,7 @@
          "returned":0,
          "total":0,
          "maximum":30,
-         "sort":{
-
-         }
+        "sort":{}
       },
       "ProjectCompletionStatuses":[
 				{

@@ -4,9 +4,9 @@
       "required": ["DomesticViolenceID"],
       "properties": {
       "DomesticViolenceID": {
-      "type": "String",
-      "maxLength": "32",
-      "minLength": "32",
+      "type": "string",
+      "maxLength": 32,
+      "minLength": 32,
       "minItems": 1,
       "uniqueItems": true,
       "example": "invgqgwhwnnhhwgwbgwtsgdhsy67yt23" 

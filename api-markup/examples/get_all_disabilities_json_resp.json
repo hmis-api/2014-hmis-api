@@ -10,13 +10,13 @@
                             "disabilitiesList": [
                                 {
                                     "disabilitiesId": "be340706-eb5c-4794-a4c1-91b7d32c78e3",
-                                    "disabilityresponse": -1732327101,
-                                    "disabilitytype": 6,
-                                    "documentationonfile": 99,
-                                    "indefiniteandimpairs": 1,
-                                    "pathhowconfirmed": 99,
-                                    "receivingservices": 0,
-                                    "pathsmiinformation": 8,
+                                    "disabilityresponse": 1732327101,
+                                    "disabilitytype": "6",
+                                    "documentationonfile": "99",
+                                    "indefiniteandimpairs": "1",
+                                    "pathhowconfirmed": "99",
+                                    "receivingservices": "0",
+                                    "pathsmiinformation": "8",
                                     "dateCreated": "03-17-2016"
                                 }
                             ]

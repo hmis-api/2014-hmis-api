@@ -21,7 +21,7 @@
         },
         "lastpermanentstate": {
           "id": "lastpermanentstate",
-          "type": "integer"
+          "type": "string"
         },
         "lastpermanentstreet": {
           "id": "lastpermanentstreet",

@@ -1,7 +1,6 @@
-{
-                        "ExitID" : "12345678901234567890123456789012",
-                        ...
-                        "DateCreated" : "2012-04-23T18:25:43.511Z",
-                        "DateUpdated" : "2013-04-23T18:25:43.511Z",
-                        "UserID": "77123456789012345678901234567890"
-                        }
+{"familyReunification": 
+  {
+  "familyReunificationId" : "12345678901234567890123456789012",
+  "familyreunificationachieved" : 0
+  }
+}

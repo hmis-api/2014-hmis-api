@@ -1,12 +1,12 @@
- {
-                      "ProjectEntryID" : "12345678901234567890123456789012",
-                       "LastPermanentAddressID":"12eiuyhtfdrgb564389023retwdsvxfr",
-                       "LastPermanentStreet":"1008 Fairwood ln",
-                       "LastPermanentCity":"Douglas",
-                       "LastPermanentState":"GA",
-                       "LastPermanentZIP":"30105",
-                       "AddressDataQuality":"1",
-                      "DateCreated" : "2012-04-23T18:25:43.511Z",
-                      "DateUpdated" : "2013-04-23T18:25:43.511Z",
-                      "UserID": "77123456789012345678901234567890"
-                    }
+{"lastPermanentAddress":{
+  "lastPermanentAddressId":"12eiuyhtfdrgb564389023retwdsvxfr",
+  "addressdataquality":1,
+  "lastpermanentcity":"Douglas",
+  "lastpermanentstate":"GA",
+  "lastpermanentstreet":"1008 Fairwood ln",
+  "lastpermanentzip":"30105",
+  "DateCreated" : "2012-04-23T18:25:43.511Z",
+  "DateUpdated" : "2013-04-23T18:25:43.511Z",
+  "UserID": "77123456789012345678901234567890"
+  }
+}

@@ -62,8 +62,7 @@
       },
       "required": [
         "pagination",
-        "lastgradecompletedList",
-        "0"
+        "lastgradecompletedList"
       ]
     }
   },

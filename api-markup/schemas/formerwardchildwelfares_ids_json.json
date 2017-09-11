@@ -70,8 +70,7 @@
       },
       "required": [
         "pagination",
-        "formerwardchildwelfares",
-        "0"
+        "formerwardchildwelfares"
       ]
     }
   },

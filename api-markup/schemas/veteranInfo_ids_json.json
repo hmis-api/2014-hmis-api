@@ -106,8 +106,7 @@
       },
       "required": [
         "pagination",
-        "veteranInfos",
-        "0"
+        "veteranInfos"
       ]
     }
   },
