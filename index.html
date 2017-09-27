@@ -181,7 +181,7 @@
       }
     ]
   }
-}     
+}
 </code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
   "errors": {
     "error": {
@@ -189,7 +189,7 @@
       "message": "the specified client is not found"
     }
   }
-} 
+}
 </code></pre></div><div class="tab-pane" id="clients__clientId__consentmessages_get_securedby"><h1>Secured by oauth_2_0</h1><h3>Headers</h3><ul><li><strong>Authorization</strong>: <em>(string)</em><p>Used to send a valid OAuth 2 access token. Do not use an "access_token" query string parameter.</p></li></ul><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Bad or expired token. This can happen if the user or the HMIS revoked or expired an access token. To fix, you should re- authenticate the user.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Bad OAuth request (wrong consumer key, bad nonce, expired timestamp...). Unfortunately, re-authenticating the user won&#39;t help here.</p></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="clients__clientId__detailedconsentmessages" class="panel-title">/clients/{clientId}/detailedconsentmessages</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_clients__clientId__detailedconsentmessages"><span class="parent"></span>/clients/{clientId}/detailedconsentmessages</a> <span class="methods"><a href="#clients__clientId__detailedconsentmessages_get"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span></a></span></h4></div><div id="panel_clients__clientId__detailedconsentmessages" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#clients__clientId__detailedconsentmessages_get'" class="list-group-item"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span><div class="method_description"><p>Gets a list of detailed consent messages for the specified client.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="clients__clientId__detailedconsentmessages_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span> <span class="parent"></span>/clients/{clientId}/detailedconsentmessages</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets a list of detailed consent messages for the specified client.</p></div><div class="alert alert-warning"><span class="glyphicon glyphicon-lock" title="Authentication required"></span> Secured by <b>oauth_2_0</b><p>The HMIS API supports OAuth 2.0 for authenticating all API requests.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#clients__clientId__detailedconsentmessages_get_request" data-toggle="tab">Request</a></li><li><a href="#clients__clientId__detailedconsentmessages_get_response" data-toggle="tab">Response</a></li><li><a href="#clients__clientId__detailedconsentmessages_get_securedby" data-toggle="tab">Security</a></li></ul><div class="tab-content"><div class="tab-pane active" id="clients__clientId__detailedconsentmessages_get_request"><h3>URI Parameters</h3><ul><li><strong>clientId</strong>: <em>required (string)</em></li></ul></div><div class="tab-pane" id="clients__clientId__detailedconsentmessages_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
   "oAuthMessageGroups": {
     "oAuthMessageGroup": {
@@ -208,7 +208,7 @@
       "message": "the specified client (trusted App) is not found"
     }
   }
-}   
+}
 </code></pre></div><div class="tab-pane" id="clients__clientId__detailedconsentmessages_get_securedby"><h1>Secured by oauth_2_0</h1><h3>Headers</h3><ul><li><strong>Authorization</strong>: <em>(string)</em><p>Used to send a valid OAuth 2 access token. Do not use an "access_token" query string parameter.</p></li></ul><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Bad or expired token. This can happen if the user or the HMIS revoked or expired an access token. To fix, you should re- authenticate the user.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Bad OAuth request (wrong consumer key, bad nonce, expired timestamp...). Unfortunately, re-authenticating the user won&#39;t help here.</p></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="clients" class="panel-title">/clients</h3></div><div class="panel-body"><div class="top-resource-description"><p>Operations performed on the set of all HMIS clients within the system, and for adding a new client to the set of clients</p></div><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_clients"><span class="parent"></span>/clients</a> <span class="methods"><a href="#clients_get"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span></a> <a href="#clients_post"><span class="badge badge_post">post <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span></a></span></h4></div><div id="panel_clients" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#clients_get'" class="list-group-item"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span><div class="method_description"><p>Searches for client. Returns a list of client ids, based on the query parameters sent. The query parameters are cumulative, so each additional query parameter narrows the search down further.</p></div><div class="clearfix"></div></div><div onclick="window.location.href = '#clients_post'" class="list-group-item"><span class="badge badge_post">post <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span><div class="method_description"><p>Add a client</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="clients_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span> <span class="parent"></span>/clients</h4></div><div class="modal-body"><div class="alert alert-info"><p>Searches for client. Returns a list of client ids, based on the query parameters sent. The query parameters are cumulative, so each additional query parameter narrows the search down further.</p></div><div class="alert alert-warning"><span class="glyphicon glyphicon-lock" title="Authentication required"></span> Secured by <b>oauth_2_0</b><p>The HMIS API supports OAuth 2.0 for authenticating all API requests.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#clients_get_request" data-toggle="tab">Request</a></li><li><a href="#clients_get_response" data-toggle="tab">Response</a></li><li><a href="#clients_get_securedby" data-toggle="tab">Security</a></li></ul><div class="tab-content"><div class="tab-pane active" id="clients_get_request"><h3>Query Parameters</h3><ul><li><strong>CreatedAfter</strong>: <em>(date)</em><p>searches for members of the collection created after (inclusive) a particular date</p><p><strong>Example</strong>:</p><pre><code>10-11-2011</code></pre></li><li><strong>CreatedBefore</strong>: <em>(date)</em><p>searches for members of the collection created before (inclusive) a particular date</p><p><strong>Example</strong>:</p><pre><code>10-11-2012</code></pre></li><li><strong>UpdatedAfter</strong>: <em>(date)</em><p>searches for members of the collection updated after (inclusive) a particular date</p><p><strong>Example</strong>:</p><pre><code>10-11-2011</code></pre></li><li><strong>UpdatedBefore</strong>: <em>(date)</em><p>searches for members of the collection updated before (inclusive) a particular date</p><p><strong>Example</strong>:</p><pre><code>10-11-2012</code></pre></li><li><strong>FirstName</strong>: <em>(string)</em><p><strong>Example</strong>:</p><pre>Bill</pre></li><li><strong>MiddleName</strong>: <em>(string)</em><p><strong>Example</strong>:</p><pre>Frances</pre></li><li><strong>LastName</strong>: <em>(string)</em><p><strong>Example</strong>:</p><pre>Smith</pre></li><li><strong>DOB</strong>: <em>(date)</em><p><strong>Example</strong>:</p><pre><code>10-11-2012</code></pre></li></ul></div><div class="tab-pane" id="clients_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>OK – Everything is working.</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "/",
@@ -492,7 +492,7 @@
             "sourceSystemId":"ssid",
              "phoneNumber":"1-541-754-3010",
                 "emailAddress":"Jeanette@gmail.com"
-      } 
+      }
 }
 </code></pre></div><div class="tab-pane" id="clients_post_response"><h2>HTTP status code <a href="http://httpstatus.es/201" target="_blank">201</a></h2><p>Returns the ID of the newly created client.</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
   "$schema": "http://json-schema.org/draft-04/schema#",
@@ -12800,4 +12800,538 @@
   "required": [
     "sites"
   ]
-}</code></pre></div><div class="tab-pane" id="projects__projectid__project_cocs__project_coc_id__sites__site_id__put_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>OK – Everything is working.</p><h2>HTTP status code <a href="http://httpstatus.es/304" target="_blank">304</a></h2><p>Not Modified – The client can use cached data.</p><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><p>Bad Request – The request was invalid or cannot be served.</p><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Unauthorized – The request requires a user.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Forbidden – The server understood the request, but is refusing it or the access is not allowed.</p><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>Not found – There is no resource behind the URI.</p><h2>HTTP status code <a href="http://httpstatus.es/500" target="_blank">500</a></h2><p>Internal Server Error.</p></div><div class="tab-pane" id="projects__projectid__project_cocs__project_coc_id__sites__site_id__put_securedby"><h1>Secured by oauth_2_0</h1><h3>Headers</h3><ul><li><strong>Authorization</strong>: <em>(string)</em><p>Used to send a valid OAuth 2 access token. Do not use an "access_token" query string parameter.</p></li></ul><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Bad or expired token. This can happen if the user or the HMIS revoked or expired an access token. To fix, you should re- authenticate the user.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Bad OAuth request (wrong consumer key, bad nonce, expired timestamp...). Unfortunately, re-authenticating the user won&#39;t help here.</p></div></div></div></div></div></div><div class="modal fade" tabindex="0" id="projects__projectid__project_cocs__project_coc_id__sites__site_id__delete"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_delete">delete <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span> <span class="parent"></span>/projects/{projectid}/project_cocs/{project_coc_id}/sites/{site_id}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Deletes a specific site specified by the URI resource parameter/ID.</p></div><div class="alert alert-warning"><span class="glyphicon glyphicon-lock" title="Authentication required"></span> Secured by <b>oauth_2_0</b><p>The HMIS API supports OAuth 2.0 for authenticating all API requests.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#projects__projectid__project_cocs__project_coc_id__sites__site_id__delete_request" data-toggle="tab">Request</a></li><li><a href="#projects__projectid__project_cocs__project_coc_id__sites__site_id__delete_response" data-toggle="tab">Response</a></li><li><a href="#projects__projectid__project_cocs__project_coc_id__sites__site_id__delete_securedby" data-toggle="tab">Security</a></li></ul><div class="tab-content"><div class="tab-pane active" id="projects__projectid__project_cocs__project_coc_id__sites__site_id__delete_request"><h3>URI Parameters</h3><ul><li><strong>Site Identifier</strong>: <em>required (string)</em><p><strong>Example</strong>:</p><pre>ADBC11112AD111114111111111D1111V</pre></li><li><strong>projectid</strong>: <em>required (string)</em></li><li><strong>project_coc_id</strong>: <em>required (string)</em></li></ul></div><div class="tab-pane" id="projects__projectid__project_cocs__project_coc_id__sites__site_id__delete_response"><h2>HTTP status code <a href="http://httpstatus.es/204" target="_blank">204</a></h2><p>OK – The resource was successfully deleted.</p><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><p>Bad Request – The request was invalid or cannot be served.</p><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Unauthorized – The request requires user authentication.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Forbidden – The server understood the request, but is refusing it or the access is not allowed.</p><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>Not found – There is no resource behind the URI.</p><h2>HTTP status code <a href="http://httpstatus.es/500" target="_blank">500</a></h2><p>Internal Server Error.</p></div><div class="tab-pane" id="projects__projectid__project_cocs__project_coc_id__sites__site_id__delete_securedby"><h1>Secured by oauth_2_0</h1><h3>Headers</h3><ul><li><strong>Authorization</strong>: <em>(string)</em><p>Used to send a valid OAuth 2 access token. Do not use an "access_token" query string parameter.</p></li></ul><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Bad or expired token. This can happen if the user or the HMIS revoked or expired an access token. To fix, you should re- authenticate the user.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Bad OAuth request (wrong consumer key, bad nonce, expired timestamp...). Unfortunately, re-authenticating the user won&#39;t help here.</p></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="search__searchentity_" class="panel-title">/search/{searchentity}</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_search__searchentity_"><span class="parent"></span>/search/{searchentity}</a> <span class="methods"><a href="#search__searchentity__get"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span></a></span></h4></div><div id="panel_search__searchentity_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#search__searchentity__get'" class="list-group-item"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span><div class="method_description"><p>The Search API is optimized to find the specific entity you&#39;re looking for (e.g., a client, enrollments, etc.).It&#39;s designed to find the one result you&#39;re looking for (or maybe the few results you&#39;re looking for). Currently hmislynk supporting search on &#39;clients&#39; and &#39;projects&#39; entities only. Just like searching on Google, you sometimes want to see a few pages of search results so that you can find the item that best meets your needs. HMISLynk Search API provides up to 50 results for each searh. However, the search results can be limited by the client. Note: 1) API currently supports search on client and project entities 2) URIs are /search/clients and /search/projects</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="search__searchentity__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span> <span class="parent"></span>/search/{searchentity}</h4></div><div class="modal-body"><div class="alert alert-info"><p>The Search API is optimized to find the specific entity you&#39;re looking for (e.g., a client, enrollments, etc.).It&#39;s designed to find the one result you&#39;re looking for (or maybe the few results you&#39;re looking for). Currently hmislynk supporting search on &#39;clients&#39; and &#39;projects&#39; entities only. Just like searching on Google, you sometimes want to see a few pages of search results so that you can find the item that best meets your needs. HMISLynk Search API provides up to 50 results for each searh. However, the search results can be limited by the client. Note: 1) API currently supports search on client and project entities 2) URIs are /search/clients and /search/projects</p></div><div class="alert alert-warning"><span class="glyphicon glyphicon-lock" title="Authentication required"></span> Secured by <b>oauth_2_0</b><p>The HMIS API supports OAuth 2.0 for authenticating all API requests.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#search__searchentity__get_request" data-toggle="tab">Request</a></li><li><a href="#search__searchentity__get_response" data-toggle="tab">Response</a></li><li><a href="#search__searchentity__get_securedby" data-toggle="tab">Security</a></li></ul><div class="tab-content"><div class="tab-pane active" id="search__searchentity__get_request"><h3>URI Parameters</h3><ul><li><strong>searchentity</strong>: <em>required (string)</em></li></ul><h3>Query Parameters</h3><ul><li><strong>q</strong>: <em>(string)</em><p>The search keywords for clients, as well as any qualifiers.Currently supported search fields are first name,middle name,last name,dob,source system id, client&#39;s dedup Id and ssn. For search on "date of birth" field the format MM/dd/YYYY should be used for the search keyword. When searched on dedup Id, the API returns the list of all clients (from all the schema years) that has the same dedup Id.</p><p>The seach keywords for projects, as well as any qualifiers. Currenly supported search fields are projectName, projectCommonName, projectId.</p></li><li><strong>sort</strong>: <em>(string)</em><p>The sort field. Default- results are sorted by "created date".</p><p><strong>Example</strong>:</p><pre>created date</pre></li><li><strong>order</strong>: <em>(string - default: desc)</em><p>The sort order if sort parameter is provided. One of asc or desc. Default- desc.</p><p><strong>Example</strong>:</p><pre>desc</pre></li><li><strong>startIndex</strong>: <em>(integer - default: 0)</em><p>The start Index from where the search results should be returned. Default - 0</p></li><li><strong>maxItems</strong>: <em>(integer - default: 50)</em><p>the number or Items that should be included in the results . Default - 50</p><p><strong>Example</strong>:</p><pre><code>50</code></pre></li><li><strong>exclude</strong>: <em>(string)</em><p>Excludes fields from the search.Currently it suppoted value is "ssi" (to exclude source system id) only.</p></li></ul></div><div class="tab-pane" id="search__searchentity__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p></div><div class="tab-pane" id="search__searchentity__get_securedby"><h1>Secured by oauth_2_0</h1><h3>Headers</h3><ul><li><strong>Authorization</strong>: <em>(string)</em><p>Used to send a valid OAuth 2 access token. Do not use an "access_token" query string parameter.</p></li></ul><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Bad or expired token. This can happen if the user or the HMIS revoked or expired an access token. To fix, you should re- authenticate the user.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Bad OAuth request (wrong consumer key, bad nonce, expired timestamp...). Unfortunately, re-authenticating the user won&#39;t help here.</p></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#clients__clientId__consentmessages">Consent Message</a></li><li><a href="#clients__clientId__detailedconsentmessages">/clients/{clientId}/detailedconsentmessages</a></li><li><a href="#clients">/clients</a></li><li><a href="#projects">/projects</a></li><li><a href="#projects__projectid__project_cocs">/projects/{projectid}/project_cocs</a></li><li><a href="#projects__projectid__project_cocs__project_coc_id_">/projects/{projectid}/project_cocs/{project_coc_id}</a></li><li><a href="#projects__projectid__project_cocs__project_coc_id__inventories">/projects/{projectid}/project_cocs/{project_coc_id}/inventories</a></li><li><a href="#projects__projectid__project_cocs__project_coc_id__inventories__inventory_id_">/projects/{projectid}/project_cocs/{project_coc_id}/inventories/{inventory_id}</a></li><li><a href="#projects__projectid__project_cocs__project_coc_id__sites">/projects/{projectid}/project_cocs/{project_coc_id}/sites</a></li><li><a href="#projects__projectid__project_cocs__project_coc_id__sites__site_id_">/projects/{projectid}/project_cocs/{project_coc_id}/sites/{site_id}</a></li><li><a href="#search__searchentity_">/search/{searchentity}</a></li></ul></div></div></div></div></body></html>
+}</code></pre></div><div class="tab-pane" id="projects__projectid__project_cocs__project_coc_id__sites__site_id__put_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>OK – Everything is working.</p><h2>HTTP status code <a href="http://httpstatus.es/304" target="_blank">304</a></h2><p>Not Modified – The client can use cached data.</p><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><p>Bad Request – The request was invalid or cannot be served.</p><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Unauthorized – The request requires a user.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Forbidden – The server understood the request, but is refusing it or the access is not allowed.</p><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>Not found – There is no resource behind the URI.</p><h2>HTTP status code <a href="http://httpstatus.es/500" target="_blank">500</a></h2><p>Internal Server Error.</p></div><div class="tab-pane" id="projects__projectid__project_cocs__project_coc_id__sites__site_id__put_securedby"><h1>Secured by oauth_2_0</h1><h3>Headers</h3><ul><li><strong>Authorization</strong>: <em>(string)</em><p>Used to send a valid OAuth 2 access token. Do not use an "access_token" query string parameter.</p></li></ul><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Bad or expired token. This can happen if the user or the HMIS revoked or expired an access token. To fix, you should re- authenticate the user.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Bad OAuth request (wrong consumer key, bad nonce, expired timestamp...). Unfortunately, re-authenticating the user won&#39;t help here.</p></div></div></div></div></div></div><div class="modal fade" tabindex="0" id="projects__projectid__project_cocs__project_coc_id__sites__site_id__delete"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_delete">delete <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span> <span class="parent"></span>/projects/{projectid}/project_cocs/{project_coc_id}/sites/{site_id}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Deletes a specific site specified by the URI resource parameter/ID.</p></div><div class="alert alert-warning"><span class="glyphicon glyphicon-lock" title="Authentication required"></span> Secured by <b>oauth_2_0</b><p>The HMIS API supports OAuth 2.0 for authenticating all API requests.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#projects__projectid__project_cocs__project_coc_id__sites__site_id__delete_request" data-toggle="tab">Request</a></li><li><a href="#projects__projectid__project_cocs__project_coc_id__sites__site_id__delete_response" data-toggle="tab">Response</a></li><li><a href="#projects__projectid__project_cocs__project_coc_id__sites__site_id__delete_securedby" data-toggle="tab">Security</a></li></ul><div class="tab-content"><div class="tab-pane active" id="projects__projectid__project_cocs__project_coc_id__sites__site_id__delete_request"><h3>URI Parameters</h3><ul><li><strong>Site Identifier</strong>: <em>required (string)</em><p><strong>Example</strong>:</p><pre>ADBC11112AD111114111111111D1111V</pre></li><li><strong>projectid</strong>: <em>required (string)</em></li><li><strong>project_coc_id</strong>: <em>required (string)</em></li></ul></div><div class="tab-pane" id="projects__projectid__project_cocs__project_coc_id__sites__site_id__delete_response"><h2>HTTP status code <a href="http://httpstatus.es/204" target="_blank">204</a></h2><p>OK – The resource was successfully deleted.</p><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><p>Bad Request – The request was invalid or cannot be served.</p><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Unauthorized – The request requires user authentication.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Forbidden – The server understood the request, but is refusing it or the access is not allowed.</p><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>Not found – There is no resource behind the URI.</p><h2>HTTP status code <a href="http://httpstatus.es/500" target="_blank">500</a></h2><p>Internal Server Error.</p></div><div class="tab-pane" id="projects__projectid__project_cocs__project_coc_id__sites__site_id__delete_securedby"><h1>Secured by oauth_2_0</h1><h3>Headers</h3><ul><li><strong>Authorization</strong>: <em>(string)</em><p>Used to send a valid OAuth 2 access token. Do not use an "access_token" query string parameter.</p></li></ul><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Bad or expired token. This can happen if the user or the HMIS revoked or expired an access token. To fix, you should re- authenticate the user.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Bad OAuth request (wrong consumer key, bad nonce, expired timestamp...). Unfortunately, re-authenticating the user won&#39;t help here.</p></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="search__searchentity_" class="panel-title">/search/{searchentity}</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_search__searchentity_"><span class="parent"></span>/search/{searchentity}</a> <span class="methods"><a href="#search__searchentity__get"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span></a></span></h4></div><div id="panel_search__searchentity_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#search__searchentity__get'" class="list-group-item"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span><div class="method_description"><p>The Search API is optimized to find the specific entity you&#39;re looking for (e.g., a client, enrollments, etc.).It&#39;s designed to find the one result you&#39;re looking for (or maybe the few results you&#39;re looking for). Currently hmislynk supporting search on &#39;clients&#39; and &#39;projects&#39; entities only. Just like searching on Google, you sometimes want to see a few pages of search results so that you can find the item that best meets your needs. HMISLynk Search API provides up to 50 results for each searh. However, the search results can be limited by the client. Note: 1) API currently supports search on client and project entities 2) URIs are /search/clients and /search/projects</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="search__searchentity__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span> <span class="parent"></span>/search/{searchentity}</h4></div><div class="modal-body"><div class="alert alert-info"><p>The Search API is optimized to find the specific entity you&#39;re looking for (e.g., a client, enrollments, etc.).It&#39;s designed to find the one result you&#39;re looking for (or maybe the few results you&#39;re looking for). Currently hmislynk supporting search on &#39;clients&#39; and &#39;projects&#39; entities only. Just like searching on Google, you sometimes want to see a few pages of search results so that you can find the item that best meets your needs. HMISLynk Search API provides up to 50 results for each searh. However, the search results can be limited by the client. Note: 1) API currently supports search on client and project entities 2) URIs are /search/clients and /search/projects</p></div><div class="alert alert-warning"><span class="glyphicon glyphicon-lock" title="Authentication required"></span> Secured by <b>oauth_2_0</b><p>The HMIS API supports OAuth 2.0 for authenticating all API requests.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#search__searchentity__get_request" data-toggle="tab">Request</a></li><li><a href="#search__searchentity__get_response" data-toggle="tab">Response</a></li><li><a href="#search__searchentity__get_securedby" data-toggle="tab">Security</a></li></ul><div class="tab-content"><div class="tab-pane active" id="search__searchentity__get_request"><h3>URI Parameters</h3><ul><li><strong>searchentity</strong>: <em>required (string)</em></li></ul><h3>Query Parameters</h3><ul><li><strong>q</strong>: <em>(string)</em><p>The search keywords for clients, as well as any qualifiers.Currently supported search fields are first name,middle name,last name,dob,source system id, client&#39;s dedup Id and ssn. For search on "date of birth" field the format MM/dd/YYYY should be used for the search keyword. When searched on dedup Id, the API returns the list of all clients (from all the schema years) that has the same dedup Id.</p><p>The seach keywords for projects, as well as any qualifiers. Currenly supported search fields are projectName, projectCommonName, projectId.</p></li><li><strong>sort</strong>: <em>(string)</em><p>The sort field. Default- results are sorted by "created date".</p><p><strong>Example</strong>:</p><pre>created date</pre></li><li><strong>order</strong>: <em>(string - default: desc)</em><p>The sort order if sort parameter is provided. One of asc or desc. Default- desc.</p><p><strong>Example</strong>:</p><pre>desc</pre></li><li><strong>startIndex</strong>: <em>(integer - default: 0)</em><p>The start Index from where the search results should be returned. Default - 0</p></li><li><strong>maxItems</strong>: <em>(integer - default: 50)</em><p>the number or Items that should be included in the results . Default - 50</p><p><strong>Example</strong>:</p><pre><code>50</code></pre></li><li><strong>exclude</strong>: <em>(string)</em><p>Excludes fields from the search.Currently it suppoted value is "ssi" (to exclude source system id) only.</p></li></ul></div><div class="tab-pane" id="search__searchentity__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p></div><div class="tab-pane" id="search__searchentity__get_securedby"><h1>Secured by oauth_2_0</h1><h3>Headers</h3><ul><li><strong>Authorization</strong>: <em>(string)</em><p>Used to send a valid OAuth 2 access token. Do not use an "access_token" query string parameter.</p></li></ul><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Bad or expired token. This can happen if the user or the HMIS revoked or expired an access token. To fix, you should re- authenticate the user.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Bad OAuth request (wrong consumer key, bad nonce, expired timestamp...). Unfortunately, re-authenticating the user won&#39;t help here.</p></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="hmisTypes" class="panel-title">/hmisTypes</h3></div><div class="panel-body"><div class="top-resource-description"><p>Get all available hmis types</p></div><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_hmisTypes"><span class="parent"></span>/hmisTypes</a> <span class="methods"><a href="#hmisTypes_get"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span></a></span></h4></div><div id="panel_hmisTypes" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#hmisTypes_get'" class="list-group-item"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span><div class="method_description"></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="hmisTypes_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span> <span class="parent"></span>/hmisTypes</h4></div><div class="modal-body"><div class="alert alert-warning"><span class="glyphicon glyphicon-lock" title="Authentication required"></span> Secured by <b>oauth_2_0</b><p>The HMIS API supports OAuth 2.0 for authenticating all API requests.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#hmisTypes_get_response" data-toggle="tab">Response</a></li><li><a href="#hmisTypes_get_securedby" data-toggle="tab">Security</a></li></ul><div class="tab-content"><div class="tab-pane active" id="hmisTypes_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "dataElements": {
+      "type": "object",
+      "properties": {
+        "dataElements": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "dataElements"
+      ]
+    }
+  },
+  "required": [
+    "dataElements"
+  ]
+}</code></pre><p><strong>Example</strong>:</p><pre><code>{
+   "dataElements":{
+      "dataElements":[
+         {
+            "name":"trackingmethod"
+         },
+         {
+            "name":"afghanistan_oef"
+         },
+         {
+            "name":"projectcompletionstatus"
+         },
+         {
+            "name":"nohivaidsassistancereason"
+         },
+         {
+            "name":"not_employed_reason"
+         },
+         {
+            "name":"noemployerprovidedreason"
+         },
+         {
+            "name":"novamedreason"
+         },
+         {
+            "name":"health_category"
+         },
+         {
+            "name":"employment_type"
+         },
+         {
+            "name":"lastgradecompleted"
+         },
+         {
+            "name":"referraloutcome"
+         },
+         {
+            "name":"housingstatus"
+         },
+         {
+            "name":"monthsHomelessThisTime"
+         },
+         {
+            "name":"pathsmiinformation"
+         },
+         {
+            "name":"timesHomelesspastthreeyears"
+         },
+         {
+            "name":"targetpopulation"
+         },
+         {
+            "name":"nostatehealthinsreason"
+         },
+         {
+            "name":"incarceratedparentstatus"
+         },
+         {
+            "name":"youth_age_group"
+         },
+         {
+            "name":"juvenilejusticeyears"
+         },
+         {
+            "name":"subsidyinformation"
+         },
+         {
+            "name":"whenoccurred"
+         },
+         {
+            "name":"nomedicaidreason"
+         },
+         {
+            "name":"monthsHomelessPastThreeYears"
+         },
+         {
+            "name":"sexualorientation"
+         },
+         {
+            "name":"childwelfareyears"
+         },
+         {
+            "name":"nocobrareason"
+         },
+         {
+            "name":"discharge_status"
+         },
+         {
+            "name":"gender"
+         },
+         {
+            "name":"availabilty"
+         },
+         {
+            "name":"military_branch"
+         },
+         {
+            "name":"referralsource"
+         },
+         {
+            "name":"noprivatepayreason"
+         },
+         {
+            "name":"householdtype"
+         },
+         {
+            "name":"pathhowconfirmed"
+         },
+         {
+            "name":"reason_no_services"
+         },
+         {
+            "name":"name_data_quality"
+         },
+         {
+            "name":"countofexchangeforsex"
+         },
+         {
+            "name":"askedorforcedtoexchangeforsex"
+         },
+         {
+            "name":"residencepriorlengthofstay"
+         },
+         {
+            "name":"dob_data_quality"
+         },
+         {
+            "name":"destination"
+         },
+         {
+            "name":"projecttype"
+         },
+         {
+            "name":"assessmentdisposition"
+         },
+         {
+            "name":"earlyexitreason"
+         },
+         {
+            "name":"reason_not_enrolled"
+         },
+         {
+            "name":"bedtype"
+         },
+         {
+            "name":"veteran_status"
+         },
+         {
+            "name":"funder"
+         },
+         {
+            "name":"relationshiptohoh"
+         },
+         {
+            "name":"health_status"
+         },
+         {
+            "name":"ethnicity"
+         },
+         {
+            "name":"noschipreason"
+         },
+         {
+            "name":"address_data_quality"
+         },
+         {
+            "name":"disabilitytype"
+         },
+         {
+            "name":"nomedicarereason"
+         },
+         {
+            "name":"housingassessment"
+         },
+         {
+            "name":"residencePrior"
+         },
+         {
+            "name":"ssn_data_quality"
+         },
+         {
+            "name":"noadapreason"
+         },
+         {
+            "name":"race"
+         }
+      ]
+   }
+}</code></pre></div><div class="tab-pane" id="hmisTypes_get_securedby"><h1>Secured by oauth_2_0</h1><h3>Headers</h3><ul><li><strong>Authorization</strong>: <em>(string)</em><p>Used to send a valid OAuth 2 access token. Do not use an "access_token" query string parameter.</p></li></ul><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Bad or expired token. This can happen if the user or the HMIS revoked or expired an access token. To fix, you should re- authenticate the user.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Bad OAuth request (wrong consumer key, bad nonce, expired timestamp...). Unfortunately, re-authenticating the user won&#39;t help here.</p></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_hmisTypes__name__values"><span class="parent">/hmisTypes</span>/{name}/values</a> <span class="methods"><a href="#hmisTypes__name__values_get"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span></a></span></h4></div><div id="panel_hmisTypes__name__values" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>get all values of hmis type</p></div><div class="list-group"><div onclick="window.location.href = '#hmisTypes__name__values_get'" class="list-group-item"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span><div class="method_description"></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="hmisTypes__name__values_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span> <span class="parent">/hmisTypes</span>/{name}/values</h4></div><div class="modal-body"><div class="alert alert-warning"><span class="glyphicon glyphicon-lock" title="Authentication required"></span> Secured by <b>oauth_2_0</b><p>The HMIS API supports OAuth 2.0 for authenticating all API requests.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#hmisTypes__name__values_get_request" data-toggle="tab">Request</a></li><li><a href="#hmisTypes__name__values_get_response" data-toggle="tab">Response</a></li><li><a href="#hmisTypes__name__values_get_securedby" data-toggle="tab">Security</a></li></ul><div class="tab-content"><div class="tab-pane active" id="hmisTypes__name__values_get_request"><h3>URI Parameters</h3><ul><li><strong>name</strong>: <em>required (string)</em></li></ul></div><div class="tab-pane" id="hmisTypes__name__values_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "dataElements": {
+      "type": "object",
+      "properties": {
+        "dataElements": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "required": [
+              "name",
+              "value",
+              "description"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "value": {
+                "type": "string",
+                "minLength": 1
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "dataElements"
+      ]
+    }
+  },
+  "required": [
+    "dataElements"
+  ]
+}</code></pre><p><strong>Example</strong>:</p><pre><code>{
+   "dataElements":{
+      "dataElements":[
+         {
+            "name":"address_data_quality",
+            "value":"1",
+            "description":"Full address reported"
+         },
+         {
+            "name":"address_data_quality",
+            "value":"2",
+            "description":"Incomplete or estimated address reported"
+         },
+         {
+            "name":"address_data_quality",
+            "value":"8",
+            "description":"Client doesn&#39;t know"
+         },
+         {
+            "name":"address_data_quality",
+            "value":"9",
+            "description":"Client refused"
+         },
+         {
+            "name":"address_data_quality",
+            "value":"99",
+            "description":"Data not collected"
+         }
+      ]
+   }
+}</code></pre></div><div class="tab-pane" id="hmisTypes__name__values_get_securedby"><h1>Secured by oauth_2_0</h1><h3>Headers</h3><ul><li><strong>Authorization</strong>: <em>(string)</em><p>Used to send a valid OAuth 2 access token. Do not use an "access_token" query string parameter.</p></li></ul><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Bad or expired token. This can happen if the user or the HMIS revoked or expired an access token. To fix, you should re- authenticate the user.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Bad OAuth request (wrong consumer key, bad nonce, expired timestamp...). Unfortunately, re-authenticating the user won&#39;t help here.</p></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="questions" class="panel-title">/questions</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_questions"><span class="parent"></span>/questions</a> <span class="methods"><a href="#questions_get"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span></a></span></h4></div><div id="panel_questions" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#questions_get'" class="list-group-item"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span><div class="method_description"></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="questions_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span> <span class="parent"></span>/questions</h4></div><div class="modal-body"><div class="alert alert-warning"><span class="glyphicon glyphicon-lock" title="Authentication required"></span> Secured by <b>oauth_2_0</b><p>The HMIS API supports OAuth 2.0 for authenticating all API requests.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#questions_get_response" data-toggle="tab">Response</a></li><li><a href="#questions_get_securedby" data-toggle="tab">Security</a></li></ul><div class="tab-content"><div class="tab-pane active" id="questions_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "questions": {
+      "type": "object",
+      "properties": {
+        "pagination": {
+          "type": "object",
+          "properties": {
+            "from": {
+              "type": "number"
+            },
+            "returned": {
+              "type": "number"
+            },
+            "total": {
+              "type": "number"
+            },
+            "maximum": {
+              "type": "number"
+            },
+            "sort": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          },
+          "required": [
+            "from",
+            "returned",
+            "total",
+            "maximum",
+            "sort"
+          ]
+        },
+        "questions": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "required": [
+              "questionId",
+              "questionDescription",
+              "displayText",
+              "questionDataType",
+              "questionType",
+              "picklistGroupName",
+              "hudQuestionId"
+            ],
+            "properties": {
+              "questionId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "questionDescription": {
+                "type": "string",
+                "minLength": 1
+              },
+              "displayText": {
+                "type": "string",
+                "minLength": 1
+              },
+              "questionDataType": {
+                "type": "string",
+                "minLength": 1
+              },
+              "questionType": {
+                "type": "string",
+                "minLength": 1
+              },
+              "picklistGroupName": {
+                "type": "string",
+                "minLength": 1
+              },
+              "hudQuestionId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "links": {
+                "type": "array",
+                "uniqueItems": true,
+                "minItems": 1,
+                "items": {
+                  "required": [
+                    "rel",
+                    "href"
+                  ],
+                  "properties": {
+                    "rel": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "href": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "pagination",
+        "questions"
+      ]
+    }
+  },
+  "required": [
+    "questions"
+  ]
+}</code></pre><p><strong>Example</strong>:</p><pre><code>{
+   "questions":{
+      "pagination":{
+         "from":0,
+         "returned":1,
+         "total":2,
+         "maximum":30,
+         "sort":{
+
+         }
+      },
+      "questions":[
+         {
+            "questionId":"273ec115-4a6a-4919-84e3-b8a0515fd2a7",
+            "questionDescription":"How long has it been since you lived in permanent stable housing?",
+            "displayText":"2. How long has it been since you lived in permanent stable housing ?",
+            "questionDataType":"STRING",
+            "questionType":"TEXT",
+            "picklistGroupName":"housingstatus",
+            "hudQuestionId":"2",
+            "links":[
+               {
+                  "rel":"pickList",
+                  "href":"/hmis-clientapi/rest/v2014/hmistypes/housingstatus/values"
+               },
+               {
+                  "rel":"updateUriTemplate",
+                  "href":"/v2014/clients/{clientid}/enrollments"
+               }
+            ]
+         }
+      ]
+   }
+}</code></pre></div><div class="tab-pane" id="questions_get_securedby"><h1>Secured by oauth_2_0</h1><h3>Headers</h3><ul><li><strong>Authorization</strong>: <em>(string)</em><p>Used to send a valid OAuth 2 access token. Do not use an "access_token" query string parameter.</p></li></ul><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Bad or expired token. This can happen if the user or the HMIS revoked or expired an access token. To fix, you should re- authenticate the user.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Bad OAuth request (wrong consumer key, bad nonce, expired timestamp...). Unfortunately, re-authenticating the user won&#39;t help here.</p></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="questions__hudQuestionId_" class="panel-title">/questions/{hudQuestionId}</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_questions__hudQuestionId_"><span class="parent"></span>/questions/{hudQuestionId}</a> <span class="methods"><a href="#questions__hudQuestionId__get"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span></a></span></h4></div><div id="panel_questions__hudQuestionId_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#questions__hudQuestionId__get'" class="list-group-item"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span><div class="method_description"></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="questions__hudQuestionId__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get <span class="glyphicon glyphicon-lock" title="Authentication required"></span></span> <span class="parent"></span>/questions/{hudQuestionId}</h4></div><div class="modal-body"><div class="alert alert-warning"><span class="glyphicon glyphicon-lock" title="Authentication required"></span> Secured by <b>oauth_2_0</b><p>The HMIS API supports OAuth 2.0 for authenticating all API requests.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#questions__hudQuestionId__get_request" data-toggle="tab">Request</a></li><li><a href="#questions__hudQuestionId__get_response" data-toggle="tab">Response</a></li><li><a href="#questions__hudQuestionId__get_securedby" data-toggle="tab">Security</a></li></ul><div class="tab-content"><div class="tab-pane active" id="questions__hudQuestionId__get_request"><h3>URI Parameters</h3><ul><li><strong>hudQuestionId</strong>: <em>required (string)</em></li></ul></div><div class="tab-pane" id="questions__hudQuestionId__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "question": {
+      "type": "object",
+      "properties": {
+        "questionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "questionDescription": {
+          "type": "string",
+          "minLength": 1
+        },
+        "displayText": {
+          "type": "string",
+          "minLength": 1
+        },
+        "questionDataType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "questionType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "picklistGroupName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hudQuestionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "links": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "required": [
+              "rel",
+              "href"
+            ],
+            "properties": {
+              "rel": {
+                "type": "string",
+                "minLength": 1
+              },
+              "href": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "questionId",
+        "questionDescription",
+        "displayText",
+        "questionDataType",
+        "questionType",
+        "picklistGroupName",
+        "hudQuestionId",
+        "links"
+      ]
+    }
+  },
+  "required": [
+    "question"
+  ]
+}</code></pre><p><strong>Example</strong>:</p><pre><code>{
+   "question":{
+      "questionId":"273ec115-4a6a-4919-84e3-b8a0515fd2a7",
+      "questionDescription":"How long has it been since you lived in permanent stable housing?",
+      "displayText":"2. How long has it been since you lived in permanent stable housing ?",
+      "questionDataType":"STRING",
+      "questionType":"TEXT",
+      "picklistGroupName":"housingstatus",
+      "hudQuestionId":"2",
+      "links":[
+         {
+            "rel":"pickList",
+            "href":"/hmis-clientapi/rest/v2014/hmistypes/housingstatus/values"
+         },
+         {
+            "rel":"updateUriTemplate",
+            "href":"/v2014/clients/{clientid}/enrollments"
+         }
+      ]
+   }
+}</code></pre></div><div class="tab-pane" id="questions__hudQuestionId__get_securedby"><h1>Secured by oauth_2_0</h1><h3>Headers</h3><ul><li><strong>Authorization</strong>: <em>(string)</em><p>Used to send a valid OAuth 2 access token. Do not use an "access_token" query string parameter.</p></li></ul><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Bad or expired token. This can happen if the user or the HMIS revoked or expired an access token. To fix, you should re- authenticate the user.</p><h2>HTTP status code <a href="http://httpstatus.es/403" target="_blank">403</a></h2><p>Bad OAuth request (wrong consumer key, bad nonce, expired timestamp...). Unfortunately, re-authenticating the user won&#39;t help here.</p></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#clients__clientId__consentmessages">Consent Message</a></li><li><a href="#clients__clientId__detailedconsentmessages">/clients/{clientId}/detailedconsentmessages</a></li><li><a href="#clients">/clients</a></li><li><a href="#projects">/projects</a></li><li><a href="#projects__projectid__project_cocs">/projects/{projectid}/project_cocs</a></li><li><a href="#projects__projectid__project_cocs__project_coc_id_">/projects/{projectid}/project_cocs/{project_coc_id}</a></li><li><a href="#projects__projectid__project_cocs__project_coc_id__inventories">/projects/{projectid}/project_cocs/{project_coc_id}/inventories</a></li><li><a href="#projects__projectid__project_cocs__project_coc_id__inventories__inventory_id_">/projects/{projectid}/project_cocs/{project_coc_id}/inventories/{inventory_id}</a></li><li><a href="#projects__projectid__project_cocs__project_coc_id__sites">/projects/{projectid}/project_cocs/{project_coc_id}/sites</a></li><li><a href="#projects__projectid__project_cocs__project_coc_id__sites__site_id_">/projects/{projectid}/project_cocs/{project_coc_id}/sites/{site_id}</a></li><li><a href="#search__searchentity_">/search/{searchentity}</a></li><li><a href="#hmisTypes">/hmisTypes</a></li><li><a href="#questions">/questions</a></li><li><a href="#questions__hudQuestionId_">/questions/{hudQuestionId}</a></li></ul></div></div></div></div></body></html>
