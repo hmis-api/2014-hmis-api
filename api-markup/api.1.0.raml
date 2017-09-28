@@ -2028,8 +2028,8 @@ resourceTypes:
                 ]
               }
             }
-/hmisTypes:
-  description: Get all available hmis types
+/dataelements:
+  description: Get all available data elements
   get:
     responses:
       200:
@@ -2038,7 +2038,7 @@ resourceTypes:
              example: !include examples/get_all_hmis_type_names.json
              schema: !include schemas/get_all_hmis_type_names.json
   /{name}/values:
-    description:  get all values of hmis type
+    description:  get all values of elements
     get:
       responses:
         200:
@@ -2048,6 +2048,7 @@ resourceTypes:
               schema: !include schemas/get_all_hmis_type_value_of_hmis_type.json
 
 /questions:
+  description:  get all HUD Questions
   get:
     responses:
       200:
@@ -2056,6 +2057,7 @@ resourceTypes:
             example: !include examples/get_all_survey_questions.json
             schema: !include schemas/get_all_survey_questions.json
 /questions/{hudQuestionId}:
+  description:  get HUD Question by hudQuestionId
   get:
     responses:
       200:
