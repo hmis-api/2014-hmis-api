@@ -7,10 +7,6 @@
       "id": "client",
       "type": "object",
       "properties": {
-        "clientId": {
-          "id": "clientId",
-          "type": "string"
-        },
         "firstName": {
           "id": "firstName",
           "type": "string"
@@ -75,25 +71,7 @@
                 "id":"emailAddress",
                 "type":"string"
               }
-      },
-      "required": [
-        "clientId",
-        "firstName",
-        "middleName",
-        "lastName",
-        "nameSuffix",
-        "nameDataQuality",
-        "ssn",
-        "ssnDataQuality",
-        "dob",
-        "dobDataQuality",
-        "race",
-        "ethnicity",
-        "gender",
-        "otherGender",
-        "emailAddress",
-        "phoneNumber"
-      ]
+      }
     }
   },
   "required": [

@@ -7,13 +7,13 @@
       "id": "familyReunification",
       "type": "object",
       "properties": {
-        "familyreunificationachieved": {
-          "id": "familyreunificationachieved",
-          "type": "integer"
+        "familyReunificationId": {
+          "id": "familyReunificationId",
+          "type": "string"
         }
       },
       "required": [
-        "familyreunificationachieved"
+        "familyReunificationId"
       ]
     }
   },

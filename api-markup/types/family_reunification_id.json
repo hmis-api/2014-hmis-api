@@ -10,10 +10,15 @@
         "familyReunificationId": {
           "id": "familyReunificationId",
           "type": "string"
+        },
+        "familyreunificationachieved": {
+          "id": "familyreunificationachieved",
+          "type": "integer"
         }
       },
       "required": [
-        "familyReunificationId"
+        "familyReunificationId",
+        "familyreunificationachieved"
       ]
     }
   },
