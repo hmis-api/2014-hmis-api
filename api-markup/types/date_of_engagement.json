@@ -7,10 +7,6 @@
       "id": "dateofengagement",
       "type": "object",
       "properties": {
-        "dateofengagementId": {
-          "id": "dateofengagementId",
-          "type": "string"
-        },
         "dateofengagement": {
           "id": "dateofengagement",
           "type": "integer"
@@ -21,7 +17,6 @@
         }
       },
       "required": [
-        "dateofengagementId",
         "dateofengagement",
         "dateCreated"
       ]

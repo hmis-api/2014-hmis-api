@@ -1,22 +1,22 @@
 {
-                  "enrollment":
-                            {
-                          "enrollmentid": "a9577ecf-5fb3-453e-9d3b-2bb81658ffe1",
-                          "continuouslyhomelessoneyear": 1,
-                          "disablingcondition": 0,
-                          "entrydate": 1458035288480,
-                          "householdid": "14aa2237-f147-4751-997b-040d9c023998",
-                          "housingstatus": 1,
-                          "monthshomelesspastthreeyears": 7,
-                          "monthshomelessthistime": 1,
-                          "otherresidenceprior": "1",
-                          "personalid": "a8b1ac45-f3c9-4d12-9ac7-46bccbf14a7e",
-                          "projectentryid": "93284e88-515c-4bb8-9246-b1f419106649",
-                          "relationshiptohoh": 2,
-                          "residenceprior": 2,
-                          "residencepriorlengthofstay": 2,
-                          "statusdocumented": 1,
-                          "yearshomeless": 2,
-                          "dateCreated": "03-15-2016"
-                      }
-                }
+  "enrollment":
+    {
+      "enrollmentid": "a9577ecf-5fb3-453e-9d3b-2bb81658ffe1",
+      "continuouslyhomelessoneyear": 1,
+      "disablingcondition": 0,
+      "entrydate": 1458035288480,
+      "householdid": "14aa2237-f147-4751-997b-040d9c023998",
+      "housingstatus": 1,
+      "monthshomelesspastthreeyears": 7,
+      "monthshomelessthistime": 1,
+      "otherresidenceprior": "1",
+      "personalid": "a8b1ac45-f3c9-4d12-9ac7-46bccbf14a7e",
+      "projectentryid": "93284e88-515c-4bb8-9246-b1f419106649",
+      "relationshiptohoh": 2,
+      "residenceprior": 2,
+      "residencepriorlengthofstay": 2,
+      "statusdocumented": 1,
+      "yearshomeless": 2,
+      "dateCreated": "03-15-2016"
+    }
+}

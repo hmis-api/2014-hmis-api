@@ -38,6 +38,7 @@ types:
   enrollment : !include types/enrollment.json
   enrollment_coc : !include types/enrollment_coc.json
   enrollment_coc_id : !include types/enrollment_coc_id.json
+  enrollment_cocs_ids : !include types/enrollment_cocs_ids.json
   enrollment_id : !include types/enrollment_id.json
   enrollments_ids : !include types/enrollments_ids.json
   exit : !include types/exit.json
@@ -287,14 +288,97 @@ resourceTypes:
                 schema_id_example: !include examples/date_of_engagement_id_example.json
                 schema_example: !include examples/date_of_engagement_example.json
         /disabilities:
-
+          type:
+            collection:
+              schema_ids: disabilities_ids
+              schema_ids_example: !include examples/disabilities_ids_example.json
+              schema: disability
+              schema_example: !include examples/disability_example.json
+              schema_id_example: !include examples/disability_id_example.json
+          /{disabilityid}:
+            type:
+              member:
+                schema: disability
+                schema_id: disability_id
+                schema_id_example: !include examples/disability_id_example.json
+                schema_example: !include examples/disability_example.json
         /domesticviolences:
-
+          type:
+            collection:
+              schema_ids: domestic_violences_ids
+              schema_ids_example: !include examples/domestic_violences_ids_example.json
+              schema: domestic_violence
+              schema_example: !include examples/domestic_violence_example.json
+              schema_id_example: !include examples/domestic_violence_id_example.json
+          /{domesticviolenceid}:
+            type:
+              member:
+                schema: domestic_violence
+                schema_id: domestic_violence_id
+                schema_id_example: !include examples/domestic_violence_id_example.json
+                schema_example: !include examples/domestic_violence_example.json
         /employments:
+          type:
+            collection:
+              schema_ids: employments_ids
+              schema_ids_example: !include examples/employments_ids_example.json
+              schema: employment
+              schema_example: !include examples/employment_example.json
+              schema_id_example: !include examples/employment_id_example.json
+          /{employmentid}:
+            type:
+              member:
+                schema: employment
+                schema_id: employment_id
+                schema_id_example: !include examples/employment_id_example.json
+                schema_example: !include examples/employment_example.json
         /enrollmentcocs:
+          type:
+            collection:
+              schema_ids: enrollment_cocs_ids
+              schema_ids_example: !include examples/enrollment_cocs_ids_example.json
+              schema: enrollment_coc
+              schema_example: !include examples/enrollment_coc_example.json
+              schema_id_example: !include examples/enrollment_coc_id_example.json
+          /{enrollmentcocid}:
+            type:
+              member:
+                schema: enrollment_coc
+                schema_id: enrollment_coc_id
+                schema_id_example: !include examples/enrollment_coc_id_example.json
+                schema_example: !include examples/enrollment_coc_example.json
         /exits:
+          type:
+            collection:
+              schema_ids: exits_ids
+              schema_ids_example: !include examples/exits_ids_example.json
+              schema: exit
+              schema_example: !include examples/exit_example.json
+              schema_id_example: !include examples/exit_id_example.json
+          /{exitid}:
+            type:
+              member:
+                schema: exit
+                schema_id: exit_id
+                schema_id_example: !include examples/exit_id_example.json
+                schema_example: !include examples/exit_example.json
             /connectionwithsoars:
+              type:
+                collection:
+                  schema_ids: connection_with_soars_ids
+                  schema_ids_example: !include examples/connection_with_soars_ids_example.json
+                  schema: connection_with_soar
+                  schema_example: !include examples/connection_with_soar_example.json
+                  schema_id_example: !include examples/connection_with_soar_id_example.json
+              /{connectionwithsoarid}:
+                type:
+                  member:
+                    schema: connection_with_soar
+                    schema_id: connection_with_soar_id
+                    schema_id_example: !include examples/connection_with_soar_id_example.json
+                    schema_example: !include examples/connection_with_soar_example.json
             /exithousingassessments:
+
             /exitplansactionses:
             /familyreunifications:
             /housingassessmentdispositions:

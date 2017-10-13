@@ -3,13 +3,8 @@
 "title": "exit",
 "type": "object",
 "$schema": "http://json-schema.org/draft-04/schema",
-  "required":["ExitID","ProjectEntryID","DateCreated","ExitDate","DateUpdated","UserID"],
+  "required":["ProjectEntryID","DateCreated","ExitDate","DateUpdated","UserID"],
 "properties": {
-  "ExitID": {
-    "type": "string",
-    "maxLength": 32,
-    "minLength": 32
-  },
   "ProjectEntryID": {
     "type": "string",
     "maxLength": 32,
