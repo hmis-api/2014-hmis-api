@@ -7,10 +7,6 @@
       "id": "housingAssessmentDisposition",
       "type": "object",
       "properties": {
-        "housingAssessmentDispositionId": {
-          "id": "housingAssessmentDispositionId",
-          "type": "string"
-        },
         "assessmentdisposition": {
           "id": "assessmentdisposition",
           "type": "integer"
@@ -21,7 +17,6 @@
         }
       },
       "required": [
-        "housingAssessmentDispositionId",
         "assessmentdisposition",
         "otherdisposition"
       ]

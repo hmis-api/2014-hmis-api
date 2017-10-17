@@ -7,10 +7,6 @@
       "id": "projectCompletionStatus",
       "type": "object",
       "properties": {
-        "projectCompletionStatusId": {
-          "id": "projectCompletionStatusId",
-          "type": "string"
-        },
         "earlyExitReason": {
           "id": "earlyExitReason",
           "type": "integer"
@@ -21,7 +17,6 @@
         }
       },
       "required": [
-        "projectCompletionStatusId",
         "earlyExitReason",
         "projectCompletionStatus"
       ]

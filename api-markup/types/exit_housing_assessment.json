@@ -7,10 +7,6 @@
       "id": "housingassessment",
       "type": "object",
       "properties": {
-        "housingassessmentId": {
-          "id": "housingassessmentId",
-          "type": "string"
-        },
         "housingassessment": {
           "id": "housingassessment",
           "type": "integer"
@@ -21,7 +17,6 @@
         }
       },
       "required": [
-        "housingassessmentId",
         "housingassessment",
         "subsidyinformation"
       ]

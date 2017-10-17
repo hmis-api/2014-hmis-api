@@ -7,10 +7,6 @@
       "id": "healthInsurance",
       "type": "object",
       "properties": {
-        "healthInsuranceId": {
-          "id": "healthInsuranceId",
-          "type": "string"
-        },
         "cobra": {
           "id": "cobra",
           "type": "integer"
@@ -85,7 +81,6 @@
         }
       },
       "required": [
-        "healthInsuranceId",
         "cobra",
         "employerprovided",
         "insurancefromanysource",

@@ -7,10 +7,6 @@
       "id": "exitPlansActions",
       "type": "object",
       "properties": {
-        "exitPlansActionsId": {
-          "id": "exitPlansActionsId",
-          "type": "string"
-        },
         "assistancemainstreambenefits": {
           "id": "assistancemainstreambenefits",
           "type": "integer"
@@ -49,7 +45,6 @@
         }
       },
       "required": [
-        "exitPlansActionsId",
         "assistancemainstreambenefits",
         "exitcounseling",
         "furtherfollowupservices",

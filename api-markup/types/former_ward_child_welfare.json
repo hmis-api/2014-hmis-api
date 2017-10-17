@@ -27,8 +27,7 @@
       "required": [
         "childwelfaremonths",
         "childwelfareyears",
-        "formerwardchildwelfare",
-        "formerwardchildwelfareid"
+        "formerwardchildwelfare"
       ]
     }
   },

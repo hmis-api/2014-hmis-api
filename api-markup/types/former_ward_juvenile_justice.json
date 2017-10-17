@@ -7,10 +7,6 @@
       "id": "formerwardjuvenilejustice",
       "type": "object",
       "properties": {
-        "formerwardjuvenilejusticeid": {
-          "id": "formerwardjuvenilejusticeid",
-          "type": "string"
-        },
         "formerwardjuvenilejustice": {
           "id": "formerwardjuvenilejustice",
           "type": "integer"
@@ -25,7 +21,6 @@
         }
       },
       "required": [
-        "formerwardjuvenilejusticeid",
         "formerwardjuvenilejustice",
         "juvenilejusticemonths",
         "juvenilejusticeyears"

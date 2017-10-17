@@ -44,7 +44,7 @@ types:
   exit : !include types/exit.json
   exit_housing_assessment : !include types/exit_housing_assessment.json
   exit_housing_assessment_id : !include types/exit_housing_assessment_id.json
-  exit_housing_assessment_ids : !include types/exit_housing_assessment_ids.json
+  exit_housing_assessments_ids : !include types/exit_housing_assessments_ids.json
   exit_id : !include types/exit_id.json
   exit_plans_action : !include types/exit_plans_action.json
   exit_plans_action_id : !include types/exit_plans_action_id.json
@@ -68,7 +68,7 @@ types:
   get_survey_question_by_hud_id : !include types/get_survey_question_by_hud_id.json
   health_insurance : !include types/health_insurance.json
   health_insurance_id : !include types/health_insurance_id.json
-  health_insurance_ids : !include types/health_insurance_ids.json
+  health_insurances_ids : !include types/health_insurances_ids.json
   health_status : !include types/health_status.json
   health_status_id : !include types/health_status_id.json
   health_statuses_ids : !include types/health_statuses_ids.json
@@ -147,86 +147,6 @@ resourceTypes:
   collection: !include types/collection.raml
   member: !include types/member.raml
 
-/clients/{clientId}/consentmessages:
-  displayName: Consent Message
-  get:
-    description: Gets a list of consent messages for the specified client.
-    responses:
-      200:
-        body:
-          example : |
-            {
-              "oAuthMessageGroups": {
-                "oAuthMessageGroup": [
-                  {
-                    "consentMessage": "Read your basic account information",
-                    "detailedConsentMessageExists": "false",
-                    "oAuthMessageItems": {
-                      "oAuthMessageItem": {
-                        "consentMessage": "Read your account id, first name, middle name and last name",
-                        "detailedConsentMessageExists": "false"
-                      }
-                    }
-                  },
-                  {
-                    "consentMessage": "read information associated with your account",
-                    "oAuthMessageItems": {
-                      "oAuthMessageItem": [
-                        {
-                          "consentMessage": "Sample consent message",
-                          "detailedConsentMessageExists": "false"
-                        },
-                        {
-                          "consentMessage": "sample consent message",
-                          "detailedConsentMessageExists": "false"
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-      404 :
-        body:
-          example : |
-            {
-              "errors": {
-                "error": {
-                  "code": "CLIENT_NOT_FOUND",
-                  "message": "the specified client is not found"
-                }
-              }
-            }
-/clients/{clientId}/detailedconsentmessages:
-  get:
-    description:
-      Gets a list of detailed consent messages for the specified client.
-    responses:
-      200:
-        body:
-          example: |
-                  {
-                    "oAuthMessageGroups": {
-                      "oAuthMessageGroup": {
-                        "consentMessage": "Consent message for the API",
-                        "detailedConsentMessage": "some detailed consent message",
-                        "oAuthMessageItems": {
-                          "oAuthMessageItem": { "detailedConsentMessage": "This is the detailed consent message" }
-                        }
-                      }
-                    }
-                  }
-      404:
-        body:
-          example: |
-                    {
-                      "errors": {
-                        "error": {
-                          "code": "CLIENT_NOT_FOUND",
-                          "message": "the specified client (trusted App) is not found"
-                        }
-                      }
-                    }
 /clients:
   type:
     collection:
@@ -378,17 +298,157 @@ resourceTypes:
                     schema_id_example: !include examples/connection_with_soar_id_example.json
                     schema_example: !include examples/connection_with_soar_example.json
             /exithousingassessments:
-
-            /exitplansactionses:
+              type:
+                collection:
+                  schema_ids: exit_housing_assessments_ids
+                  schema_ids_example: !include examples/exit_housing_assessments_ids_example.json
+                  schema: exit_housing_assessment
+                  schema_example: !include examples/exit_housing_assessment_example.json
+                  schema_id_example: !include examples/exit_housing_assessment_id_example.json
+              /{exithousingassessmentid}:
+                type:
+                  member:
+                    schema: exit_housing_assessment
+                    schema_id: exit_housing_assessment_id
+                    schema_id_example: !include examples/exit_housing_assessment_id_example.json
+                    schema_example: !include examples/exit_housing_assessment_example.json
+            /exitplansactions:
+              type:
+                collection:
+                  schema_ids: exit_plans_actions_ids
+                  schema_ids_example: !include examples/exit_plans_actions_ids_example.json
+                  schema: exit_plans_action
+                  schema_example: !include examples/exit_plans_action_example.json
+                  schema_id_example: !include examples/exit_plans_action_id_example.json
+              /{exitplansactionid}:
+                type:
+                  member:
+                    schema: exit_plans_action
+                    schema_id: exit_plans_action_id
+                    schema_id_example: !include examples/exit_plans_action_id_example.json
+                    schema_example: !include examples/exit_plans_action_example.json
             /familyreunifications:
+              type:
+                collection:
+                  schema_ids: family_reunifications_ids
+                  schema_ids_example: !include examples/family_reunifications_ids_example.json
+                  schema: family_reunification
+                  schema_example: !include examples/family_reunification_example.json
+                  schema_id_example: !include examples/family_reunification_id_example.json
+              /{familyreunificationid}:
+                type:
+                  member:
+                    schema: family_reunification
+                    schema_id: family_reunification_id
+                    schema_id_example: !include examples/family_reunification_id_example.json
+                    schema_example: !include examples/family_reunification_example.json
             /housingassessmentdispositions:
+              type:
+                collection:
+                  schema_ids: housing_assessment_dispositions_ids
+                  schema_ids_example: !include examples/housing_assessment_dispositions_ids_example.json
+                  schema: housing_assessment_disposition
+                  schema_example: !include examples/housing_assessment_disposition_example.json
+                  schema_id_example: !include examples/housing_assessment_disposition_id_example.json
+              /{housingassessmentdispositionid}:
+                type:
+                  member:
+                    schema: housing_assessment_disposition
+                    schema_id: housing_assessment_disposition_id
+                    schema_id_example: !include examples/housing_assessment_disposition_id_example.json
+                    schema_example: !include examples/housing_assessment_disposition_example.json
             /projectcompletionstatuses:
+              type:
+                collection:
+                  schema_ids: project_completion_statuses_ids
+                  schema_ids_example: !include examples/project_completion_statuses_ids_example.json
+                  schema: project_completion_status
+                  schema_example: !include examples/project_completion_status_example.json
+                  schema_id_example: !include examples/project_completion_status_id_example.json
+              /{projectcompletionstatusid}:
+                type:
+                  member:
+                    schema: project_completion_status
+                    schema_id: project_completion_status_id
+                    schema_id_example: !include examples/project_completion_status_id_example.json
+                    schema_example: !include examples/project_completion_status_example.json
         /formerwardchildwelfares:
+          type:
+            collection:
+              schema_ids: former_ward_child_welfares_ids
+              schema_ids_example: !include examples/former_ward_child_welfares_ids_example.json
+              schema: former_ward_child_welfare
+              schema_example: !include examples/former_ward_child_welfare_example.json
+              schema_id_example: !include examples/former_ward_child_welfare_id_example.json
+          /{formerwardchildwelfareid}:
+            type:
+              member:
+                schema: former_ward_child_welfare
+                schema_id: former_ward_child_welfare_id
+                schema_id_example: !include examples/former_ward_child_welfare_id_example.json
+                schema_example: !include examples/former_ward_child_welfare_example.json
         /formerwardjuvenilejustices:
+          type:
+            collection:
+              schema_ids: former_ward_juvenile_justices_ids
+              schema_ids_example: !include examples/former_ward_juvenile_justices_ids_example.json
+              schema: former_ward_juvenile_justice
+              schema_example: !include examples/former_ward_juvenile_justice_example.json
+              schema_id_example: !include examples/former_ward_juvenile_justice_id_example.json
+          /{formerwardjuvenilejusticeid}:
+            type:
+              member:
+                schema: former_ward_juvenile_justice
+                schema_id: former_ward_juvenile_justice_id
+                schema_id_example: !include examples/former_ward_juvenile_justice_id_example.json
+                schema_example: !include examples/former_ward_juvenile_justice_example.json
         /healthinsurances:
+          type:
+            collection:
+              schema_ids: health_insurances_ids
+              schema_ids_example: !include examples/health_insurances_ids_example.json
+              schema: health_insurance
+              schema_example: !include examples/health_insurance_example.json
+              schema_id_example: !include examples/health_insurance_id_example.json
+          /{healthinsuranceid}:
+            type:
+              member:
+                schema: health_insurance
+                schema_id: health_insurance_id
+                schema_id_example: !include examples/health_insurance_id_example.json
+                schema_example: !include examples/health_insurance_example.json
         /healthstatuses:
+          type:
+            collection:
+              schema_ids: health_statuses_ids
+              schema_ids_example: !include examples/health_statuses_ids_example.json
+              schema: health_status
+              schema_example: !include examples/health_status_example.json
+              schema_id_example: !include examples/health_status_id_example.json
+          /{healthstatusid}:
+            type:
+              member:
+                schema: health_status
+                schema_id: health_status_id
+                schema_id_example: !include examples/health_status_id_example.json
+                schema_example: !include examples/health_status_example.json
         /incomeandsources:
+          type:
+            collection:
+              schema_ids: income_and_sources_ids
+              schema_ids_example: !include examples/income_and_sources_ids_example.json
+              schema: income_and_source
+              schema_example: !include examples/income_and_source_example.json
+              schema_id_example: !include examples/income_and_source_id_example.json
+          /{incomeandsourceid}:
+            type:
+              member:
+                schema: income_and_source
+                schema_id: income_and_source_id
+                schema_id_example: !include examples/income_and_source_id_example.json
+                schema_example: !include examples/income_and_source_example.json
         /lastgradecompleteds:
+
         /lastpermanentaddresses:
         /medicalassistances:
         /noncashbenefits:
