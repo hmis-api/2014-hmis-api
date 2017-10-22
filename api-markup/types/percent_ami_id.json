@@ -10,10 +10,25 @@
         "percentamiId": {
           "id": "percentamiId",
           "type": "string"
+        },
+        "percentage": {
+          "id": "percentage",
+          "type": "integer"
+        },
+        "dateCreated": {
+          "id": "dateCreated",
+          "type": "string"
+        },
+        "dateUpdated": {
+          "id": "dateUpdated",
+          "type": "string"
         }
       },
       "required": [
-        "percentamiId"
+        "percentamiId",
+        "percentage",
+        "dateCreated",
+        "dateUpdated"
       ]
     }
   },

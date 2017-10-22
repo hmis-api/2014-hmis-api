@@ -1,0 +1,16 @@
+{
+   "nonCashBenefit":{
+      "othersource":99,
+      "othersourceidentify":"test",
+      "othertanf":1,
+      "rentalassistanceongoing":99,
+      "rentalassistancetemp":99,
+      "snap":0,
+      "tanfchildcare":99,
+      "tanftransportation":99,
+      "wic":1,
+      "benefitsfromanysource":0,
+      "dateCreated":"03-17-2016",
+      "dateUpdated":"03-17-2016"
+   }
+}

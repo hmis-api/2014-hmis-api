@@ -7,10 +7,6 @@
       "id": "medicalassistance",
       "type": "object",
       "properties": {
-        "medicalassistanceId": {
-          "id": "medicalassistanceId",
-          "type": "string"
-        },
         "adap": {
           "id": "adap",
           "type": "integer"
@@ -25,7 +21,6 @@
         }
       },
       "required": [
-        "medicalassistanceId",
         "adap",
         "dateCreated",
         "dateUpdated"

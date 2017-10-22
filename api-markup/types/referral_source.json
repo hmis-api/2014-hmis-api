@@ -7,10 +7,6 @@
       "id": "referralsource",
       "type": "object",
       "properties": {
-        "referralsourceId": {
-          "id": "referralsourceId",
-          "type": "string"
-        },
         "countoutreachreferralapproaches": {
           "id": "countoutreachreferralapproaches",
           "type": "integer"
@@ -25,7 +21,6 @@
         }
       },
       "required": [
-        "referralsourceId",
         "countoutreachreferralapproaches",
         "dateCreated",
         "dateUpdated"

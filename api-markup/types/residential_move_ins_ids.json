@@ -41,14 +41,14 @@
 						"sort"
 					  ]
 					},
-					"residentialmoveindates": {
+					"residentialmoveins": {
 					  "id": "http://jsonschema.net/residentialmoveindates/residentialmoveindates",
 					  "type": "array",
 					  "items": {
 						"id": "http://jsonschema.net/residentialmoveindates/residentialmoveindates/0",
 						"type": "object",
 						"properties": {
-						  "residentialmoveindateId": {
+						  "residentialmoveinId": {
 							"id": "http://jsonschema.net/residentialmoveindates/residentialmoveindates/0/residentialmoveindateId",
 							"type": "string"
 						  },
@@ -70,11 +70,11 @@
 				  },
 				  "required": [
 					"pagination",
-					"residentialmoveindates"
+					"residentialmoveins"
 				  ]
 				}
 			  },
 			  "required": [
-				"residentialmoveindates"
+				"residentialmoveins"
 			  ]
 			}

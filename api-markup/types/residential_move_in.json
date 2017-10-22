@@ -3,12 +3,12 @@
   "id": "/",
   "type": "object",
   "properties": {
-    "residentialmoveindate": {
-      "id": "residentialmoveindate",
+    "residentialmovein": {
+      "id": "residentialmovein",
       "type": "object",
       "properties": {
-        "residentialmoveindateId": {
-          "id": "residentialmoveindateId",
+        "residentialmoveinId": {
+          "id": "residentialmoveinId",
           "type": "string"
         },
         "inpermanenthousing": {
@@ -25,7 +25,7 @@
         }
       },
       "required": [
-        "residentialmoveindateId",
+        "residentialmoveinId",
         "inpermanenthousing",
         "dateCreated",
         "dateUpdated"
@@ -33,6 +33,6 @@
     }
   },
   "required": [
-    "residentialmoveindate"
+    "residentialmovein"
   ]
 }

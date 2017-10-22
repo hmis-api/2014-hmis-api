@@ -10,10 +10,40 @@
         "funderId": {
           "id": "funderId",
           "type": "string"
+        },
+        "enddate": {
+          "id": "enddate",
+          "type": "string"
+        },
+        "funder": {
+          "id": "funder",
+          "type": "integer"
+        },
+        "grantid": {
+          "id": "grantid",
+          "type": "string"
+        },
+        "startdate": {
+          "id": "startdate",
+          "type": "string"
+        },
+        "dateCreated": {
+          "id": "dateCreated",
+          "type": "string"
+        },
+        "dateUpdated": {
+          "id": "dateUpdated",
+          "type": "string"
         }
       },
       "required": [
-        "funderId"
+        "funderId",
+        "enddate",
+        "funder",
+        "grantid",
+        "startdate",
+        "dateCreated",
+        "dateUpdated"
       ]
     }
   },

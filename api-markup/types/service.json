@@ -7,10 +7,6 @@
       "id": "services",
       "type": "object",
       "properties": {
-        "servicesId": {
-          "id": "servicesId",
-          "type": "string"
-        },
         "dateprovided": {
           "id": "dateprovided",
           "type": "integer"
@@ -45,7 +41,6 @@
         }
       },
       "required": [
-        "servicesId",
         "dateprovided",
         "faamount",
         "recordtype",

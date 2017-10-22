@@ -7,10 +7,6 @@
       "id": "youthCriticalIssue",
       "type": "object",
       "properties": {
-        "youthCriticalIssuesId": {
-          "id": "youthCriticalIssuesId",
-          "type": "string"
-        },
         "abuseandneglectfam": {
           "id": "abuseandneglectfam",
           "type": "integer"
@@ -121,7 +117,6 @@
         }
       },
       "required": [
-        "youthCriticalIssuesId",
         "abuseandneglectfam",
         "abuseandneglectyouth",
         "activemilitaryparent",

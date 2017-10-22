@@ -7,10 +7,6 @@
       "id": "worstHousingSituation",
       "type": "object",
       "properties": {
-        "worstHousingSituationId": {
-          "id": "worstHousingSituationId",
-          "type": "string"
-        },
         "worsthousingsituation": {
           "id": "worsthousingsituation",
           "type": "integer"
@@ -25,7 +21,6 @@
         }
       },
       "required": [
-        "worstHousingSituationId",
         "worsthousingsituation",
         "dateCreated",
         "dateUpdated"

@@ -7,6 +7,10 @@
       "id": "http://jsonschema.net/project",
       "type": "object",
       "properties": {
+        "projectId": {
+          "id": "http://jsonschema.net/projects/projects/0/projectId",
+          "type": "string"
+        },
         "projectName": {
           "id": "http://jsonschema.net/project/projectName",
           "type": "string"
@@ -37,6 +41,7 @@
         }
       },
       "required": [
+        "projectId",
         "projectName",
         "projectCommonName",
         "continuumProject",

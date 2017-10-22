@@ -7,10 +7,6 @@
       "id": "lastPermanentAddress",
       "type": "object",
       "properties": {
-        "lastPermanentAddressId": {
-          "id": "lastPermanentAddressId",
-          "type": "string"
-        },
         "addressdataquality": {
           "id": "addressdataquality",
           "type": "integer"
@@ -33,7 +29,6 @@
         }
       },
       "required": [
-        "lastPermanentAddressId",
         "addressdataquality",
         "lastpermanentcity",
         "lastpermanentstate",

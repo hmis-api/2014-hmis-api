@@ -7,10 +7,6 @@
       "id": "sexualorientation",
       "type": "object",
       "properties": {
-        "sexualorientationId": {
-          "id": "sexualorientationId",
-          "type": "string"
-        },
         "sexualorientation": {
           "id": "sexualorientation",
           "type": "integer"
@@ -25,7 +21,6 @@
         }
       },
       "required": [
-        "sexualorientationId",
         "sexualorientation",
         "dateCreated",
         "dateUpdated"

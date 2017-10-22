@@ -32,7 +32,7 @@
           "id": "http://jsonschema.net/project/targetPopulation",
           "type": "integer"
         },
-  
+
         "trackingMethod": {
           "id": "http://jsonschema.net/project/trackingMethod",
           "type": "integer"

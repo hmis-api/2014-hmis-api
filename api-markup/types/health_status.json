@@ -3,14 +3,10 @@
   "id": "/",
   "type": "object",
   "properties": {
-    "HealthStatus": {
-      "id": "HealthStatus",
+    "healthStatus": {
+      "id": "healthStatus",
       "type": "object",
       "properties": {
-        "healthStatusId": {
-          "id": "healthStatusId",
-          "type": "string"
-        },
         "informationDate": {
           "id": "informationDate",
           "type": "integer"
@@ -37,7 +33,6 @@
         }
       },
       "required": [
-        "healthStatusId",
         "informationDate",
         "healthCategory",
         "healthStatus",
@@ -48,6 +43,6 @@
     }
   },
   "required": [
-    "HealthStatus"
+    "healthStatus"
   ]
 }

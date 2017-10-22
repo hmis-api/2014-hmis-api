@@ -1,0 +1,16 @@
+{
+   "veteranInfo":{
+      "yearEntrdService":12,
+      "yearSeperated":2,
+      "worldWar2":9,
+      "koreanWar":8,
+      "vietnamWar":8,
+      "desertStorm":99,
+      "afghanistanOef":9,
+      "iraqOif":1,
+      "iraqOnd":8,
+      "otherTheater":99,
+      "militaryBranch":6,
+      "dischargeStatus":2
+   }
+}

@@ -10,10 +10,25 @@
         "referralsourceId": {
           "id": "referralsourceId",
           "type": "string"
+        },
+        "countoutreachreferralapproaches": {
+          "id": "countoutreachreferralapproaches",
+          "type": "integer"
+        },
+        "dateCreated": {
+          "id": "dateCreated",
+          "type": "string"
+        },
+        "dateUpdated": {
+          "id": "dateUpdated",
+          "type": "string"
         }
       },
       "required": [
-        "referralsourceId"
+        "referralsourceId",
+        "countoutreachreferralapproaches",
+        "dateCreated",
+        "dateUpdated"
       ]
     }
   },

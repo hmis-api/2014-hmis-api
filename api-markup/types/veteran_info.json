@@ -7,10 +7,6 @@
       "id": "veteranInfo",
       "type": "object",
       "properties": {
-        "veteranInfoId": {
-          "id": "veteranInfoId",
-          "type": "string"
-        },
         "yearEntrdService": {
           "id": "yearEntrdService",
           "type": "integer"
@@ -61,7 +57,6 @@
         }
       },
       "required": [
-        "veteranInfoId",
         "yearEntrdService",
         "yearSeperated",
         "worldWar2",

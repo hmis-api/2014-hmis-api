@@ -7,10 +7,6 @@
       "id": "schoolstatus",
       "type": "object",
       "properties": {
-        "schoolstatusId": {
-          "id": "schoolstatusId",
-          "type": "string"
-        },
         "dateCreated": {
           "id": "dateCreated",
           "type": "string"
@@ -25,7 +21,6 @@
         }
       },
       "required": [
-        "schoolstatusId",
         "dateCreated",
         "dateUpdated",
         "informationDate"

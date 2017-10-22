@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-		"worstHousingSituations": {
+		"worstHousingSituation": {
 		  "id": "http://jsonschema.net/worstHousingSituations/worstHousingSituation",
 		  "type": "object",
 			"properties": {
@@ -25,5 +25,5 @@
 			}
 		}
 	},
-  "required": ["worstHousingSituations"]
+  "required": ["worstHousingSituation"]
 }

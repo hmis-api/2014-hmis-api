@@ -10,10 +10,25 @@
         "pathstatusId": {
           "id": "pathstatusId",
           "type": "string"
+        },
+        "clientenrolledinpath": {
+          "id": "clientenrolledinpath",
+          "type": "integer"
+        },
+        "dateCreated": {
+          "id": "dateCreated",
+          "type": "string"
+        },
+        "dateUpdated": {
+          "id": "dateUpdated",
+          "type": "string"
         }
       },
       "required": [
-        "pathstatusId"
+        "pathstatusId",
+        "clientenrolledinpath",
+        "dateCreated",
+        "dateUpdated"
       ]
     }
   },

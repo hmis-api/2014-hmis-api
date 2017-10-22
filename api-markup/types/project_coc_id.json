@@ -10,14 +10,19 @@
         "projectcocId": {
           "id": "projectcocId",
           "type": "string"
+        },
+        "coccode": {
+          "id": "coccode",
+          "type": "string"
         }
       },
       "required": [
-        "projectcocId"
+        "coccode"
       ]
     }
   },
   "required": [
+    "projectcocId",
     "projectcoc"
   ]
 }

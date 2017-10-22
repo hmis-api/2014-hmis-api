@@ -7,10 +7,6 @@
       "id": "pathstatus",
       "type": "object",
       "properties": {
-        "pathstatusId": {
-          "id": "pathstatusId",
-          "type": "string"
-        },
         "clientenrolledinpath": {
           "id": "clientenrolledinpath",
           "type": "integer"
@@ -25,7 +21,6 @@
         }
       },
       "required": [
-        "pathstatusId",
         "clientenrolledinpath",
         "dateCreated",
         "dateUpdated"

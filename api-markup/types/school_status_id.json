@@ -10,10 +10,25 @@
         "schoolstatusId": {
           "id": "schoolstatusId",
           "type": "string"
+        },
+        "dateCreated": {
+          "id": "dateCreated",
+          "type": "string"
+        },
+        "dateUpdated": {
+          "id": "dateUpdated",
+          "type": "string"
+        },
+        "informationDate": {
+          "id": "informationDate",
+          "type": "string"
         }
       },
       "required": [
-        "schoolstatusId"
+        "schoolstatusId",
+        "dateCreated",
+        "dateUpdated",
+        "informationDate"
       ]
     }
   },

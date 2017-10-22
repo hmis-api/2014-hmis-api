@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "referralsource": {
+      "id": "referralsource",
+      "type": "object",
+      "properties": {
+        "referralsourceId": {
+          "id": "referralsourceId",
+          "type": "string"
+        }
+      },
+      "required": [
+        "referralsourceId"
+      ]
+    }
+  },
+  "required": [
+    "referralsource"
+  ]
+}

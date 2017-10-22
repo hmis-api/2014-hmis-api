@@ -3,21 +3,21 @@
   "id": "/",
   "type": "object",
   "properties": {
-    "residentialmoveindate": {
-      "id": "residentialmoveindate",
+    "residentialmovein": {
+      "id": "residentialmovein",
       "type": "object",
       "properties": {
         "residentialmoveindateId": {
-          "id": "residentialmoveindateId",
+          "id": "residentialmoveinId",
           "type": "string"
         }
       },
       "required": [
-        "residentialmoveindateId"
+        "residentialmoveinId"
       ]
     }
   },
   "required": [
-    "residentialmoveindate"
+    "residentialmovein"
   ]
 }

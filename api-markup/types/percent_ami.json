@@ -7,10 +7,6 @@
       "id": "percentami",
       "type": "object",
       "properties": {
-        "percentamiId": {
-          "id": "percentamiId",
-          "type": "string"
-        },
         "percentage": {
           "id": "percentage",
           "type": "integer"
@@ -25,7 +21,6 @@
         }
       },
       "required": [
-        "percentamiId",
         "percentage",
         "dateCreated",
         "dateUpdated"

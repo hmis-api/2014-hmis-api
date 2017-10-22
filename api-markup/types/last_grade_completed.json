@@ -7,17 +7,12 @@
       "id": "lastgradecompleted",
       "type": "object",
       "properties": {
-        "lastgradecompletedId": {
-          "id": "lastgradecompletedId",
-          "type": "string"
-        },
         "lastgradecompleted": {
           "id": "lastgradecompleted",
           "type": "integer"
         }
       },
       "required": [
-        "lastgradecompletedId",
         "lastgradecompleted"
       ]
     }

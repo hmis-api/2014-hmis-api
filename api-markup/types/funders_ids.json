@@ -82,8 +82,7 @@
       },
       "required": [
         "pagination",
-        "funders",
-        "0"
+        "funders"
       ]
     }
   },

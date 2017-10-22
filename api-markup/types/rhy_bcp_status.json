@@ -7,10 +7,6 @@
       "id": "rhybcpstatus",
       "type": "object",
       "properties": {
-        "rhybcpstatusId": {
-          "id": "rhybcpstatusId",
-          "type": "string"
-        },
         "dateCreated": {
           "id": "dateCreated",
           "type": "string"
@@ -25,7 +21,6 @@
         }
       },
       "required": [
-        "rhybcpstatusId",
         "dateCreated",
         "dateUpdated",
         "statusDate"

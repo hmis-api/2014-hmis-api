@@ -7,10 +7,6 @@
       "id": "funder",
       "type": "object",
       "properties": {
-        "funderId": {
-          "id": "funderId",
-          "type": "string"
-        },
         "enddate": {
           "id": "enddate",
           "type": "string"
@@ -37,7 +33,6 @@
         }
       },
       "required": [
-        "funderId",
         "enddate",
         "funder",
         "grantid",

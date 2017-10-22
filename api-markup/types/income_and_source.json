@@ -7,10 +7,6 @@
       "id": "incomeAndSource",
       "type": "object",
       "properties": {
-        "incomeAndSourceId": {
-          "id": "incomeAndSourceId",
-          "type": "string"
-        },
         "alimony": {
           "id": "alimony",
           "type": "integer"
@@ -153,7 +149,6 @@
         }
       },
       "required": [
-        "incomeAndSourceId",
         "alimony",
         "alimonyamount",
         "childsupport",

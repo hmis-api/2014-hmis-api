@@ -90,9 +90,9 @@ types:
   medical_assistance : !include types/medical_assistance.json
   medical_assistance_id : !include types/medical_assistance_id.json
   medical_assistances_ids : !include types/medical_assistances_ids.json
-  non_cash_benefit : !include types/non_cash_benefit.json
-  non_cash_benefit_id : !include types/non_cash_benefit_id.json
-  non_cash_benefits_ids : !include types/non_cash_benefits_ids.json
+  non_cash_benefits : !include types/non_cash_benefits.json
+  non_cash_benefits_id : !include types/non_cash_benefits_id.json
+  non_cash_benefitses_ids : !include types/non_cash_benefitses_ids.json
   organization : !include types/organization.json
   organization_id : !include types/organization_id.json
   organization_id_only : !include types/organization_id_only.json
@@ -448,25 +448,276 @@ resourceTypes:
                 schema_id_example: !include examples/income_and_source_id_example.json
                 schema_example: !include examples/income_and_source_example.json
         /lastgradecompleteds:
-
+          type:
+            collection:
+              schema_ids: last_grade_completeds_ids
+              schema_ids_example: !include examples/last_grade_completeds_ids_example.json
+              schema: last_grade_completed
+              schema_example: !include examples/last_grade_completed_example.json
+              schema_id_example: !include examples/last_grade_completed_id_example.json
+          /{lastgradecompletedid}:
+            type:
+              member:
+                schema: last_grade_completed
+                schema_id: last_grade_completed_id
+                schema_id_example: !include examples/last_grade_completed_id_example.json
+                schema_example: !include examples/last_grade_completed_example.json
         /lastpermanentaddresses:
+          type:
+            collection:
+              schema_ids: last_permanent_addresses_ids
+              schema_ids_example: !include examples/last_permanent_addresses_ids_example.json
+              schema: last_permanent_address
+              schema_example: !include examples/last_permanent_address_example.json
+              schema_id_example: !include examples/last_permanent_address_id_example.json
+          /{lastpermanentaddressid}:
+            type:
+              member:
+                schema: last_permanent_address
+                schema_id: last_permanent_address_id
+                schema_id_example: !include examples/last_permanent_address_id_example.json
+                schema_example: !include examples/last_permanent_address_example.json
         /medicalassistances:
+          type:
+            collection:
+              schema_ids: medical_assistances_ids
+              schema_ids_example: !include examples/medical_assistances_ids_example.json
+              schema: medical_assistance
+              schema_example: !include examples/medical_assistance_example.json
+              schema_id_example: !include examples/medical_assistance_id_example.json
+          /{medicalassistanceid}:
+            type:
+              member:
+                schema: medical_assistance
+                schema_id: medical_assistance_id
+                schema_id_example: !include examples/medical_assistance_id_example.json
+                schema_example: !include examples/medical_assistance_example.json
         /noncashbenefits:
+          type:
+            collection:
+              schema_ids: non_cash_benefitses_ids
+              schema_ids_example: !include examples/non_cash_benefitses_ids_example.json
+              schema: non_cash_benefits
+              schema_example: !include examples/non_cash_benefits_example.json
+              schema_id_example: !include examples/non_cash_benefits_id_example.json
+          /{noncashbenefitid}:
+            type:
+              member:
+                schema: non_cash_benefits
+                schema_id: non_cash_benefits_id
+                schema_id_example: !include examples/non_cash_benefits_id_example.json
+                schema_example: !include examples/non_cash_benefits_example.json
         /referralsources:
+          type:
+            collection:
+              schema_ids: referral_sources_ids
+              schema_ids_example: !include examples/referral_sources_ids_example.json
+              schema: referral_source
+              schema_example: !include examples/referral_source_example.json
+              schema_id_example: !include examples/referral_source_id_example.json
+          /{referralsourceid}:
+            type:
+              member:
+                schema: referral_source
+                schema_id: referral_source_id
+                schema_id_example: !include examples/referral_source_id_example.json
+                schema_example: !include examples/referral_source_example.json
         /residentialmoveins:
+          type:
+            collection:
+              schema_ids: residential_move_ins_ids
+              schema_ids_example: !include examples/residential_move_ins_ids_example.json
+              schema: residential_move_in
+              schema_example: !include examples/residential_move_in_example.json
+              schema_id_example: !include examples/residential_move_in_id_example.json
+          /{residentialmoveinid}:
+            type:
+              member:
+                schema: residential_move_in
+                schema_id: residential_move_in_id
+                schema_id_example: !include examples/residential_move_in_id_example.json
+                schema_example: !include examples/residential_move_in_example.json
         /rhybcpstatuses:
+          type:
+            collection:
+              schema_ids: rhy_bcp_statuses_ids
+              schema_ids_example: !include examples/rhy_bcp_statuses_ids_example.json
+              schema: rhy_bcp_status
+              schema_example: !include examples/rhy_bcp_status_example.json
+              schema_id_example: !include examples/rhy_bcp_status_id_example.json
+          /{rhybcpstatusid}:
+            type:
+              member:
+                schema: rhy_bcp_status
+                schema_id: rhy_bcp_status_id
+                schema_id_example: !include examples/rhy_bcp_status_id_example.json
+                schema_example: !include examples/rhy_bcp_status_example.json
         /pathstatuses:
+          type:
+            collection:
+              schema_ids: path_statuses_ids
+              schema_ids_example: !include examples/path_statuses_ids_example.json
+              schema: path_status
+              schema_example: !include examples/path_status_example.json
+              schema_id_example: !include examples/path_status_id_example.json
+          /{pathstatusid}:
+            type:
+              member:
+                schema: path_status
+                schema_id: path_status_id
+                schema_id_example: !include examples/path_status_id_example.json
+                schema_example: !include examples/path_status_example.json
         /percentamis:
+          type:
+            collection:
+              schema_ids: percent_amis_ids
+              schema_ids_example: !include examples/percent_amis_ids_example.json
+              schema: percent_ami
+              schema_example: !include examples/percent_ami_example.json
+              schema_id_example: !include examples/percent_ami_id_example.json
+          /{percentamiid}:
+            type:
+              member:
+                schema: percent_ami
+                schema_id: percent_ami_id
+                schema_id_example: !include examples/percent_ami_id_example.json
+                schema_example: !include examples/percent_ami_example.json
         /schoolstatuses:
+          type:
+            collection:
+              schema_ids: school_statuses_ids
+              schema_ids_example: !include examples/school_statuses_ids_example.json
+              schema: school_status
+              schema_example: !include examples/school_status_example.json
+              schema_id_example: !include examples/school_status_id_example.json
+          /{schoolstatusid}:
+            type:
+              member:
+                schema: school_status
+                schema_id: school_status_id
+                schema_id_example: !include examples/school_status_id_example.json
+                schema_example: !include examples/school_status_example.json
         /services:
+          type:
+            collection:
+              schema_ids: services_ids
+              schema_ids_example: !include examples/services_ids_example.json
+              schema: service
+              schema_example: !include examples/service_example.json
+              schema_id_example: !include examples/service_id_example.json
+          /{serviceid}:
+            type:
+              member:
+                schema: service
+                schema_id: service_id
+                schema_id_example: !include examples/service_id_example.json
+                schema_example: !include examples/service_example.json
         /sexualorientations:
+          type:
+            collection:
+              schema_ids: sexual_orientations_ids
+              schema_ids_example: !include examples/sexual_orientations_ids_example.json
+              schema: sexual_orientation
+              schema_example: !include examples/sexual_orientation_example.json
+              schema_id_example: !include examples/sexual_orientation_id_example.json
+          /{sexualorientationid}:
+            type:
+              member:
+                schema: sexual_orientation
+                schema_id: sexual_orientation_id
+                schema_id_example: !include examples/sexual_orientation_id_example.json
+                schema_example: !include examples/sexual_orientation_example.json
         /worsthousingsituations:
+          type:
+            collection:
+              schema_ids: worst_housing_situations_ids
+              schema_ids_example: !include examples/worst_housing_situations_ids_example.json
+              schema: worst_housing_situation
+              schema_example: !include examples/worst_housing_situation_example.json
+              schema_id_example: !include examples/worst_housing_situation_id_example.json
+          /{worsthousingsituationid}:
+            type:
+              member:
+                schema: worst_housing_situation
+                schema_id: worst_housing_situation_id
+                schema_id_example: !include examples/worst_housing_situation_id_example.json
+                schema_example: !include examples/worst_housing_situation_example.json
         /youthcriticalissues:
+          type:
+            collection:
+              schema_ids: youth_critical_issues_ids
+              schema_ids_example: !include examples/youth_critical_issues_ids_example.json
+              schema: youth_critical_issue
+              schema_example: !include examples/youth_critical_issue_example.json
+              schema_id_example: !include examples/youth_critical_issue_id_example.json
+          /{youthcriticalissueid}:
+            type:
+              member:
+                schema: youth_critical_issue
+                schema_id: youth_critical_issue_id
+                schema_id_example: !include examples/youth_critical_issue_id_example.json
+                schema_example: !include examples/youth_critical_issue_example.json
     /veteraninfos:
-/projects:
-    /affiliations:
-    /funders:
+      type:
+        collection:
+          schema_ids: veteran_infos_ids
+          schema_ids_example: !include examples/veteran_infos_ids_example.json
+          schema: veteran_info
+          schema_example: !include examples/veteran_info_example.json
+          schema_id_example: !include examples/veteran_info_id_example.json
+      /{veteraninfoid}:
+        type:
+          member:
+            schema: veteran_info
+            schema_id: veteran_info_id
+            schema_id_example: !include examples/veteran_info_id_example.json
+            schema_example: !include examples/veteran_info_example.json
 /organizations:
+/projects:
+  type:
+    collection:
+      schema_ids: projects_ids
+      schema_ids_example: !include examples/projects_ids_example.json
+      schema: project
+      schema_example: !include examples/project_example.json
+      schema_id_example: !include examples/project_id_example.json
+  /{projectid}:
+    type:
+      member:
+        schema: project
+        schema_id: project_id
+        schema_id_example: !include examples/project_id_example.json
+        schema_example: !include examples/project_example.json
+    /affiliations:
+      type:
+        collection:
+          schema_ids: affiliations_ids
+          schema_ids_example: !include examples/affiliations_ids_example.json
+          schema: affiliation
+          schema_example: !include examples/affiliation_example.json
+          schema_id_example: !include examples/affiliation_id_example.json
+      /{affiliationid}:
+        type:
+          member:
+            schema: affiliation
+            schema_id: affiliation_id
+            schema_id_example: !include examples/affiliation_id_example.json
+            schema_example: !include examples/affiliation_example.json
+    /funders:
+      type:
+        collection:
+          schema_ids: funders_ids
+          schema_ids_example: !include examples/funders_ids_example.json
+          schema: funder
+          schema_example: !include examples/funder_example.json
+          schema_id_example: !include examples/funder_id_example.json
+      /{funderid}:
+        type:
+          member:
+            schema: funder
+            schema_id: funder_id
+            schema_id_example: !include examples/funder_id_example.json
+            schema_example: !include examples/funder_example.json
 /projects/{projectid}/project_cocs:
 /projects/{projectid}/project_cocs/{project_coc_id}:
 /projects/{projectid}/project_cocs/{project_coc_id}/inventories:
