@@ -17,12 +17,12 @@
         }
       },
       "required": [
+        "projectcocId",
         "coccode"
       ]
     }
   },
   "required": [
-    "projectcocId",
     "projectcoc"
   ]
 }

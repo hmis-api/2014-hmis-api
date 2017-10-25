@@ -1,0 +1,13 @@
+{
+   "site":{
+      "siteId":"9c64f6e4-924b-4b65-af62-11a33cc6090a",
+      "address":"address",
+      "city":"address",
+      "geocode":2500,
+      "principalsite":0,
+      "state":"AK",
+      "zip":"1212",
+      "dateCreated":"03-15-2016",
+      "dateUpdated":"03-15-2016"
+   }
+}

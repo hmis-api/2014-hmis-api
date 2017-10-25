@@ -86,8 +86,7 @@
       },
       "required": [
         "pagination",
-        "inventories",
-        "0"
+        "inventories"
       ]
     }
   },

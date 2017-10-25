@@ -673,6 +673,20 @@ resourceTypes:
             schema_id_example: !include examples/veteran_info_id_example.json
             schema_example: !include examples/veteran_info_example.json
 /organizations:
+  type:
+    collection:
+      schema_ids: organizations_ids
+      schema_ids_example: !include examples/organizations_ids_example.json
+      schema: organization
+      schema_example: !include examples/organization_example.json
+      schema_id_example: !include examples/organization_id_example.json
+  /{organizationid}:
+    type:
+      member:
+        schema: organization
+        schema_id: organization_id
+        schema_id_example: !include examples/organization_id_example.json
+        schema_example: !include examples/organization_example.json
 /projects:
   type:
     collection:
@@ -718,12 +732,51 @@ resourceTypes:
             schema_id: funder_id
             schema_id_example: !include examples/funder_id_example.json
             schema_example: !include examples/funder_example.json
-/projects/{projectid}/project_cocs:
-/projects/{projectid}/project_cocs/{project_coc_id}:
-/projects/{projectid}/project_cocs/{project_coc_id}/inventories:
-/projects/{projectid}/project_cocs/{project_coc_id}/inventories/{inventory_id}:
-/projects/{projectid}/project_cocs/{project_coc_id}/sites:
-/projects/{projectid}/project_cocs/{project_coc_id}/sites/{site_id}:
+    /inventories:
+      type:
+        collection:
+          schema_ids: inventories_ids
+          schema_ids_example: !include examples/inventories_ids_example.json
+          schema: inventory
+          schema_example: !include examples/inventory_example.json
+          schema_id_example: !include examples/inventory_id_example.json
+      /{inventoryid}:
+        type:
+          member:
+            schema: inventory
+            schema_id: inventory_id
+            schema_id_example: !include examples/inventory_id_example.json
+            schema_example: !include examples/inventory_example.json
+    /projectcocs:
+      type:
+        collection:
+          schema_ids: project_cocs_ids
+          schema_ids_example: !include examples/project_cocs_ids_example.json
+          schema: project_coc
+          schema_example: !include examples/project_coc_example.json
+          schema_id_example: !include examples/project_coc_id_example.json
+      /{projectcocid}:
+        type:
+          member:
+            schema: project_coc
+            schema_id: project_coc_id
+            schema_id_example: !include examples/project_coc_id_example.json
+            schema_example: !include examples/project_coc_example.json
+    /sites:
+      type:
+        collection:
+          schema_ids: sites_ids
+          schema_ids_example: !include examples/sites_ids_example.json
+          schema: site
+          schema_example: !include examples/site_example.json
+          schema_id_example: !include examples/site_id_example.json
+      /{siteid}:
+        type:
+          member:
+            schema: site
+            schema_id: site_id
+            schema_id_example: !include examples/site_id_example.json
+            schema_example: !include examples/site_example.json
 /search/{searchentity}:
   get:
     description: |
@@ -870,12 +923,12 @@ resourceTypes:
           application/json:
             example: !include examples/get_all_survey_questions_example.json
             type: !include types/get_all_survey_questions.json
-/questions/{hudQuestionId}:
-  description:  get HUD Question by hudQuestionId
-  get:
-    responses:
-      200:
-        body:
-          application/json:
-            example: !include examples/get_survey_question_by_hud_id_example.json
-            type: !include types/get_survey_question_by_hud_id.json
+  /{hudQuestionId}:
+    description:  get HUD Question by hudQuestionId
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include examples/get_survey_question_by_hud_id_example.json
+              type: !include types/get_survey_question_by_hud_id.json

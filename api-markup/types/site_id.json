@@ -10,6 +10,38 @@
         "siteId": {
           "id": "siteId",
           "type": "string"
+        },
+        "address": {
+          "id": "address",
+          "type": "string"
+        },
+        "city": {
+          "id": "city",
+          "type": "string"
+        },
+        "geocode": {
+          "id": "geocode",
+          "type": "integer"
+        },
+        "principalsite": {
+          "id": "principalsite",
+          "type": "integer"
+        },
+        "state": {
+          "id": "state",
+          "type": "string"
+        },
+        "zip": {
+          "id": "zip",
+          "type": "string"
+        },
+        "dateCreated": {
+          "id": "dateCreated",
+          "type": "string"
+        },
+        "dateUpdated": {
+          "id": "dateUpdated",
+          "type": "string"
         }
       },
       "required": [

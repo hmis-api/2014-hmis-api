@@ -3,99 +3,46 @@
   "id": "/",
   "type": "object",
   "properties": {
-    "sites": {
-      "id": "sites",
+    "site": {
+      "id": "site",
       "type": "object",
       "properties": {
-        "pagination": {
-          "id": "pagination",
-          "type": "object",
-          "properties": {
-            "from": {
-              "id": "from",
-              "type": "integer"
-            },
-            "returned": {
-              "id": "returned",
-              "type": "integer"
-            },
-            "total": {
-              "id": "total",
-              "type": "integer"
-            },
-            "maximum": {
-              "id": "maximum",
-              "type": "integer"
-            },
-            "sort": {
-              "id": "sort",
-              "type": "object",
-              "properties": {}
-            }
-          },
-          "required": [
-            "from",
-            "returned",
-            "total",
-            "maximum",
-            "sort"
-          ]
+        "address": {
+          "id": "address",
+          "type": "string"
         },
-        "sites": {
-          "id": "sites",
-          "type": "array",
-          "items": {
-            "id": "0",
-            "type": "object",
-            "properties": {
-              "siteId": {
-                "id": "siteId",
-                "type": "string"
-              },
-              "address": {
-                "id": "address",
-                "type": "string"
-              },
-              "city": {
-                "id": "city",
-                "type": "string"
-              },
-              "geocode": {
-                "id": "geocode",
-                "type": "integer"
-              },
-              "principalsite": {
-                "id": "principalsite",
-                "type": "integer"
-              },
-              "state": {
-                "id": "state",
-                "type": "string"
-              },
-              "zip": {
-                "id": "zip",
-                "type": "string"
-              },
-              "dateCreated": {
-                "id": "dateCreated",
-                "type": "string"
-              },
-              "dateUpdated": {
-                "id": "dateUpdated",
-                "type": "string"
-              }
-            }
-          }
+        "city": {
+          "id": "city",
+          "type": "string"
+        },
+        "geocode": {
+          "id": "geocode",
+          "type": "integer"
+        },
+        "principalsite": {
+          "id": "principalsite",
+          "type": "integer"
+        },
+        "state": {
+          "id": "state",
+          "type": "string"
+        },
+        "zip": {
+          "id": "zip",
+          "type": "string"
+        },
+        "dateCreated": {
+          "id": "dateCreated",
+          "type": "string"
+        },
+        "dateUpdated": {
+          "id": "dateUpdated",
+          "type": "string"
         }
-      },
-      "required": [
-        "pagination",
-        "sites",
-        "0"
-      ]
+      }
     }
   },
   "required": [
-    "sites"
+    "site"
   ]
 }
