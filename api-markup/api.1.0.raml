@@ -777,43 +777,43 @@ resourceTypes:
             schema_id: site_id
             schema_id_example: !include examples/site_id_example.json
             schema_example: !include examples/site_example.json
-    /search:
-      description: |
-        The Search API is optimized to find the specific entity you're looking for (e.g., a client, enrollments, etc.).  It's designed to  find the one result you're looking for (or maybe the few results you're looking for). Currently hmislynk supporting search on 'clients' entity only. Just like searching on Google, you sometimes want to see a few pages of search results so that you can find the item that best meets your needs.  HMISLynk Search API provides up to 50 results for each search. However, the search results can be limited by the client. Note: Current supporting URI is /search/clients .
+/search:
+  description: |
+    The Search API is optimized to find the specific entity you're looking for (e.g., a client, enrollments, etc.).  It's designed to  find the one result you're looking for (or maybe the few results you're looking for). Currently hmislynk supporting search on 'clients' entity only. Just like searching on Google, you sometimes want to see a few pages of search results so that you can find the item that best meets your needs.  HMISLynk Search API provides up to 50 results for each search. However, the search results can be limited by the client. Note: Current supporting URI is /search/clients .
 
-      /{searchentity}:
-        get:
-          responses:
-            '200':
-              body:
-                application/json:
-                  example: !include examples/search_results.json
-          queryParameters:
-            q:
-              description: |
-                The search keywords, as well as any qualifiers. Currently supported search fields are first name,middle name,last name,dob,source system id and ssn. For search on "date of birth" field the format MM-dd-YYYY should be used for the search keyword.
-            sort:
-              description: The sort field. Default- results are sorted by "created date".
-              example: created date
-              type: string
-            order:
-              description: The sort order if sort parameter is provided. One of asc or desc. Default- desc.
-              example: desc
-              default: desc
-              type: string
-            startIndex:
-              description: The start Index from where the search results should be returned. Default - 0
-              example: 0
-              default: 0
-              type: integer
-            maxItems:
-              description: the number or Items that should be included in the results . Default - 50
-              example: 50
-              default: 50
-              type: integer
-            exclude:
-              description: |
-                Excludes fields from the search.  Currently its only supported value is "ssi" (to exclude source system id) only.
+  /{searchentity}:
+    get:
+      responses:
+        '200':
+          body:
+            application/json:
+              example: !include examples/search_results.json
+      queryParameters:
+        q:
+          description: |
+            The search keywords, as well as any qualifiers. Currently supported search fields are first name,middle name,last name,dob,source system id and ssn. For search on "date of birth" field the format MM-dd-YYYY should be used for the search keyword.
+        sort:
+          description: The sort field. Default- results are sorted by "created date".
+          example: created date
+          type: string
+        order:
+          description: The sort order if sort parameter is provided. One of asc or desc. Default- desc.
+          example: desc
+          default: desc
+          type: string
+        startIndex:
+          description: The start Index from where the search results should be returned. Default - 0
+          example: 0
+          default: 0
+          type: integer
+        maxItems:
+          description: the number or Items that should be included in the results . Default - 50
+          example: 50
+          default: 50
+          type: integer
+        exclude:
+          description: |
+            Excludes fields from the search.  Currently its only supported value is "ssi" (to exclude source system id) only.
 /dataelements:
   description: Get all available data elements
   get:
