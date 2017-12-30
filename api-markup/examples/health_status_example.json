@@ -1,6 +1,7 @@
 {
    "healthStatus":{
       "informationDate":1458186668375,
+      "dataCollectionStage":1,
       "healthCategory":27,
       "healthStatus":1,
       "dueDate":1458186668375,

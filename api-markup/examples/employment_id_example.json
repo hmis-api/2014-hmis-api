@@ -5,6 +5,7 @@
                                     "employed": "9",
                                     "employmentType": "2",
                                     "notEmployedReason": "2",
+                                    "dataCollectionStage":1,
                                     "informationDate": 1458124933736,
                                     "dateCreated": "03-16-2016"
                                 }

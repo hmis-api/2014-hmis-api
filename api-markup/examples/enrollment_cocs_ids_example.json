@@ -10,6 +10,7 @@
     "enrollmentCocs": [
       {
         "enrollmentCocId": "a9577ecf-5fb3-453e-9d3b-2bb81658ffe1",
+        "dataCollectionStage":1,
         "informationDate": "03-15-2016",
         "clientCode": "abc-123"
       }

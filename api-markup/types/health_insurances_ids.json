@@ -120,6 +120,12 @@
                             "id": "vamedicalservices",
                             "type": "integer"
                           },
+                          "informationDate": {
+                            "type": "string"
+                          },
+                          "dataCollectionStage": {
+                            "type": "integer"
+                          },
                           "dateCreated": {
                             "id": "dateCreated",
                             "type": "string"

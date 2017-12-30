@@ -55,6 +55,9 @@
               "informationDate": {
                 "type": "string"
               },
+              "dataCollectionStage": {
+                "type": "integer"
+              },
               "clientCode": {
                 "type": "string"
               }
@@ -62,6 +65,7 @@
             "required": [
               "enrollmentCocId",
               "informationDate",
+              "dataCollectionStage",
               "clientCode"
             ]
           }

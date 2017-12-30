@@ -22,13 +22,19 @@
                       "informationDate": {
                         "id": "informationDate",
                         "type": "integer"
+                      },
+                      "dataCollectionStage": {
+                        "id": "dataCollectionStage",
+                        "type": "integer"
                       }
                     },
                     "required": [
                       "employed",
                       "employmentType",
                       "notEmployedReason",
-                      "informationDate"
+                      "informationDate",
+                      "dataCollectionStage"
+
                     ]
                   }
                 },

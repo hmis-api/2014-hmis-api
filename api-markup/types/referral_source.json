@@ -11,6 +11,13 @@
           "id": "countoutreachreferralapproaches",
           "type": "integer"
         },
+        "dataCollectionStage": {
+          "type": "integer"
+        },
+        "informationDate": {
+          "id": "informationDate",
+          "type": "string"
+        },
         "dateCreated": {
           "id": "dateCreated",
           "type": "string"
@@ -22,6 +29,8 @@
       },
       "required": [
         "countoutreachreferralapproaches",
+        "dataCollectionStage",
+        "informationDate",
         "dateCreated",
         "dateUpdated"
       ]

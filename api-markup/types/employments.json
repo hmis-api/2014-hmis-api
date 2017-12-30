@@ -33,7 +33,7 @@
                             "properties": {}
                           }
                         }
-                        
+
                       },
                       "employments": {
                         "id": "employments",
@@ -60,6 +60,10 @@
                             },
                             "informationDate": {
                               "id": "informationDate",
+                              "type": "integer"
+                            },
+                            "dataCollectionStage": {
+                              "id": "dataCollectionStage",
                               "type": "integer"
                             },
                             "dateCreated": {

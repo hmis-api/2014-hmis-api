@@ -11,6 +11,8 @@
                                         {
                                             "domesticViolenceId": "81b6e3f4-5d11-47c6-93c5-5b13c0c2779e",
                                             "domesticviolencevictim": "1",
+                                            "dataCollectionStage":1,
+                                            "informationDate":"03-16-2016",
                                             "whenoccurred": "3",
                                             "dateCreated": "03-17-2016"
                                         }

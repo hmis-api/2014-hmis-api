@@ -66,8 +66,12 @@
               },
               "informationDate": {
                 "id": "informationDate",
-                "type": "integer"
+                "type": "string"
               },
+              "dataCollectionStage": {
+                  "id": "dataCollectionStage",
+                  "type": "integer"
+                },
               "dateCreated": {
                 "id": "dateCreated",
                 "type": "string"

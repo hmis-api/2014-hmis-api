@@ -22,12 +22,20 @@
         "formerwardchildwelfareid": {
           "id": "formerwardchildwelfareid",
           "type": "string"
+        },
+        "informationDate": {
+          "type": "string"
+        },
+        "dataCollectionStage": {
+          "type": "integer"
         }
       },
       "required": [
         "childwelfaremonths",
         "childwelfareyears",
-        "formerwardchildwelfare"
+        "formerwardchildwelfare",
+        "informationDate",
+        "dataCollectionStage"
       ]
     }
   },

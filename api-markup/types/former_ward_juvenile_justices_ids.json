@@ -63,6 +63,12 @@
               "juvenilejusticeyears": {
                 "id": "juvenilejusticeyears",
                 "type": "integer"
+              },
+              "informationDate": {
+                "type": "string"
+              },
+              "dataCollectionStage": {
+                "type": "integer"
               }
             }
           }

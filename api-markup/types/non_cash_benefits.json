@@ -47,6 +47,13 @@
           "id": "benefitsfromanysource",
           "type": "integer"
         },
+        "dataCollectionStage": {
+          "type": "integer"
+        },
+        "informationDate": {
+          "id": "informationDate",
+          "type": "string"
+        },
         "dateCreated": {
           "id": "dateCreated",
           "type": "string"
@@ -67,6 +74,8 @@
         "tanftransportation",
         "wic",
         "benefitsfromanysource",
+        "dataCollectionStage",
+        "informationDate",
         "dateCreated",
         "dateUpdated"
       ]

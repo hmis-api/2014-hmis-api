@@ -60,6 +60,14 @@
                                     "id": "whenoccurred",
                                     "type": "string"
                                   },
+                                  "dataCollectionStage": {
+                                    "id": "dataCollectionStage",
+                                    "type": "integer"
+                                  },
+                                  "informationDate": {
+                                    "id": "informationDate",
+                                    "type": "string"
+                                  },
                                   "dateCreated": {
                                     "id": "dateCreated",
                                     "type": "string"
@@ -78,4 +86,4 @@
                       "required": [
                         "DomesticViolences"
                       ]
-                    }      
+                    }

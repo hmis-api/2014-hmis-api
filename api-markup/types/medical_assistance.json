@@ -11,6 +11,12 @@
           "id": "adap",
           "type": "integer"
         },
+        "informationDate": {
+          "type": "string"
+        },
+        "dataCollectionStage": {
+          "type": "integer"
+        },
         "dateCreated": {
           "id": "dateCreated",
           "type": "string"
@@ -22,6 +28,8 @@
       },
       "required": [
         "adap",
+        "informationDate",
+        "dataCollectionStage",
         "dateCreated",
         "dateUpdated"
       ]

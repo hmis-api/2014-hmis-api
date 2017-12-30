@@ -56,6 +56,14 @@
 							"id": "http://jsonschema.net/referralsources/referralsources/0/countoutreachreferralapproaches",
 							"type": "integer"
 						  },
+							"dataCollectionStage": {
+							"id": "http://jsonschema.net/healthStatuses/healthStatuses/0/dataCollectionStage",
+							"type": "integer"
+							},
+							"informationDate": {
+							"id": "http://jsonschema.net/healthStatuses/healthStatuses/0/informationDate",
+							"type": "string"
+							},
 						  "dateCreated": {
 							"id": "http://jsonschema.net/referralsources/referralsources/0/dateCreated",
 							"type": "string"

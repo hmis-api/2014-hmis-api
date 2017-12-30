@@ -26,6 +26,12 @@
         "unitinventory": {
           "id": "unitinventory",
           "type": "integer"
+        },
+        "informationDate": {
+          "type": "string"
+        },
+        "dataCollectionStage": {
+          "type": "integer"
         }
       },
       "required": [
@@ -33,7 +39,9 @@
         "bedtype",
         "hmisparticipatingbeds",
         "householdtype",
-        "unitinventory"
+        "unitinventory",
+        "informationDate",
+        "dataCollectionStage"
       ]
     }
   },

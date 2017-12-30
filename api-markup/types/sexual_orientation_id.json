@@ -15,6 +15,13 @@
           "id": "sexualorientation",
           "type": "integer"
         },
+        "dataCollectionStage": {
+          "type": "integer"
+        },
+        "informationDate": {
+          "id": "informationDate",
+          "type": "string"
+        },
         "dateCreated": {
           "id": "dateCreated",
           "type": "string"
@@ -27,6 +34,8 @@
       "required": [
         "sexualorientationId",
         "sexualorientation",
+        "dataCollectionStage",
+        "informationDate",
         "dateCreated",
         "dateUpdated"
       ]

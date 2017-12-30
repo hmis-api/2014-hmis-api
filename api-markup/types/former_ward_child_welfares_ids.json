@@ -63,6 +63,12 @@
               "formerwardchildwelfareid": {
                 "id": "formerwardchildwelfareid",
                 "type": "string"
+              },
+              "informationDate": {
+                "type": "string"
+              },
+              "dataCollectionStage": {
+                "type": "integer"
               }
             }
           }
