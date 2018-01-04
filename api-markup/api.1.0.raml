@@ -7,7 +7,7 @@ securedBy: [oauth_2_0]
 securitySchemes:
   oauth_2_0: !include security-schemes/oauth_2_0.raml
 title: 2014 HMIS
-version: 1.0.0
+version: 1.1.0
 types:
   affiliation : !include types/affiliation.json
   affiliation_id : !include types/affiliation_id.json
@@ -834,7 +834,7 @@ resourceTypes:
               type: !include types/get_all_hmis_type_value_of_hmis_type.json
 
 /questions:
-  description:  get all HUD Questions
+  description:  get all HUD Questions. Maximum number items (questions) that can be returned in a response is 200.
   get:
     responses:
       200:
