@@ -14553,7 +14553,7 @@
         "title": "clients",
         "type": "array",
         "items": {
-          "$ref": "#/definitions/client"
+          "$ref": "#/components/schemas/client"
         }
       },
       "clients_ids": {
