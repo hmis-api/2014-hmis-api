@@ -1986,7 +1986,7 @@
                         "employmentType": 2,
                         "notEmployedReason": 2,
                         "dataCollectionStage": 1,
-                        "informationDate": 1458124933736,
+                        "informationDate": "03-16-2016",
                         "dateCreated": "03-16-2016"
                       }
                     ]
@@ -2104,7 +2104,7 @@
                   "employmentType": "2",
                   "notEmployedReason": "2",
                   "informationDate": "03-16-2016",
-                  "dataCollectionStage": 1,
+                  "dataCollectionStage": "1",
                   "dateCreated": "03-16-2016"
                 }
               },
@@ -2215,7 +2215,7 @@
                   "employmentType": "2",
                   "notEmployedReason": "2",
                   "informationDate": "03-16-2016",
-                  "dataCollectionStage": 1,
+                  "dataCollectionStage": "1",
                   "dateCreated": "03-16-2016"
                 }
               },
@@ -5860,11 +5860,11 @@
                     "healthStatuses": [
                       {
                         "healthStatusId": "5c025aea-ecdc-4902-b451-4436b64a83ea",
-                        "informationDate": 1458186668375,
+                        "informationDate": "03-17-2016",
                         "dataCollectionStage": 1,
                         "healthCategory": 27,
                         "healthStatus": 1,
-                        "dueDate": 1458186668375,
+                        "dueDate": "04-18-2016",
                         "dateCreated": "03-17-2016",
                         "dateUpdated": "03-17-2016"
                       }
@@ -5980,11 +5980,11 @@
             "application/json": {
               "example": {
                 "healthStatus": {
-                  "informationDate": 1458186668375,
+                  "informationDate": "03-17-2016",
                   "dataCollectionStage": 1,
                   "healthCategory": 27,
                   "healthStatus": 1,
-                  "dueDate": 1458186668375,
+                  "dueDate": "04-18-2016",
                   "dateCreated": "03-17-2016",
                   "dateUpdated": "03-17-2016"
                 }
@@ -6093,11 +6093,11 @@
             "application/json": {
               "example": {
                 "healthStatus": {
-                  "informationDate": 1458186668375,
+                  "informationDate": "03-17-2016",
                   "dataCollectionStage": 1,
                   "healthCategory": 27,
                   "healthStatus": 1,
-                  "dueDate": 1458186668375,
+                  "dueDate": "04-18-2016",
                   "dateCreated": "03-17-2016",
                   "dateUpdated": "03-17-2016"
                 }
@@ -13567,7 +13567,54 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "example": "{\n\"searchResults\": {\n  \"pagination\": {\n    \"total\":\"2\"\n    \"from\": \"0\",\n    \"maximum\": \"50\",\n    \"returned\":\"2\"\n  },\n  \"items\": [\n    {\n      \"clientId\": \"65e3df62-dd22-4d07-83ef-6858a6322839\",\n      \"firstName\": \"Eric\",\n      \"middleName\": \"Eric\",\n      \"lastName\": \"Eric\",\n      \"nameSuffix\": \"NS \",\n      \"nameDataQuality\": \"1\",\n      \"ssn\": \"ssn \",\n      \"ssnDataQuality\": \"1\",\n      \"dob\": \"1459498034983\",\n      \"dobDataQuality\": \"1\",\n      \"race\": \"1\",\n      \"ethnicity\": \"1\",\n      \"gender\": \"1\",\n      \"otherGender\": \"Test\",\n      \"veteranStatus\": \"8\",\n      \"link\":\"/hmis-clientapi/rest/v2015/clients/65e3df62-dd22-4d07-83ef-6858a6322839\"\n    },\n    {\n      \"clientId\": \"cf98b9b2-9a77-4133-99a3-b60f05a12ad1\",\n      \"firstName\": \"Eric\",\n      \"middleName\": \"Eric\",\n      \"lastName\": \"Eric\",\n      \"nameSuffix\": \"NS \",\n      \"nameDataQuality\": \"1\",\n      \"ssn\": \"ssn \",\n      \"ssnDataQuality\": \"1\",\n      \"dob\": \"1459498034983\",\n      \"dobDataQuality\": \"1\",\n      \"race\": \"1\",\n      \"ethnicity\": \"1\",\n      \"gender\": \"1\",\n      \"otherGender\": \"Test\",\n      \"veteranStatus\": \"8\",\n      \"link\":\"/hmis-clientapi/rest/v2014/clients/cf98b9b2-9a77-4133-99a3-b60f05a12ad1\"\n    }\n  ]\n}\n}\n"
+                  "example": {
+                    "searchResults": {
+                      "pagination": {
+                        "total": "2",
+                        "from": "0",
+                        "maximum": "50",
+                        "returned": "2"
+                      },
+                      "items": [
+                        {
+                          "clientId": "65e3df62-dd22-4d07-83ef-6858a6322839",
+                          "firstName": "Eric",
+                          "middleName": "Eric",
+                          "lastName": "Eric",
+                          "nameSuffix": "NS ",
+                          "nameDataQuality": "1",
+                          "ssn": "ssn ",
+                          "ssnDataQuality": "1",
+                          "dob": "1459498034983",
+                          "dobDataQuality": "1",
+                          "race": "1",
+                          "ethnicity": "1",
+                          "gender": "1",
+                          "otherGender": "Test",
+                          "veteranStatus": "8",
+                          "link": "/hmis-clientapi/rest/v2015/clients/65e3df62-dd22-4d07-83ef-6858a6322839"
+                        },
+                        {
+                          "clientId": "cf98b9b2-9a77-4133-99a3-b60f05a12ad1",
+                          "firstName": "Eric",
+                          "middleName": "Eric",
+                          "lastName": "Eric",
+                          "nameSuffix": "NS ",
+                          "nameDataQuality": "1",
+                          "ssn": "ssn ",
+                          "ssnDataQuality": "1",
+                          "dob": "1459498034983",
+                          "dobDataQuality": "1",
+                          "race": "1",
+                          "ethnicity": "1",
+                          "gender": "1",
+                          "otherGender": "Test",
+                          "veteranStatus": "8",
+                          "link": "/hmis-clientapi/rest/v2014/clients/cf98b9b2-9a77-4133-99a3-b60f05a12ad1"
+                        }
+                      ]
+                    }
+                  }
                 }
               }
             }
@@ -15347,10 +15394,10 @@
                 "type": "string"
               },
               "informationDate": {
-                "type": "integer"
+                "type": "string"
               },
               "dataCollectionStage": {
-                "type": "integer"
+                "type": "string"
               }
             }
           }
@@ -17455,7 +17502,6 @@
               "healthCategory",
               "healthStatus",
               "dueDate",
-              "informationDate",
               "dataCollectionStage",
               "dateCreated",
               "dateUpdated"
@@ -17472,7 +17518,7 @@
                 "type": "integer"
               },
               "dueDate": {
-                "type": "integer"
+                "type": "string"
               },
               "dataCollectionStage": {
                 "type": "integer"
@@ -17564,7 +17610,7 @@
                       "type": "integer"
                     },
                     "dueDate": {
-                      "type": "integer"
+                      "type": "string"
                     },
                     "dataCollectionStage": {
                       "type": "integer"
