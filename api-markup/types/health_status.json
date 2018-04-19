@@ -4,12 +4,12 @@
   "type": "object",
   "properties": {
     "healthStatus": {
-      "id": "healthStatus",
+      "id": "healthStatu",
       "type": "object",
       "properties": {
         "informationDate": {
           "id": "informationDate",
-          "type": "integer"
+          "type": "string"
         },
         "healthCategory": {
           "id": "healthCategory",
@@ -21,9 +21,6 @@
         },
         "dueDate": {
           "id": "dueDate",
-          "type": "integer"
-        },
-        "informationDate": {
           "type": "string"
         },
         "dataCollectionStage": {
@@ -43,7 +40,6 @@
         "healthCategory",
         "healthStatus",
         "dueDate",
-        "informationDate",
         "dataCollectionStage",
         "dateCreated",
         "dateUpdated"

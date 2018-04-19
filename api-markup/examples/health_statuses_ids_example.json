@@ -12,11 +12,11 @@
       "healthStatuses":[
          {
             "healthStatusId":"5c025aea-ecdc-4902-b451-4436b64a83ea",
-            "informationDate":1458186668375,
+            "informationDate":"03-17-2016",
             "dataCollectionStage":1,
             "healthCategory":27,
             "healthStatus":1,
-            "dueDate":1458186668375,
+            "dueDate":"04-18-2016",
             "dateCreated":"03-17-2016",
             "dateUpdated":"03-17-2016"
          }

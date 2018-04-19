@@ -54,7 +54,7 @@
 						  },
 						  "informationDate": {
 							"id": "http://jsonschema.net/healthStatuses/healthStatuses/0/informationDate",
-							"type": "integer"
+							"type": "string"
 						  },
 						  "healthCategory": {
 							"id": "http://jsonschema.net/healthStatuses/healthStatuses/0/healthCategory",
@@ -66,7 +66,7 @@
 						  },
 						  "dueDate": {
 							"id": "http://jsonschema.net/healthStatuses/healthStatuses/0/dueDate",
-							"type": "integer"
+							"type": "string"
 						  },
 							"dataCollectionStage": {
 							"id": "http://jsonschema.net/healthStatuses/healthStatuses/0/dataCollectionStage",
