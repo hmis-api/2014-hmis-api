@@ -36,7 +36,9 @@
         "trackingMethod": {
           "id": "http://jsonschema.net/project/trackingMethod",
           "type": "integer"
-        }
+        } ,     "sourceSystemId" : {
+                "type":"string"
+              }
       },
       "required": [
         "projectName",
@@ -45,6 +47,7 @@
         "projectType",
         "residentialAffiliation",
         "targetPopulation",
+        "sourceSystemId",
         "trackingMethod"
       ]
     }

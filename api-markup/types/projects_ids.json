@@ -83,6 +83,9 @@
               "dateCreated": {
                 "id": "http://jsonschema.net/projects/projects/0/dateCreated",
                 "type": "string"
+              },
+              "sourceSystemId":{
+                "type":"string"
               }
             }
           }
