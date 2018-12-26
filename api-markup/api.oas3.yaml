@@ -37,7 +37,6 @@ paths:
                           ethnicity: '1'
                           gender: '1'
                           otherGender: 'Test      '
-                          dateCreated: 03-15-2016
                           phoneNumber: 1-541-754-3010
                           emailAddress: Jeanette@gmail.com
         '400':
@@ -120,7 +119,6 @@ paths:
                     ethnicity: '1'
                     gender: '1'
                     otherGender: 'Test      '
-                    dateCreated: 03-15-2016
                     phoneNumber: 1-541-754-3010
                     emailAddress: Jeanette@gmail.com
         required: true
@@ -148,7 +146,6 @@ paths:
                       ethnicity: '1'
                       gender: '1'
                       otherGender: 'Test      '
-                      dateCreated: 03-15-2016
                       phoneNumber: 1-541-754-3010
                       emailAddress: Jeanette@gmail.com
         '400':
@@ -208,7 +205,6 @@ paths:
                     ethnicity: '1'
                     gender: '1'
                     otherGender: 'Test      '
-                    dateCreated: 03-15-2016
                     phoneNumber: 1-541-754-3010
                     emailAddress: Jeanette@gmail.com
         required: true
@@ -270,7 +266,6 @@ paths:
                           residencepriorlengthofstay: '2'
                           statusdocumented: '1'
                           yearshomeless: 2
-                          dateCreated: 03-15-2016
         '400':
           description: Bad Request – The request was invalid or cannot be served.
         '403':
@@ -351,7 +346,6 @@ paths:
                     residencepriorlengthofstay: 2
                     statusdocumented: 1
                     yearshomeless: 2
-                    dateCreated: 03-15-2016
         required: true
     parameters:
       - name: clientid
@@ -386,7 +380,6 @@ paths:
                       residencepriorlengthofstay: 2
                       statusdocumented: 1
                       yearshomeless: 2
-                      dateCreated: 03-15-2016
         '400':
           description: Bad Request – The request was invalid or cannot be served.
         '401':
@@ -604,7 +597,6 @@ paths:
                       exchangeforsexpastthreemonths: 8
                       dataCollectionStage: 1
                       informationDate: 03-16-2016
-                      dateCreated: 03-16-2016
         '400':
           description: Bad Request – The request was invalid or cannot be served.
         '401':
@@ -3813,7 +3805,6 @@ paths:
                     vamedicalservices: 1
                     informationDate: 03-15-2016
                     dataCollectionStage: 1
-                    dateCreated: 03-17-2016
         required: true
     parameters:
       - name: enrollmentid
