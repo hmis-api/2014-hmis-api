@@ -1,4 +1,3 @@
-##%RAML 1.0
 baseUri: https://www.hmislynk.com/hmis-clientapi/rest/v2014
 mediaType: application/json
 protocols:
