@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: 2014 HMIS
-  version: 1.1.1
+  version: 1.2.0
   description: |
        **Note :**
               Please note that the partial updates are supported via PUT APIs. However, Note that If "null" value is passed for any element, in the PUT request body, it will be ignored. An empty string value should be sent (instead of "null" value) for the elements that need to be updated with NULL values.
@@ -9303,6 +9303,2097 @@ paths:
         required: true
         schema:
           type: string
+  '/clients/{clientid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    Clients:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 3
+                        maximum: 30
+                        sort: {}
+                      clients:
+                        - clientId: 717661f4-eaa3-4298-8739-789ab8a1f3d1
+                          dedupClientId: b7eb6be3-1ed3-49f4-a0c9-ae78d7f386fd
+                          firstName: 'FirstName '
+                          middleName: Middle Name
+                          lastName: LAST NAME
+                          nameSuffix: NS
+                          nameDataQuality: '1'
+                          ssn: 'ssn      '
+                          ssnDataQuality: '1'
+                          dob: 1458035236115
+                          dobDataQuality: '1'
+                          race: '1'
+                          ethnicity: '1'
+                          gender: '1'
+                          otherGender: 'Test      '
+                          phoneNumber: 1-541-754-3010
+                          emailAddress: Jeanette@gmail.com
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for client history.  Returns a list of client ids history, based on the query
+        parameters sent.  The query parameters are cumulative, so each
+        additional query parameter narrows the search down further.
+      operationId: GET_clients-clientid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string
+    parameters:
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier
+  '/clients/{clientid}/enrollments/{enrollmentid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    enrollments:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      enrollments:
+                        - enrollmentId: a9577ecf-5fb3-453e-9d3b-2bb81658ffe1
+                          continuouslyhomelessoneyear: '1'
+                          disablingcondition: '0'
+                          entrydate: 1458035288480
+                          householdid: 14aa2237-f147-4751-997b-040d9c023998
+                          housingstatus: '1'
+                          monthshomelesspastthreeyears: '7'
+                          monthshomelessthistime: '1'
+                          otherresidenceprior: '1'
+                          personalid: a8b1ac45-f3c9-4d12-9ac7-46bccbf14a7e
+                          projectentryid: 93284e88-515c-4bb8-9246-b1f419106649
+                          relationshiptohoh: '2'
+                          residenceprior: '2'
+                          residencepriorlengthofstay: '2'
+                          statusdocumented: '1'
+                          yearshomeless: 2
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for enrollment history.  Returns a list of enrollment ids history, based on the
+        query parameters sent.  The query parameters are cumulative, so each
+        additional query parameter narrows the search down further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string        
+    parameters:
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier
+  '/clients/{clientid}/enrollments/{enrollmentid}/commercialsexualexploitations/{commercialsexualexploitationid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    commercialSexualExploitations:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      CommercialSexualExploitations:
+                        - commercialsexualexploitationId: 78285647-ccda-4d09-847d-2f07fa683f50
+                          askedorforcedtoexchangeforsex: 1
+                          countofexchangeforsex: 4
+                          exchangeforsexpastthreemonths: 8
+                          dataCollectionStage: 1
+                          informationDate: 03-16-2016
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for commercialsexualexploitation history.  Returns a list of
+        commercialsexualexploitation ids history, based on the query parameters sent. 
+        The query parameters are cumulative, so each additional query parameter
+        narrows the search down further.
+      operationId: >-
+        GET_clients-clientid-enrollments-enrollmentid-commercialsexualexploitations-commercialsexualexploitationid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string
+    parameters:
+      - name: commercialsexualexploitationid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Commercialsexualexploitation Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier        
+  '/clients/{clientid}/enrollments/{enrollmentid}/dateofengagements/{dateofengagementid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    Dateofengagements:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      dateofengagements:
+                        - dateofengagementId: f1901be5-d11e-4158-9ece-f36252e2e654
+                          dateofengagement: 03-16-2016
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for dateofengagement history.  Returns a list of dateofengagement ids history,
+        based on the query parameters sent.  The query parameters are
+        cumulative, so each additional query parameter narrows the search down
+        further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-dateofengagements-dateofengagementid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string  
+    parameters:
+      - name: dateofengagementid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Dateofengagement Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier            
+  '/clients/{clientid}/enrollments/{enrollmentid}/disabilities/{disabilityid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    disabilitiesList:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      disabilitiesList:
+                        - disabilitiesId: be340706-eb5c-4794-a4c1-91b7d32c78e3
+                          disabilityresponse: 1732327101
+                          disabilitytype: '6'
+                          documentationonfile: '99'
+                          indefiniteandimpairs: '1'
+                          pathhowconfirmed: '99'
+                          receivingservices: '0'
+                          pathsmiinformation: '8'
+                          dataCollectionStage: 1
+                          informationDate: 03-16-2016
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for disability history.  Returns a list of disability ids history, based on the
+        query parameters sent.  The query parameters are cumulative, so each
+        additional query parameter narrows the search down further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-disabilities-disabilityid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string    
+    parameters:
+      - name: disabilityid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Disability Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier            
+  '/clients/{clientid}/enrollments/{enrollmentid}/domesticviolences/{domesticviolenceid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    DomesticViolences:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      domesticViolences:
+                        - domesticViolenceId: 81b6e3f4-5d11-47c6-93c5-5b13c0c2779e
+                          domesticviolencevictim: '1'
+                          dataCollectionStage: 1
+                          informationDate: 03-16-2016
+                          whenoccurred: '3'
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for domesticviolence history.  Returns a list of domesticviolence ids history,
+        based on the query parameters sent.  The query parameters are
+        cumulative, so each additional query parameter narrows the search down
+        further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-domesticviolences-domesticviolenceid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string  
+    parameters:
+      - name: domesticviolenceid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Domesticviolence Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier            
+  '/clients/{clientid}/enrollments/{enrollmentid}/employments/{employmentid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    employments:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      employments:
+                        - employmentId: 3d01bf85-75f0-4ee3-89aa-c603380afea2
+                          employed: 9
+                          employmentType: 2
+                          notEmployedReason: 2
+                          dataCollectionStage: 1
+                          informationDate: 03-16-2016
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for employment history.  Returns a list of employment ids history, based on the
+        query parameters sent.  The query parameters are cumulative, so each
+        additional query parameter narrows the search down further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-employments-employmentid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string  
+    parameters:
+      - name: employmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Employment Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier            
+  '/clients/{clientid}/enrollments/{enrollmentid}/exits/{exitid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json: 
+              schema:
+                example:
+                  exits:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      exits:
+                        - exitId: 14c70311-2701-4c74-af47-2bb4fdfe48cd
+                          exitDate: '03-17-2016'
+                          destination: 24
+                          otherDestination: Test destination
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for exit history.  Returns a list of exit ids history, based on the query
+        parameters sent.  The query parameters are cumulative, so each
+        additional query parameter narrows the search down further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-exits-exitid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string  
+    parameters:
+      - name: exitid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Exit Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier
+  '/clients/{clientid}/enrollments/{enrollmentid}/exits/{exitid}/housingassessmentdispositions/{housingassessmentdispositionid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    HousingAssessmentDispositions:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      HousingAssessmentDispositions:
+                        - housingassessmentDispositionId: ff97e480-75ca-4040-b3a2-59078cadf548
+                          assessmentdisposition: 1
+                          otherdisposition: some disposition
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for housingassessmentdisposition history.  Returns a list of
+        housingassessmentdisposition ids history, based on the query parameters sent. 
+        The query parameters are cumulative, so each additional query parameter
+        narrows the search down further.
+      operationId: >-
+        GET_clients-clientid-enrollments-enrollmentid-exits-exitid-housingassessmentdispositions-housingassessmentdispositionid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string        
+    parameters:
+      - name: housingassessmentdispositionid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Housingassessmentdisposition Identifier
+      - name: exitid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Exit Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier        
+  '/clients/{clientid}/enrollments/{enrollmentid}/healthinsurances/{healthinsuranceid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    healthInsurances:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      healthInsurances:
+                        - healthInsuranceId: 50a50523-e1ba-458f-a37e-66c9922b0204
+                          cobra: -918045701
+                          employerprovided: 49269345
+                          insurancefromanysource: 9
+                          medicaid: 99
+                          medicare: 99
+                          nocobrareason: 99
+                          noemployerprovidedreason: 3
+                          nomedicaidreason: 8
+                          nomedicarereason: 2
+                          noprivatepayreason: 8
+                          noschipreason: 2
+                          nostatehealthinsreason: 1
+                          novamedreason: 1
+                          privatepay: 1
+                          schip: 0
+                          statehealthins: 99
+                          vamedicalservices: 1
+                          informationDate: 03-15-2016
+                          dataCollectionStage: 1
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for healthinsurance history.  Returns a list of healthinsurance ids history,
+        based on the query parameters sent.  The query parameters are
+        cumulative, so each additional query parameter narrows the search down
+        further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-healthinsurances-healthinsuranceid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string     
+    parameters:
+      - name: healthinsuranceid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Healthinsurance Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier            
+  '/clients/{clientid}/enrollments/{enrollmentid}/incomeandsources/{incomeandsourceid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    IncomeAndSources:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      incomeAndSources:
+                        - incomeAndSourceId: 5c025aea-ecdc-4902-b451-4436b64a83ea
+                          alimony: 99
+                          alimonyamount: 15
+                          childsupport: 1
+                          childsupportamount: 3
+                          earned: 99
+                          earnedamount: 15
+                          ga: 0
+                          gaamount: 3
+                          incomefromanysource: 8
+                          othersource: 0
+                          othersourceamount: 15
+                          othersourceidentify: test
+                          pension: 99
+                          pensionamount: 3
+                          privatedisability: 1
+                          privatedisabilityamount: 15
+                          socsecretirement: 99
+                          socsecretirementamount: 15
+                          ssdi: 0
+                          ssdiamount: 3
+                          ssi: 99
+                          ssiamount: 3
+                          tanf: 0
+                          tanfamount: 3
+                          totalmonthlyincome: 3
+                          unemployment: 99
+                          unemploymentamount: 15
+                          vadisabilitynonservice: 0
+                          vadisabilitynonserviceamount: 3
+                          vadisabilityservice: 1
+                          vadisabilityserviceamount: 15
+                          workerscomp: 0
+                          workerscompamount: 15
+                          informationDate: 03-17-2016
+                          dataCollectionStage: 1
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for incomeandsource history.  Returns a list of incomeandsource ids history,
+        based on the query parameters sent.  The query parameters are
+        cumulative, so each additional query parameter narrows the search down
+        further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-incomeandsources-incomeandsourceid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string  
+    parameters:
+      - name: incomeandsourceid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Incomeandsource Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier            
+  '/clients/{clientid}/enrollments/{enrollmentid}/lastpermanentaddresses/{lastpermanentaddressid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    LastPermanentAddresses:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 0
+                        maximum: 30
+                        sort: {}
+                      lastPermanentAddresses:
+                        - lastPermanentAddressId: 5c025aea-ecdc-4902-b451-4436b64a83ea
+                          addressdataquality: 1
+                          lastpermanentcity: test
+                          lastpermanentstate: 2
+                          lastpermanentstreet: street
+                          lastpermanentzip: '53324'
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for lastpermanentaddress history.  Returns a list of
+        lastpermanentaddress ids history, based on the query parameters sent.  The query
+        parameters are cumulative, so each additional query parameter narrows
+        the search down further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-lastpermanentaddresses-lastpermanentaddressid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string   
+    parameters:
+      - name: lastpermanentaddressid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Lastpermanentaddress Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier            
+  '/clients/{clientid}/enrollments/{enrollmentid}/medicalassistances/{medicalassistanceid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    medicalassistances:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      medicalassistances:
+                        - medicalassistanceId: 5c025aea-ecdc-4902-b451-4436b64a83ea
+                          adap: 0
+                          informationDate: 03-17-2016
+                          dataCollectionStage: 1
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for medicalassistance history.  Returns a list of medicalassistance
+        ids history, based on the query parameters sent.  The query parameters are
+        cumulative, so each additional query parameter narrows the search down
+        further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-medicalassistances-medicalassistanceid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string 
+    parameters:
+      - name: medicalassistanceid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Medicalassistance Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier            
+  '/clients/{clientid}/enrollments/{enrollmentid}/referralsources/{referralsourceid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    referralsources:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      referralsources:
+                        - referralsourceId: 5c025aea-ecdc-4902-b451-4436b64a83ea
+                          countoutreachreferralapproaches: 1
+                          informationDate: 03-17-2016
+                          dataCollectionStage: 1
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for referralsource history.  Returns a list of referralsource ids history,
+        based on the query parameters sent.  The query parameters are
+        cumulative, so each additional query parameter narrows the search down
+        further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-referralsources-referralsourceid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string
+    parameters:
+      - name: referralsourceid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Referralsource Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier        
+  '/clients/{clientid}/enrollments/{enrollmentid}/pathstatuses/{pathstatusid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    pathstatuses:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      pathstatuses:
+                        - pathstatusId: 5c025aea-ecdc-4902-b451-4436b64a83ea
+                          clientenrolledinpath: 122355
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for pathstatus history.  Returns a list of pathstatus ids history, based on the
+        query parameters sent.  The query parameters are cumulative, so each
+        additional query parameter narrows the search down further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-pathstatuses-pathstatusid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string    
+    parameters:
+      - name: pathstatusid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Pathstatus Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier            
+  '/clients/{clientid}/enrollments/{enrollmentid}/percentamis/{percentamiid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    percentamis:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      percentamis:
+                        - percentamiId: 5c025aea-ecdc-4902-b451-4436b64a83ea
+                          percentage: 12
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for percentami history.  Returns a list of percentami ids history, based on the
+        query parameters sent.  The query parameters are cumulative, so each
+        additional query parameter narrows the search down further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-percentamis-percentamiid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string  
+    parameters:
+      - name: percentamiid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Percentami Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier            
+  '/clients/{clientid}/enrollments/{enrollmentid}/schoolstatuses/{schoolstatusid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    schoolstatuses:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      schoolstatuses:
+                        - schoolstatusId: 5c025aea-ecdc-4902-b451-4436b64a83ea
+                          informationDate: '2016-03-17T09:21:08.375'
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for schoolstatus history.  Returns a list of schoolstatus ids history, based on
+        the query parameters sent.  The query parameters are cumulative, so each
+        additional query parameter narrows the search down further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-schoolstatuses-schoolstatusid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string   
+    parameters:
+      - name: schoolstatusid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Schoolstatus Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier            
+  '/clients/{clientid}/enrollments/{enrollmentid}/services/{serviceid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    servicesList:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      servicesList:
+                        - servicesId: 5c025aea-ecdc-4902-b451-4436b64a83ea
+                          dateprovided: 1458186668375
+                          faamount: 15
+                          recordtype: 15
+                          referraloutcome: 3
+                          subtypeprovided: 11
+                          typeprovided: 10
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for service history.  Returns a list of service ids history, based on the query
+        parameters sent.  The query parameters are cumulative, so each
+        additional query parameter narrows the search down further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-services-serviceid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string        
+    parameters:
+      - name: serviceid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Service Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier        
+  '/clients/{clientid}/enrollments/{enrollmentid}/sexualorientations/{sexualorientationid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    sexualorientations:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      sexualorientations:
+                        - sexualorientationId: 5c025aea-ecdc-4902-b451-4436b64a83ea
+                          sexualorientation: 99
+                          informationDate: 03-17-2016
+                          dataCollectionStage: 1
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for sexualorientation history.  Returns a list of sexualorientation
+        ids history, based on the query parameters sent.  The query parameters are
+        cumulative, so each additional query parameter narrows the search down
+        further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-sexualorientations-sexualorientationid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string      
+    parameters:
+      - name: sexualorientationid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Sexualorientation Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier            
+  '/clients/{clientid}/enrollments/{enrollmentid}/worsthousingsituations/{worsthousingsituationid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    worstHousingSituations:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      worstHousingSituations:
+                        - worstHousingSituationId: 5c025aea-ecdc-4902-b451-4436b64a83ea
+                          worsthousingsituation: 9
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for worsthousingsituation history.  Returns a list of
+        worsthousingsituation ids history, based on the query parameters sent.  The
+        query parameters are cumulative, so each additional query parameter
+        narrows the search down further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-worsthousingsituations-worsthousingsituationid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string
+    parameters:
+      - name: worsthousingsituationid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Worsthousingsituation Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier        
+  '/clients/{clientid}/enrollments/{enrollmentid}/youthcriticalissues/{youthcriticalissueid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    youthCriticalIssues:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      youthCriticalIssues:
+                        - youthCriticalIssuesId: 5c025aea-ecdc-4902-b451-4436b64a83ea
+                          abuseandneglectfam: 0
+                          abuseandneglectyouth: 99
+                          activemilitaryparent: 1
+                          alcoholdrugabusefam: 99
+                          alcoholdrugabuseyouth: 1
+                          healthissuesfam: 99
+                          healthissuesyouth: 1
+                          householddynamics: 0
+                          housingissuesfam: 99
+                          housingissuesyouth: 0
+                          incarceratedparent: 99
+                          incarceratedparentstatus: 3
+                          insufficientincome: 0
+                          mentaldisabilityfam: 99
+                          mentaldisabilityyouth: 0
+                          mentalhealthissuesfam: 1
+                          mentalhealthissuesyouth: 99
+                          physicaldisabilityfam: 0
+                          physicaldisabilityyouth: 99
+                          schooleducationalissuesfam: 0
+                          schooleducationalissuesyouth: 0
+                          sexualorientationgenderidfam: 1
+                          sexualorientationgenderidyouth: 1
+                          unemploymentfam: 99
+                          unemploymentyouth: 99
+                          informationDate: 03-17-2016
+                          dataCollectionStage: 1
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for youthcriticalissue history.  Returns a list of youthcriticalissue
+        ids history, based on the query parameters sent.  The query parameters are
+        cumulative, so each additional query parameter narrows the search down
+        further.
+      operationId: GET_clients-clientid-enrollments-enrollmentid-youthcriticalissues-youthcriticalissueid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string   
+    parameters:
+      - name: youthcriticalissueid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Youthcriticalissue Identifier
+      - name: enrollmentid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Enrollment Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier            
+  '/clients/{clientid}/veteraninfos/{veteraninfoid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    veteranInfos:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      veteranInfos:
+                        - veteranInfoId: 5c025aea-ecdc-4902-b451-4436b64a83ea
+                          yearEntrdService: 12
+                          yearSeperated: 2
+                          worldWar2: 9
+                          koreanWar: 8
+                          vietnamWar: 8
+                          desertStorm: 99
+                          afghanistanOef: 9
+                          iraqOif: 1
+                          iraqOnd: 8
+                          otherTheater: 99
+                          militaryBranch: 6
+                          dischargeStatus: 2
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for veteraninfo history.  Returns a list of veteraninfo ids history, based on
+        the query parameters sent.  The query parameters are cumulative, so each
+        additional query parameter narrows the search down further.
+      operationId: GET_clients-clientid-veteraninfos-veteraninfoid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string   
+    parameters:
+      - name: veteraninfoid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Veteraninfo Identifier
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Client Identifier 
+  '/projects/{projectid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    projects:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      projects:
+                        - projectId: 0dda7333-0592-4fa7-ba79-1fe2dfaaff4e
+                          projectName: Homeless People Project
+                          projectCommonName: Homeless People Project
+                          continuumProject: 0
+                          projectType: 1
+                          residentialAffiliation: 0
+                          targetPopulation: 1
+                          trackingMethod: 0
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for project history.  Returns a list of project ids history, based on the query
+        parameters sent.  The query parameters are cumulative, so each
+        additional query parameter narrows the search down further.
+      operationId: GET_projects-projectid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string   
+    parameters:
+      - name: projectid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Project Identifier            
+  '/projects/{projectid}/affiliations/{affiliationid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    affiliations:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      affiliations:
+                        - affiliationId: 0dda7333-0592-4fa7-ba79-1fe2dfaaff4e
+                          resprojectid: response project
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for affiliation history.  Returns a list of affiliation ids history, based on
+        the query parameters sent.  The query parameters are cumulative, so each
+        additional query parameter narrows the search down further.
+      operationId: GET_projects-projectid-affiliations-affiliationid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string    
+    parameters:
+      - name: affiliationid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Affiliation Identifier
+      - name: projectid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Project Identifier
+  '/projects/{projectid}/funders/{funderid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    funders:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      funders:
+                        - funderId: 8f11979d-8402-49a8-8253-f5f16c57d63f
+                          funder: 8
+                          grantid: a2cac563-e852-487b-996d-b1bae8225234
+                          enddate: 04-16-2016
+                          startdate: 02-04-2016
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for funder history.  Returns a list of funder ids history, based on the query
+        parameters sent.  The query parameters are cumulative, so each
+        additional query parameter narrows the search down further.
+      operationId: GET_projects-projectid-funders-funderid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string
+    parameters:
+      - name: funderid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Funder Identifier
+      - name: projectid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Project Identifier            
+  '/projects/{projectid}/projectcocs/{projectcocid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    projectcocs:
+                      pagination:
+                        from: 0
+                        returned: 2
+                        total: 2
+                        maximum: 30
+                        sort: {}
+                      projectcocs:
+                        - projectcocId: 0dda7333-0592-4fa7-ba79-1fe2dfaaff4e
+                          coccode: coc code
+                        - projectcocId: 62caffe5-dd48-4acd-9b48-cadf9a68205c
+                          coccode: coc new code
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for projectcoc history.  Returns a list of projectcoc ids history, based on the
+        query parameters sent.  The query parameters are cumulative, so each
+        additional query parameter narrows the search down further.
+      operationId: GET_projects-projectid-projectcocs-projectcocid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string        
+    parameters:
+      - name: projectcocid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Projectcoc Identifier
+      - name: projectid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Project Identifier        
+  '/projects/{projectid}/inventories/{inventoryid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    inventories:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      inventories:
+                        - inventoryId: 9c64f6e4-924b-4b65-af62-11a33cc6090a
+                          availabilty: ONE
+                          bedtype: 1
+                          hmisparticipatingbeds: 1
+                          householdtype: 1
+                          unitinventory: 123
+                          informationDate: 03-17-2016
+                          dataCollectionStage: 1
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for inventory history.  Returns a list of inventory ids history, based on the
+        query parameters sent.  The query parameters are cumulative, so each
+        additional query parameter narrows the search down further.
+      operationId: GET_projects-projectid-inventories-inventoryid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string      
+    parameters:
+      - name: inventoryid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Inventory Identifier
+      - name: projectid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Project Identifier            
+  '/projects/{projectid}/sites/{siteid}/history':
+    get:
+      responses:
+        '200':
+          description: OK – Everything is working.
+          content:
+            application/json:
+              schema:
+                example:
+                    sites:
+                      pagination:
+                        from: 0
+                        returned: 1
+                        total: 1
+                        maximum: 30
+                        sort: {}
+                      sites:
+                        - siteId: 9c64f6e4-924b-4b65-af62-11a33cc6090a
+                          address: address
+                          city: address
+                          geocode: 2500
+                          principalsite: 0
+                          state: AK
+                          zip: '1212'
+        '400':
+          description: Bad Request – The request was invalid or cannot be served.
+        '403':
+          description: >-
+            Forbidden – The server understood the request, but is refusing it or
+            the access is not allowed.
+        '404':
+          description: Not found – There is no resource behind the URI.
+        '500':
+          description: Internal Server Error
+      description: >-
+        Searches for site history.  Returns a list of site ids history, based on the query
+        parameters sent.  The query parameters are cumulative, so each
+        additional query parameter narrows the search down further.
+      operationId: GET_projects-projectid-sites-siteid-history
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          description: >-
+            start index
+
+          schema:
+            type: string
+        - name: maxItems
+          in: query
+          required: true
+          description: >-
+            Max items in response
+
+          schema:
+            type: string     
+    parameters:
+      - name: siteid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Site Identifier
+      - name: projectid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Project Identifier                      
 components:
   schemas:
     affiliation:
