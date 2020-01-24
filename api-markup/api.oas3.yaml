@@ -1,12 +1,12 @@
 openapi: 3.0.0
 info:
   title: 2014 HMIS
-  version: 1.2.3
+  version: 1.2.4
   description: |
        **Note :**
               Please note that the partial updates are supported via PUT APIs. However, Note that If "null" value is passed for any element, in the PUT request body, it will be ignored. An empty string value should be sent (instead of "null" value) for the elements that need to be updated with NULL values.
 servers:
-  - url: 'https://www.hslynk.com/hmis-clientapi/rest/v2014'
+  - url: 'https://api.hslynk.com/hmis-clientapi/rest/v2014'
 paths:
   /clients:
     get:
@@ -16,8 +16,9 @@ paths:
           content:
             application/json:
               schema:
+                "$ref": "#/components/schemas/get_all_clients"
                 example:
-                    Clients:
+                    clients:
                       pagination:
                         from: 0
                         returned: 1
@@ -3869,7 +3870,7 @@ paths:
         required: true
         schema:
           type: string
-        description: Familyreunification Identifier      
+        description: Familyreunification Identifier
       - name: exitid
         in: path
         required: true
@@ -12728,7 +12729,7 @@ paths:
                         href: '/v2014/clients/{clientid}/enrollments'
       operationId: GET_questions-hudQuestionId
     parameters:
-      - name: hudQuestionId
+      - name: hudquestionid
         in: path
         required: true
         schema:
@@ -12974,9 +12975,69 @@ paths:
         in: path
         required: true
         schema:
-          type: string          
+          type: string
 components:
   schemas:
+    get_all_clients:
+        type: object
+        properties:
+          Clients:
+            type: object
+            properties:
+              pagination:
+                type: object
+                properties:
+                  from:
+                    type: integer
+                  returned:
+                    type: integer
+                  total:
+                    type: integer
+                  maximum:
+                    type: integer
+                  sort:
+                    type: object
+              clients:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    links:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          rel:
+                            type: string
+                          href:
+                            type: string
+                    clientId:
+                      type: string
+                      format: uuid
+                    dedupClientId:
+                      type: string
+                    firstName:
+                      type: string
+                    middleName:
+                      type: string
+                    lastName:
+                      type: string
+                    nameSuffix:
+                      type: string
+                    nameDataQuality:
+                      type: string
+                    ssn:
+                      type: string
+                    ssnDataQuality:
+                      type: string
+                    dob:
+                      type: integer
+                    dobDataQuality:
+                      type: string
+                    race:
+                      type: string
+                    ethnicity:
+                      type: string
     affiliation:
       required:
         - affiliation
@@ -17996,6 +18057,7 @@ components:
                   - informationDate
                   - dateCreated
                   - dateUpdated
+
   responses: {}
   parameters: {}
   examples: {}
