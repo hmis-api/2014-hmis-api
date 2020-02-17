@@ -921,7 +921,8 @@ paths:
                                 "residenceprior",
                                 "residencepriorlengthofstay",
                                 "statusdocumented",
-                                "yearshomeless"
+                                "yearshomeless",
+                                "chronicHomeless"
                               ],
                               "properties": {
                                 "links": {
@@ -993,6 +994,9 @@ paths:
                                 },
                                 "yearshomeless": {
                                   "type": "integer"
+                                },
+                                "chronicHomeless" : {
+                                  "type": "integer"
                                 }
                               }
                             }
@@ -1029,6 +1033,7 @@ paths:
                           residencepriorlengthofstay: '2'
                           statusdocumented: '1'
                           yearshomeless: 2
+                          chronicHomeless: 1
         '400':
           description: Bad Request – The request was invalid or cannot be served.
         '403':
@@ -1135,7 +1140,8 @@ paths:
                         "residenceprior",
                         "residencepriorlengthofstay",
                         "statusdocumented",
-                        "yearshomeless"
+                        "yearshomeless",
+                        "chronicHomeless"
                       ],
                       "properties": {
                         "continuouslyhomelessoneyear": {
@@ -1185,6 +1191,9 @@ paths:
                         },
                         "yearshomeless": {
                           "type": "integer"
+                        },
+                        "chronicHomeless" : {
+                            "type": "integer"
                         }
                       }
                     }
@@ -1207,6 +1216,7 @@ paths:
                     residencepriorlengthofstay: 2
                     statusdocumented: 1
                     yearshomeless: 2
+                    chronicHomeless: 1
         required: true
     parameters:
       - name: clientid
@@ -1249,7 +1259,7 @@ paths:
                           "residencepriorlengthofstay",
                           "statusdocumented",
                           "yearshomeless",
-			  "chronicHomeless"
+                          "chronicHomeless"
                         ],
                         "properties": {
                           "links": {
@@ -1322,9 +1332,9 @@ paths:
                           "yearshomeless": {
                             "type": "integer"
                           },
-			 "chronicHomeless" : {
-			    "type": "integer"
-			 }
+                          "chronicHomeless" : {
+                            "type": "integer"
+                          }
                         }
                       }
                     }
@@ -1350,7 +1360,7 @@ paths:
                         residencepriorlengthofstay: 2
                         statusdocumented: 1
                         yearshomeless: 1
-			chronicHomeless: 1
+                        chronicHomeless: 1
         '400':
           description: Bad Request – The request was invalid or cannot be served.
         '401':
@@ -1415,7 +1425,7 @@ paths:
                         "residencepriorlengthofstay",
                         "statusdocumented",
                         "yearshomeless",
-			"chronicHomeless"
+                        "chronicHomeless"
                       ],
                       "properties": {
                         "continuouslyhomelessoneyear": {
@@ -1466,7 +1476,7 @@ paths:
                         "yearshomeless": {
                           "type": "integer"
                         },
-			"chronicHomeless" : {
+                        "chronicHomeless" : {
                           "type": "integer"
                         }
                       }
@@ -1490,7 +1500,7 @@ paths:
                     residencepriorlengthofstay: 2
                     statusdocumented: 1
                     yearshomeless: 2
-		    chronicHomeless: 1
+                    chronicHomeless: 1
         required: true
     delete:
       responses:
