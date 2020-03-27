@@ -997,6 +997,10 @@ paths:
                                 },
                                 "chronicHomeless" : {
                                   "type": "integer"
+                                },
+                                "hmisHouseholdId": {
+                                  "type": "string",
+                                  "format": "uuid",
                                 }
                               }
                             }
@@ -1017,7 +1021,9 @@ paths:
                         - links:
                           - rel: history
                             href: "/clients/717661f4-eaa3-4298-8739-789ab8a1f3d1/enrollments/a9577ecf-5fb3-453e-9d3b-2bb81658ffe1/history"
-                          enrollmentId: a9577ecf-5fb3-453e-9d3b-2bb81658ffe1
+                          - rel: hmisHouseHold
+                            href: "/hmis-clientapi/rest/v2014/hmishouseholds/8e956388-b909-41ea-b1d0-203e9cc15c45/"
+                          enrollmentId: a9577ecf-5fb3-453e-9d3b-2bb81658ffe1                          
                           continuouslyhomelessoneyear: '1'
                           disablingcondition: '0'
                           entrydate: 1458035288480
@@ -1034,6 +1040,7 @@ paths:
                           statusdocumented: '1'
                           yearshomeless: 2
                           chronicHomeless: 1
+                          hmisHouseholdId: 8e956388-b909-41ea-b1d0-203e9cc15c45
         '400':
           description: Bad Request – The request was invalid or cannot be served.
         '403':
@@ -1194,7 +1201,12 @@ paths:
                         },
                         "chronicHomeless" : {
                             "type": "integer"
+                        },
+                        "hmisHouseholdId": {
+                          "type": "string",
+                          "format": "uuid",
                         }
+                        
                       }
                     }
                   }
@@ -1217,6 +1229,7 @@ paths:
                     statusdocumented: 1
                     yearshomeless: 2
                     chronicHomeless: 1
+                    hmisHouseholdId: 8e956388-b909-41ea-b1d0-203e9cc15c45
         required: true
     parameters:
       - name: clientid
@@ -1334,7 +1347,11 @@ paths:
                           },
                           "chronicHomeless" : {
                             "type": "integer"
-                          }
+                          },
+                            "hmisHouseholdId": {
+                              "type": "string",
+                              "format": "uuid",
+                            }
                         }
                       }
                     }
@@ -1344,6 +1361,8 @@ paths:
                         links:
                         - rel: history
                           href: "/clients/717661f4-eaa3-4298-8739-789ab8a1f3d1/enrollments/a9577ecf-5fb3-453e-9d3b-2bb81658ffe1/history"
+                        - rel: hmisHouseHold
+                          href: "/hmis-clientapi/rest/v2014/hmishouseholds/8e956388-b909-41ea-b1d0-203e9cc15c45/"                          
                         enrollmentid: a9577ecf-5fb3-453e-9d3b-2bb81658ffe1
                         continuouslyhomelessoneyear: 1
                         disablingcondition: 0
@@ -1361,6 +1380,7 @@ paths:
                         statusdocumented: 1
                         yearshomeless: 1
                         chronicHomeless: 1
+                        hmisHouseholdId: 8e956388-b909-41ea-b1d0-203e9cc15c45                        
         '400':
           description: Bad Request – The request was invalid or cannot be served.
         '401':
@@ -1478,6 +1498,10 @@ paths:
                         },
                         "chronicHomeless" : {
                           "type": "integer"
+                        },
+                        "hmisHouseholdId": {
+                          "type": "string",
+                          "format": "uuid",
                         }
                       }
                     }
@@ -1485,6 +1509,9 @@ paths:
                 }
               example:
                   enrollment:
+                    links:
+                    - rel: hmisHouseHold
+                      href: "/hmis-clientapi/rest/v2014/hmishouseholds/8e956388-b909-41ea-b1d0-203e9cc15c45/"                                            
                     continuouslyhomelessoneyear: 1
                     disablingcondition: 0
                     entrydate: 1458035288480
@@ -1501,6 +1528,7 @@ paths:
                     statusdocumented: 1
                     yearshomeless: 2
                     chronicHomeless: 1
+                    hmisHouseholdId: 8e956388-b909-41ea-b1d0-203e9cc15c45
         required: true
     delete:
       responses:
@@ -1657,6 +1685,10 @@ paths:
                                 },
                                 "yearshomeless": {
                                   "type": "integer"
+                                },
+                                "hmisHouseholdId": {
+                                  "type": "string",
+                                  "format": "uuid",
                                 }
                               }
                             }
@@ -1690,6 +1722,7 @@ paths:
                           residencepriorlengthofstay: '2'
                           statusdocumented: '1'
                           yearshomeless: 2
+                          hmisHouseholdId: 8e956388-b909-41ea-b1d0-203e9cc15c45  
         '400':
           description: Bad Request – The request was invalid or cannot be served.
         '403':
