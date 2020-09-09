@@ -2468,17 +2468,17 @@ paths:
                           "yearshomeless": {
                             "type": "integer"
                           },
-                          "chronicHomeless" : {
+                          "chronicHomeless": {
                             "type": "integer"
                           },
                             "hmisHouseholdId": {
                               "type": "string",
                               "format": "uuid",
                             },
-                                "genericHouseHoldId":{
-                                  "type": "string",
-                                  "format": "uuid",
-                                }
+                            "genericHouseHoldId": {
+                              "type": "string",
+                              "format": "uuid",
+                            }
                         }
                       }
                     }
