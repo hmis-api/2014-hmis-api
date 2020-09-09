@@ -5,7 +5,7 @@ info:
   contact:
     name: API Source
     email: support@hslynk.com
-    url: https://github.com/hmis-api/20144-hmis-api
+    url: https://github.com/hmis-api/2014-hmis-api
   # Name of the license and a URL to the license description.
   license:
     name: Apache 2.0
