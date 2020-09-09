@@ -2412,73 +2412,69 @@ paths:
                                         "chronicHomeless": {
                                             "type": "integer"
                                         }
-                                    }
-                                }
-                            }
-                          },
-                          "enrollmentid": {
-                            "type": "string",
-                            "format": "uuid",
-                          },
-                          "continuouslyhomelessoneyear": {
-                            "type": "integer"
-                          },
-                          "disablingcondition": {
-                            "type": "integer"
-                          },
-                          "entrydate": {
-                            "type": "integer"
-                          },
-                          "householdid": {
-                            "type": "string",
-                            "format": "uuid",
-                          },
-                          "housingstatus": {
-                            "type": "integer"
-                          },
-                          "monthshomelesspastthreeyears": {
-                            "type": "integer"
-                          },
-                          "monthshomelessthistime": {
-                            "type": "integer"
-                          },
-                          "otherresidenceprior": {
-                            "type": "string",
-                          },
-                          "personalid": {
-                            "type": "string",
-                            "format": "uuid",
-                          },
-                          "projectentryid": {
-                            "type": "string",
-                            "format": "uuid",
-                          },
-                          "relationshiptohoh": {
-                            "type": "integer"
-                          },
-                          "residenceprior": {
-                            "type": "integer"
-                          },
-                          "residencepriorlengthofstay": {
-                            "type": "integer"
-                          },
-                          "statusdocumented": {
-                            "type": "integer"
-                          },
-                          "yearshomeless": {
-                            "type": "integer"
-                          },
-                          "chronicHomeless": {
-                            "type": "integer"
-                          },
-                            "hmisHouseholdId": {
-                              "type": "string",
-                              "format": "uuid",
-                            },
-                            "genericHouseHoldId": {
-                              "type": "string",
-                              "format": "uuid",
-                            }
+                                        "enrollmentid": {
+                                          "type": "string",
+                                          "format": "uuid",
+                                        },
+                                        "continuouslyhomelessoneyear": {
+                                          "type": "integer"
+                                        },
+                                        "disablingcondition": {
+                                          "type": "integer"
+                                        },
+                                        "entrydate": {
+                                          "type": "integer"
+                                        },
+                                        "householdid": {
+                                          "type": "string",
+                                          "format": "uuid",
+                                        },
+                                        "housingstatus": {
+                                          "type": "integer"
+                                        },
+                                        "monthshomelesspastthreeyears": {
+                                          "type": "integer"
+                                        },
+                                        "monthshomelessthistime": {
+                                          "type": "integer"
+                                        },
+                                        "otherresidenceprior": {
+                                          "type": "string",
+                                        },
+                                        "personalid": {
+                                          "type": "string",
+                                          "format": "uuid",
+                                        },
+                                        "projectentryid": {
+                                          "type": "string",
+                                          "format": "uuid",
+                                        },
+                                        "relationshiptohoh": {
+                                          "type": "integer"
+                                        },
+                                        "residenceprior": {
+                                          "type": "integer"
+                                        },
+                                        "residencepriorlengthofstay": {
+                                          "type": "integer"
+                                        },
+                                        "statusdocumented": {
+                                          "type": "integer"
+                                        },
+                                        "yearshomeless": {
+                                          "type": "integer"
+                                        },
+                                        "chronicHomeless": {
+                                          "type": "integer"
+                                        },
+                                          "hmisHouseholdId": {
+                                            "type": "string",
+                                            "format": "uuid",
+                                          },
+                                          "genericHouseHoldId": {
+                                            "type": "string",
+                                            "format": "uuid",
+                                          }
                         }
                       }
                     }
