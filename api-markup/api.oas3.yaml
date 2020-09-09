@@ -2411,10 +2411,10 @@ paths:
                                         },
                                         "chronicHomeless": {
                                             "type": "integer"
-                                        }
+                                        },
                                         "enrollmentid": {
                                           "type": "string",
-                                          "format": "uuid",
+                                          "format": "uuid"
                                         },
                                         "continuouslyhomelessoneyear": {
                                           "type": "integer"
